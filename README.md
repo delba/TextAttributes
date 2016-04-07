@@ -27,7 +27,11 @@ NSAttributedString("The quick brown fox jumps over the lazy dog", attributes: at
 
 ```swift
 attrs.font = UIFont(name: "HelveticaNeue", size: 16)
+attrs.backgroundColor = .whiteColor()
+// etc.
 ```
+
+> See [all the properties](#references)
 
 - **Methods chaining:**
 
@@ -35,7 +39,10 @@ attrs.font = UIFont(name: "HelveticaNeue", size: 16)
 attrs
     .lineHeightMultiple(1.5)
     .underlineStyle(.StyleSingle)
+    // etc.
 ```
+
+> See [all the methods](#references)
 
 - **Methods are constructors:**
 
@@ -59,7 +66,7 @@ attrs
 - **Access the underlying dictionary:**
 
 ```swift
-attrs.dictionary
+attrs.dictionary // Returns the attributes dictionary of type [String: AnyObject]
 ```
 
 ### Carthage

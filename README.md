@@ -23,7 +23,7 @@ NSAttributedString("The quick brown fox jumps over the lazy dog", attributes: at
 
 ## Usage
 
-- **Set properties:**
+- **Set/Get the `TextAttributes` properties:**
 
 ```swift
 attrs.font = UIFont(name: "HelveticaNeue", size: 16)
@@ -34,6 +34,8 @@ attrs.backgroundColor = .whiteColor()
 > See [all the properties](#references)
 
 - **Methods chaining:**
+
+The `TextAttributes` return `Self` to allow method chaining:
 
 ```swift
 attrs

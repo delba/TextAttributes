@@ -37,7 +37,6 @@ NSAttributedString("The quick brown fox jumps over the lazy dog", attributes: at
 ```swift
 attrs.font = UIFont(name: "HelveticaNeue", size: 16)
 attrs.backgroundColor = .whiteColor()
-// etc.
 ```
 
 > See [all the properties](#references)
@@ -50,7 +49,6 @@ The `TextAttributes` methods return `Self` to allow method chaining:
 attrs
     .lineHeightMultiple(1.5)
     .underlineStyle(.StyleSingle)
-    // etc.
 ```
 
 > See [all the methods](#references)

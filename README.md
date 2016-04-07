@@ -1,4 +1,6 @@
-<h1 align="center">TextAttributes</h1>
+<p align="center">
+  <img src="https://raw.githubusercontent.com/delba/TextAttributes/assets/TextAttributes@2x.png">
+</p>
 
 <p align="center">
   <a href="https://travis-ci.org/delba/TextAttributes"><img alt="Travis Status" src="https://img.shields.io/travis/delba/TextAttributes.svg"/></a>
@@ -18,26 +20,42 @@ NSAttributedString("The quick brown fox jumps over the lazy dog", attributes: at
 ```
 
 <p align="center">
-    <a href="#usage">Usage</a> • <a href="#installation">Installation</a> • <a href="#references">References</a> • <a href="#license">License</a>
+    <a href="#features">Features</a> • <a href="#usage">Usage</a> • <a href="#references">References</a> • <a href="#installation">Installation</a> • <a href="#license">License</a>
 </p>
+
+## Features
+
+- [x] Strongly typed properties
+- [x] Chainable setter methods
+- [x] A direct access to the `NSParagraphStyle` properties
+- [x] Better autocompletion
 
 ## Usage
 
-- **Set properties:**
+- **Get or set the `TextAttributes` properties:**
 
 ```swift
 attrs.font = UIFont(name: "HelveticaNeue", size: 16)
+attrs.backgroundColor = .whiteColor()
+// etc.
 ```
 
-- **Methods chaining:**
+> See [all the properties](#references)
+
+- **Method chaining:**
+
+The `TextAttributes` methods return `Self` to allow method chaining:
 
 ```swift
 attrs
     .lineHeightMultiple(1.5)
     .underlineStyle(.StyleSingle)
+    // etc.
 ```
 
-- **Methods are constructors:**
+> See [all the methods](#references)
+
+- **The methods are also constructors:**
 
 The following are equivalent:
 
@@ -59,42 +77,7 @@ attrs
 - **Access the underlying dictionary:**
 
 ```swift
-attrs.dictionary
-```
-
-### Carthage
-
-[Carthage](https://github.com/Carthage/Carthage) is a decentralized dependency manager that automates the process of adding frameworks to your Cocoa application.
-
-You can install Carthage with [Homebrew](http://brew.sh/) using the following command:
-
-```bash
-$ brew update
-$ brew install carthage
-```
-
-To integrate TextAttributes into your Xcode project using Carthage, specify it in your `Cartfile`:
-
-```ogdl
-github "delba/TextAttributes"
-```
-
-### Cocoapods
-
-[CocoaPods](http://cocoapods.org) is a dependency manager for Cocoa projects.
-
-You can install it with the following command:
-
-```bash
-$ gem install cocoapods
-```
-
-To integrate TextAttributes into your Xcode project using CocoaPods, specify it in your `Podfile`:
-
-```ruby
-use_frameworks!
-
-pod 'TextAttributes'
+attrs.dictionary // Returns the attributes dictionary of type [String: AnyObject]
 ```
 
 ## References
@@ -163,6 +146,43 @@ pod 'TextAttributes'
 | `paragraphSpacingBefore`           | `paragraphSpacingBefore`  | `paragraphSpacingBefore(_:)` |
 | `baseWritingDirection`             | `baseWritingDirection`    | `baseWritingDirection(_:)`   |
 | `lineHeightMultiple`               | `lineHeightMultiple`      | `lineHeightMultiple(_:)`     |
+
+## Installation
+
+### Carthage
+
+[Carthage](https://github.com/Carthage/Carthage) is a decentralized dependency manager that automates the process of adding frameworks to your Cocoa application.
+
+You can install Carthage with [Homebrew](http://brew.sh/) using the following command:
+
+```bash
+$ brew update
+$ brew install carthage
+```
+
+To integrate TextAttributes into your Xcode project using Carthage, specify it in your `Cartfile`:
+
+```ogdl
+github "delba/TextAttributes"
+```
+
+### Cocoapods
+
+[CocoaPods](http://cocoapods.org) is a dependency manager for Cocoa projects.
+
+You can install it with the following command:
+
+```bash
+$ gem install cocoapods
+```
+
+To integrate TextAttributes into your Xcode project using CocoaPods, specify it in your `Podfile`:
+
+```ruby
+use_frameworks!
+
+pod 'TextAttributes'
+```
 
 ## License
 

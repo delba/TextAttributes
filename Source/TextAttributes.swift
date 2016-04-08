@@ -58,13 +58,14 @@ public class TextAttributes {
      */
     public init(base: TextAttributes? = nil) {
         if let base = base {
-            self.dictionary = base.dictionary
-            self.paragraphStyle = base.paragraphStyle
+            dictionary = base.dictionary
+            paragraphStyle = base.paragraphStyle.clone()
         } else {
-            self.dictionary = [:]
-            self.paragraphStyle = NSMutableParagraphStyle()
-            dictionary[NSParagraphStyleAttributeName] = paragraphStyle
+            dictionary = [:]
+            paragraphStyle = NSMutableParagraphStyle()
         }
+        
+        dictionary[NSParagraphStyleAttributeName] = paragraphStyle
     }
     
     // MARK: - Font

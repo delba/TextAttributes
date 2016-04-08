@@ -1,5 +1,5 @@
 //
-//  Extensions.swift
+//  AttributedString.swift
 //
 //  Copyright (c) 2016 Damien (http://delba.io)
 //
@@ -43,42 +43,5 @@ extension NSMutableAttributedString {
     
     public func addAttributes(attributes: TextAttributes, range: NSRange) {
         addAttributes(attributes.dictionary, range: range)
-    }
-}
-
-extension NSRange {
-    init(_ range: Range<Int>) {
-        self = NSRange(location: range.first ?? 0, length: range.count)
-    }
-}
-
-extension NSMutableParagraphStyle {
-    func clone() -> NSMutableParagraphStyle {
-        let clone = NSMutableParagraphStyle()
-        
-        if #available(iOS 9.0, *) {
-            clone.setParagraphStyle(self)
-        } else {
-            clone.cloneParagraphStyle(self)
-        }
-        
-        return clone
-    }
-    
-    private func cloneParagraphStyle(other: NSMutableParagraphStyle) -> NSMutableParagraphStyle {
-        alignment              = other.alignment
-        firstLineHeadIndent    = other.firstLineHeadIndent
-        headIndent             = other.headIndent
-        tailIndent             = other.tailIndent
-        lineBreakMode          = other.lineBreakMode
-        maximumLineHeight      = other.maximumLineHeight
-        minimumLineHeight      = other.minimumLineHeight
-        lineSpacing            = other.lineSpacing
-        paragraphSpacing       = other.paragraphSpacing
-        paragraphSpacingBefore = other.paragraphSpacingBefore
-        baseWritingDirection   = other.baseWritingDirection
-        lineHeightMultiple     = other.lineHeightMultiple
-        
-        return self
     }
 }

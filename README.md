@@ -20,7 +20,7 @@ NSAttributedString("The quick brown fox jumps over the lazy dog", attributes: at
 ```
 
 <p align="center">
-    <a href="#features">Features</a> • <a href="#usage">Usage</a> • <a href="#references">References</a> • <a href="#installation">Installation</a> • <a href="#license">License</a>
+    <a href="#features">Features</a> • <a href="#usage">Usage</a> • <a href="#demo">Demo</a> • <a href="#references">References</a> • <a href="#installation">Installation</a> • <a href="#license">License</a>
 </p>
 
 ## Features
@@ -77,6 +77,13 @@ attrs
 ```swift
 attrs.dictionary // Returns the attributes dictionary of type [String: AnyObject]
 ```
+
+## Demo
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/delba/TextAttributes/assets/demo.gif" />
+  <em>Live updates with <a href="https://github.com/johnno1962/injectionforxcode" alt="Injection for Xcode">Injection for Xcode</a></em>
+</p>
 
 ## References
 

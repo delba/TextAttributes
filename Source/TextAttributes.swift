@@ -999,3 +999,28 @@ public class TextAttributes {
         return self
     }
 }
+
+extension TextAttributes {
+    
+    /**
+     Create and return AttributedString
+     
+     - parameter string: The text
+     
+     - returns: The AttributedString
+     */
+    public func string(string: String) -> NSAttributedString {
+        return NSAttributedString(string: string, attributes: self)
+    }
+    
+    /**
+     Create and return MutableAttributedString
+     
+     - parameter string: The text
+     
+     - returns: The MutableAttributedString
+     */
+    public func mutableString(string: String) -> NSMutableAttributedString {
+        return NSMutableAttributedString(string: string, attributes: self)
+    }
+}

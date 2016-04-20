@@ -45,24 +45,28 @@ public enum TextEffect {
 
 public class TextAttributes {
     /// The attributes dictionary.
-    public var dictionary: [String: AnyObject]
+    public var dictionary: [String: AnyObject] = [:]
     
     /**
-     Create an instance of TextAttributes with an optional base.
+     Create an instance of TextAttributes with a base.
      
-     - parameter base: The optional base.
+     - parameter base: The base.
      
      - returns: The created TextAttributes.
      */
-    public init(base: TextAttributes? = nil) {
-        if let base = base {
-            dictionary = base.dictionary
-            paragraphStyle = base.paragraphStyle.clone()
-        } else {
-            dictionary = [:]
-            paragraphStyle = NSMutableParagraphStyle()
-        }
-        
+    @available(*, deprecated=1, message="Please use the clone() method.")
+    public init(base: TextAttributes) {
+        dictionary = base.dictionary
+        paragraphStyle = base.paragraphStyle.clone()
+        dictionary[NSParagraphStyleAttributeName] = paragraphStyle
+    }
+    
+    /**
+     Create an instance of TextAttributes.
+     
+     - returns: The created TextAttributes.
+     */
+    public init() {
         dictionary[NSParagraphStyleAttributeName] = paragraphStyle
     }
     
@@ -793,7 +797,7 @@ public class TextAttributes {
     // MARK: - Paragraph style
     
     /// The paragraph style attribute.
-    public var paragraphStyle: NSMutableParagraphStyle {
+    public var paragraphStyle: NSMutableParagraphStyle = NSMutableParagraphStyle() {
         didSet {
             dictionary[NSParagraphStyleAttributeName] = paragraphStyle
         }

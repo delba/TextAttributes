@@ -19,7 +19,8 @@ class TextAttributesTests: XCTestCase {
         
         XCTAssertEqual(1.5, firstStyle.lineHeightMultiple)
         
-        let second = TextAttributes(base: first)
+        let second = first.clone()
+        
         let secondStyle = second.paragraphStyle
         
         XCTAssertEqual(1.5, secondStyle.lineHeightMultiple)

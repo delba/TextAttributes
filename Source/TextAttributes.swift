@@ -45,7 +45,7 @@ public enum TextEffect {
 
 public class TextAttributes {
     /// The attributes dictionary.
-    public var dictionary: [String: AnyObject] = [:]
+    public private(set) var dictionary: [String: AnyObject] = [:]
     
     /**
      Create an instance of TextAttributes with a base.

@@ -23,8 +23,12 @@
 //
 
 extension NSAttributedString {
-    public convenience init(string: String, attributes: TextAttributes) {
-        self.init(string: string, attributes: attributes.dictionary)
+    public convenience init(string: NSString, attributes: TextAttributes? = nil) {
+        self.init(string: string as String, attributes: attributes)
+    }
+    
+    public convenience init(string: String, attributes: TextAttributes? = nil) {
+        self.init(string: string, attributes: attributes?.dictionary)
     }
 }
 

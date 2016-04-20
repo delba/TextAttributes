@@ -26,6 +26,10 @@ extension NSRange {
     init(_ range: Range<Int>) {
         self = NSRange(location: range.first ?? 0, length: range.count)
     }
+    
+    init(_ string: NSString) {
+        self = NSRange(location: 0, length: string.length)
+    }
 }
 
 extension NSMutableParagraphStyle {

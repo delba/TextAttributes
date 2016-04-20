@@ -29,12 +29,20 @@ extension NSAttributedString {
 }
 
 extension NSMutableAttributedString {
+    public func setAttributes(attributes: TextAttributes) {
+        setAttributes(attributes, range: NSRange(mutableString))
+    }
+    
     public func setAttributes(attributes: TextAttributes, range: Range<Int>) {
         setAttributes(attributes, range: NSRange(range))
     }
     
     public func setAttributes(attributes: TextAttributes, range: NSRange) {
         setAttributes(attributes.dictionary, range: range)
+    }
+    
+    public func addAttributes(attributes: TextAttributes) {
+        addAttributes(attributes, range: NSRange(mutableString))
     }
     
     public func addAttributes(attributes: TextAttributes, range: Range<Int>) {

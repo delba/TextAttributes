@@ -66,6 +66,18 @@ public class TextAttributes {
         dictionary[NSParagraphStyleAttributeName] = paragraphStyle
     }
     
+    /**
+     Creates a copy of the receiver.
+     
+     - returns: A copy of the receiver.
+     */
+    public func clone() -> TextAttributes {
+        let clone = TextAttributes()
+        clone.dictionary = dictionary
+        clone.paragraphStyle = paragraphStyle.clone()
+        return clone
+    }
+    
     // MARK: - Font
     
     /// The font attribute.

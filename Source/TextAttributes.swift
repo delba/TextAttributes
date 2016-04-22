@@ -1014,4 +1014,24 @@ public class TextAttributes {
         self.paragraphSpacingBefore = value
         return self
     }
+    
+    // MARK: - Line Break Mode
+    
+    /// The mode that should be used to break lines.
+    public var lineBreakMode: NSLineBreakMode {
+        get { return paragraphStyle.lineBreakMode }
+        set { paragraphStyle.lineBreakMode = newValue }
+    }
+    
+    /**
+     Sets the mode that should be used to break lines and returns the receiver.
+     
+     - parameter value: The mode that should be used to break lines.
+     
+     - returns: The receiver.
+     */
+    public func lineBreakMode(value: NSLineBreakMode) -> Self {
+        self.lineBreakMode = value
+        return self
+    }
 }

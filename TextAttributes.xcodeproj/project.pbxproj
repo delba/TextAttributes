@@ -45,6 +45,11 @@
 						<key>CreatedOnToolsVersion</key>
 						<string>7.2</string>
 					</dict>
+					<key>6DB519771CCA7F30005C3E83</key>
+					<dict>
+						<key>CreatedOnToolsVersion</key>
+						<string>7.3</string>
+					</dict>
 				</dict>
 			</dict>
 			<key>buildConfigurationList</key>
@@ -75,6 +80,7 @@
 			<array>
 				<string>6D2475361CAAB1050044D223</string>
 				<string>6D2475401CAAB1050044D223</string>
+				<string>6DB519771CCA7F30005C3E83</string>
 			</array>
 		</dict>
 		<key>6D2475311CAAB1050044D223</key>
@@ -159,7 +165,7 @@
 			<key>isa</key>
 			<string>PBXNativeTarget</string>
 			<key>name</key>
-			<string>TextAttributes</string>
+			<string>TextAttributes iOS</string>
 			<key>productName</key>
 			<string>TextAttributes</string>
 			<key>productReference</key>
@@ -186,6 +192,7 @@
 			<array>
 				<string>6D2475371CAAB1050044D223</string>
 				<string>6D2475411CAAB1050044D223</string>
+				<string>6DB519781CCA7F30005C3E83</string>
 			</array>
 			<key>isa</key>
 			<string>PBXGroup</string>
@@ -301,7 +308,7 @@
 			<key>isa</key>
 			<string>PBXNativeTarget</string>
 			<key>name</key>
-			<string>TextAttributesTests</string>
+			<string>TextAttributes iOS Tests</string>
 			<key>productName</key>
 			<string>TextAttributesTests</string>
 			<key>productReference</key>
@@ -318,7 +325,7 @@
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>path</key>
-			<string>TextAttributesTests.xctest</string>
+			<string>TextAttributes iOS Tests.xctest</string>
 			<key>sourceTree</key>
 			<string>BUILT_PRODUCTS_DIR</string>
 		</dict>
@@ -604,7 +611,7 @@
 				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
 				<string>io.delba.TextAttributes</string>
 				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
+				<string>TextAttributes</string>
 				<key>SKIP_INSTALL</key>
 				<string>YES</string>
 				<key>SWIFT_OPTIMIZATION_LEVEL</key>
@@ -640,7 +647,7 @@
 				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
 				<string>io.delba.TextAttributes</string>
 				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
+				<string>TextAttributes</string>
 				<key>SKIP_INSTALL</key>
 				<string>YES</string>
 			</dict>
@@ -746,6 +753,224 @@
 			<string>Supporting Files</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
+		</dict>
+		<key>6DB519731CCA7F30005C3E83</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>6DB519821CCA819A005C3E83</string>
+				<string>6DB519811CCA8195005C3E83</string>
+				<string>6DB519861CCA8AD9005C3E83</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>6DB519741CCA7F30005C3E83</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>6DB519751CCA7F30005C3E83</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>6DB519801CCA8189005C3E83</string>
+			</array>
+			<key>isa</key>
+			<string>PBXHeadersBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>6DB519761CCA7F30005C3E83</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXResourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>6DB519771CCA7F30005C3E83</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>6DB5197F1CCA7F31005C3E83</string>
+			<key>buildPhases</key>
+			<array>
+				<string>6DB519731CCA7F30005C3E83</string>
+				<string>6DB519741CCA7F30005C3E83</string>
+				<string>6DB519751CCA7F30005C3E83</string>
+				<string>6DB519761CCA7F30005C3E83</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>TextAttributes watchOS</string>
+			<key>productName</key>
+			<string>TextAttributes watchOS</string>
+			<key>productReference</key>
+			<string>6DB519781CCA7F30005C3E83</string>
+			<key>productType</key>
+			<string>com.apple.product-type.framework</string>
+		</dict>
+		<key>6DB519781CCA7F30005C3E83</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.framework</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>TextAttributes.framework</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>6DB5197D1CCA7F30005C3E83</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>APPLICATION_EXTENSION_API_ONLY</key>
+				<string>YES</string>
+				<key>CLANG_ANALYZER_NONNULL</key>
+				<string>YES</string>
+				<key>DEFINES_MODULE</key>
+				<string>YES</string>
+				<key>DYLIB_COMPATIBILITY_VERSION</key>
+				<string>1</string>
+				<key>DYLIB_CURRENT_VERSION</key>
+				<string>1</string>
+				<key>DYLIB_INSTALL_NAME_BASE</key>
+				<string>@rpath</string>
+				<key>INFOPLIST_FILE</key>
+				<string>$(SRCROOT)/Source/Supporting Files/Info.plist</string>
+				<key>INSTALL_PATH</key>
+				<string>$(LOCAL_LIBRARY_DIR)/Frameworks</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
+				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
+				<string>io.delba.TextAttributes-watchOS</string>
+				<key>PRODUCT_NAME</key>
+				<string>TextAttributes</string>
+				<key>SDKROOT</key>
+				<string>watchos</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+				<key>TARGETED_DEVICE_FAMILY</key>
+				<string>4</string>
+				<key>WATCHOS_DEPLOYMENT_TARGET</key>
+				<string>2.2</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>6DB5197E1CCA7F30005C3E83</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>APPLICATION_EXTENSION_API_ONLY</key>
+				<string>YES</string>
+				<key>CLANG_ANALYZER_NONNULL</key>
+				<string>YES</string>
+				<key>DEFINES_MODULE</key>
+				<string>YES</string>
+				<key>DYLIB_COMPATIBILITY_VERSION</key>
+				<string>1</string>
+				<key>DYLIB_CURRENT_VERSION</key>
+				<string>1</string>
+				<key>DYLIB_INSTALL_NAME_BASE</key>
+				<string>@rpath</string>
+				<key>INFOPLIST_FILE</key>
+				<string>$(SRCROOT)/Source/Supporting Files/Info.plist</string>
+				<key>INSTALL_PATH</key>
+				<string>$(LOCAL_LIBRARY_DIR)/Frameworks</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
+				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
+				<string>io.delba.TextAttributes-watchOS</string>
+				<key>PRODUCT_NAME</key>
+				<string>TextAttributes</string>
+				<key>SDKROOT</key>
+				<string>watchos</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+				<key>TARGETED_DEVICE_FAMILY</key>
+				<string>4</string>
+				<key>WATCHOS_DEPLOYMENT_TARGET</key>
+				<string>2.2</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>6DB5197F1CCA7F31005C3E83</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>6DB5197D1CCA7F30005C3E83</string>
+				<string>6DB5197E1CCA7F30005C3E83</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>6DB519801CCA8189005C3E83</key>
+		<dict>
+			<key>fileRef</key>
+			<string>6D24753A1CAAB1050044D223</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>6DB519811CCA8195005C3E83</key>
+		<dict>
+			<key>fileRef</key>
+			<string>6DB8402C1CB1F398002AB94E</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>6DB519821CCA819A005C3E83</key>
+		<dict>
+			<key>fileRef</key>
+			<string>6DC3C56A1CB82FCB00ED7249</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>6DB519861CCA8AD9005C3E83</key>
+		<dict>
+			<key>fileRef</key>
+			<string>6D2475511CAAB1140044D223</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
 		</dict>
 		<key>6DB8402C1CB1F398002AB94E</key>
 		<dict>

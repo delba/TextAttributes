@@ -508,46 +508,6 @@ public class TextAttributes {
         return self
     }
     
-    // MARK: - Shadow
-    
-    /// The shadow attribute.
-    public var shadow: NSShadow? = nil {
-        didSet {
-            dictionary[NSShadowAttributeName] = shadow
-        }
-    }
-    
-    /**
-     Sets the shadow attribute and returns the receiver.
-     
-     - parameter color:      The color of the shadow.
-     - parameter offset:     The offset values of the shadow.
-     - parameter blurRadius: The blur radius of the shadow.
-     
-     - returns: The receiver.
-     */
-    public func shadow(color color: AnyObject?, offset: CGSize, blurRadius: CGFloat) -> Self {
-        return shadow({
-            let shadow = NSShadow()
-            shadow.shadowColor = color
-            shadow.shadowOffset = offset
-            shadow.shadowBlurRadius = blurRadius
-            return shadow
-        }() as NSShadow)
-    }
-    
-    /**
-     Sets the shadow attribute and returns the receiver.
-     
-     - parameter shadow: The shadow.
-     
-     - returns: The receiver.
-     */
-    public func shadow(shadow: NSShadow?) -> Self {
-        self.shadow = shadow
-        return self
-    }
-    
     // MARK: - TextEffect
     
     /// The text effect attribute.
@@ -570,27 +530,6 @@ public class TextAttributes {
      */
     public func textEffect(style: TextEffect?) -> Self {
         self.textEffect = style
-        return self
-    }
-    
-    // MARK: - Attachment
-    
-    /// The attachment attribute.
-    public var attachment: NSTextAttachment? = nil {
-        didSet {
-            dictionary[NSAttachmentAttributeName] = attachment
-        }
-    }
-    
-    /**
-     Sets the attachment attribute and returns the receiver.
-     
-     - parameter attachment: The text attachment.
-     
-     - returns: The receiver.
-     */
-    public func attachment(attachment: NSTextAttachment?) -> Self {
-        self.attachment = attachment
         return self
     }
     
@@ -1014,4 +953,77 @@ public class TextAttributes {
         self.paragraphSpacingBefore = value
         return self
     }
+
+    #if os(watchOS)
+    #else
+    // MARK: - Shadow
+    
+    /// The shadow attribute.
+    public var shadow: NSShadow? = nil {
+        didSet {
+            dictionary[NSShadowAttributeName] = shadow
+        }
+    }
+    
+    // MARK: - Attachment
+    
+    /// The attachment attribute.
+    public var attachment: NSTextAttachment? = nil {
+        didSet {
+            dictionary[NSAttachmentAttributeName] = attachment
+        }
+    }
+    #endif
 }
+
+#if os(watchOS)
+#else
+extension TextAttributes {
+    // MARK: - Shadow
+    
+    /**
+     Sets the shadow attribute and returns the receiver.
+     
+     - parameter color:      The color of the shadow.
+     - parameter offset:     The offset values of the shadow.
+     - parameter blurRadius: The blur radius of the shadow.
+     
+     - returns: The receiver.
+     */
+    public func shadow(color color: AnyObject?, offset: CGSize, blurRadius: CGFloat) -> Self {
+        return shadow({
+            let shadow = NSShadow()
+            shadow.shadowColor = color
+            shadow.shadowOffset = offset
+            shadow.shadowBlurRadius = blurRadius
+            return shadow
+        }() as NSShadow)
+    }
+    
+    /**
+     Sets the shadow attribute and returns the receiver.
+     
+     - parameter shadow: The shadow.
+     
+     - returns: The receiver.
+     */
+    public func shadow(shadow: NSShadow?) -> Self {
+        self.shadow = shadow
+        return self
+    }
+    
+    // MARK: - Attachment
+    
+    /**
+     Sets the attachment attribute and returns the receiver.
+     
+     - parameter attachment: The text attachment.
+     
+     - returns: The receiver.
+     */
+    public func attachment(attachment: NSTextAttachment?) -> Self {
+        self.attachment = attachment
+        return self
+    }
+}
+#endif

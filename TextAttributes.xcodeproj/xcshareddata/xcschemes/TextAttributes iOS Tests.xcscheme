@@ -17,8 +17,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "6D2475401CAAB1050044D223"
-               BuildableName = "TextAttributesTests.xctest"
-               BlueprintName = "TextAttributesTests"
+               BuildableName = "TextAttributes iOS Tests.xctest"
+               BlueprintName = "TextAttributes iOS Tests"
                ReferencedContainer = "container:TextAttributes.xcodeproj">
             </BuildableReference>
          </TestableReference>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0720"
+   LastUpgradeVersion = "0730"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "6D2475361CAAB1050044D223"
+               BlueprintIdentifier = "6DB519771CCA7F30005C3E83"
                BuildableName = "TextAttributes.framework"
-               BlueprintName = "TextAttributes"
+               BlueprintName = "TextAttributes watchOS"
                ReferencedContainer = "container:TextAttributes.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -28,26 +28,7 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "6D2475401CAAB1050044D223"
-               BuildableName = "TextAttributesTests.xctest"
-               BlueprintName = "TextAttributesTests"
-               ReferencedContainer = "container:TextAttributes.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "6D2475361CAAB1050044D223"
-            BuildableName = "TextAttributes.framework"
-            BlueprintName = "TextAttributes"
-            ReferencedContainer = "container:TextAttributes.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -64,9 +45,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "6D2475361CAAB1050044D223"
+            BlueprintIdentifier = "6DB519771CCA7F30005C3E83"
             BuildableName = "TextAttributes.framework"
-            BlueprintName = "TextAttributes"
+            BlueprintName = "TextAttributes watchOS"
             ReferencedContainer = "container:TextAttributes.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -82,9 +63,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "6D2475361CAAB1050044D223"
+            BlueprintIdentifier = "6DB519771CCA7F30005C3E83"
             BuildableName = "TextAttributes.framework"
-            BlueprintName = "TextAttributes"
+            BlueprintName = "TextAttributes watchOS"
             ReferencedContainer = "container:TextAttributes.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

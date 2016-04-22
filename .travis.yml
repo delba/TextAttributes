@@ -10,4 +10,4 @@ osx_image: xcode7.3
 xcode_sdk: iphonesimulator9.3
 
 script:
-  - xcodebuild test -project TextAttributes.xcodeproj -scheme TextAttributesTests -destination "platform=iOS Simulator,name=iPhone 6s"
+  - xcodebuild test -project TextAttributes.xcodeproj -scheme "TextAttributes iOS Tests" -destination "platform=iOS Simulator,name=iPhone 6s"

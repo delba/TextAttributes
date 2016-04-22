@@ -4,15 +4,20 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>TextAttributes.xcscheme_^#shared#^_</key>
+		<key>TextAttributes iOS Tests.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
+		<key>TextAttributes iOS.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
-		<key>TextAttributesTests.xcscheme_^#shared#^_</key>
+		<key>TextAttributes watchOS.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>1</integer>
+			<integer>2</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
@@ -23,6 +28,11 @@
 			<true/>
 		</dict>
 		<key>6D2475401CAAB1050044D223</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6DB519771CCA7F30005C3E83</key>
 		<dict>
 			<key>primary</key>
 			<true/>

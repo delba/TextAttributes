@@ -974,8 +974,7 @@ public class TextAttributes {
         return self
     }
 
-    #if os(watchOS)
-    #else
+    #if os(iOS) || os(tvOS)
     // MARK: - Shadow
     
     /// The shadow attribute.
@@ -996,8 +995,7 @@ public class TextAttributes {
     #endif
 }
 
-#if os(watchOS)
-#else
+#if os(iOS) || os(tvOS)
 extension TextAttributes {
     // MARK: - Shadow
     

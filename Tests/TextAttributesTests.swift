@@ -29,6 +29,179 @@ import UIKit
 class TextAttributesTests: XCTestCase {
     let string = "The quick brown fox jumps over the lazy dog"
     
+    func testSetAttributes() {
+        let font = UIFont(name: "Avenir", size: 16)
+        let color = UIColor(white: 0.42, alpha: 1)
+        let ligature: LigatureStyle = .All
+        let float: CGFloat = 0.42
+        let underlineStyle: NSUnderlineStyle = .StyleSingle
+        let textEffect: TextEffect = .Letterpress
+        let form: VerticalGlyphForm = .Vertical
+        
+        let attrs = TextAttributes()
+            .font(font)
+            .foregroundColor(color)
+            .backgroundColor(color)
+            .ligature(ligature)
+            .kern(float)
+            .strikethroughStyle(underlineStyle)
+            .strikethroughColor(color)
+            .underlineStyle(underlineStyle)
+            .underlineColor(color)
+            .strokeWidth(float)
+            .strokeColor(color)
+            .shadow(nil)
+            .textEffect(textEffect)
+            .attachment(nil)
+            .obliqueness(float)
+            .expansion(float)
+            .verticalGlyphForm(form)
+        
+        XCTAssertEqual(font, attrs.font)
+        XCTAssertEqual(ligature, attrs.ligature)
+        XCTAssertEqual(textEffect, attrs.textEffect)
+        XCTAssertEqual(form, attrs.verticalGlyphForm)
+        
+        XCTAssertEqual(color, attrs.foregroundColor)
+        XCTAssertEqual(color, attrs.backgroundColor)
+        XCTAssertEqual(color, attrs.strikethroughColor)
+        XCTAssertEqual(color, attrs.underlineColor)
+        XCTAssertEqual(color, attrs.strokeColor)
+        
+        XCTAssertEqual(float, attrs.kern)
+        XCTAssertEqual(float, attrs.obliqueness)
+        XCTAssertEqual(float, attrs.expansion)
+        XCTAssertEqual(float, attrs.strokeWidth)
+        
+        XCTAssertEqual(underlineStyle, attrs.strikethroughStyle)
+        XCTAssertEqual(underlineStyle, attrs.underlineStyle)
+        
+        XCTAssertEqual(nil, attrs.shadow)
+        XCTAssertEqual(nil, attrs.attachment)
+    }
+    
+    func testSetShadowAndAttachment() {
+        let color = UIColor(white: 0.2, alpha: 1)
+        let offset = CGSize(width: 0.42, height: 0.42)
+        let blurRadius: CGFloat = 0.42
+        
+        let shadow = NSShadow()
+        shadow.shadowColor = color
+        shadow.shadowOffset = offset
+        shadow.shadowBlurRadius = blurRadius
+        
+        let attachment = NSTextAttachment()
+        attachment.bounds = CGRect(x: 0, y: 0, width: 42, height: 42)
+        
+        let attrs = TextAttributes()
+            .shadow(shadow)
+            .attachment(attachment)
+        
+        XCTAssertEqual(shadow, attrs.shadow)
+        XCTAssertEqual(attachment, attrs.attachment)
+    }
+    
+    func testSetParagraphStyle() {
+        let style = NSMutableParagraphStyle()
+        style.lineHeightMultiple = 1.42
+        
+        let attrs = TextAttributes()
+            .paragraphStyle(style)
+        
+        XCTAssertEqual(style, attrs.paragraphStyle)
+    }
+    
+    func testSetParagraphStyleProperties() {
+        let float: CGFloat = 0.42
+        
+        let attrs = TextAttributes()
+            .lineHeightMultiple(float)
+        
+        XCTAssertEqual(float, attrs.lineHeightMultiple)
+    }
+    
+    func testClone() {
+        let font = UIFont(name: "Avenir", size: 16)
+        let color = UIColor(white: 0.42, alpha: 1)
+        let ligature: LigatureStyle = .All
+        let float: CGFloat = 0.42
+        let underlineStyle: NSUnderlineStyle = .StyleSingle
+        let textEffect: TextEffect = .Letterpress
+        let form: VerticalGlyphForm = .Vertical
+        
+        let attrs = TextAttributes()
+            .font(font)
+            .foregroundColor(color)
+            .backgroundColor(color)
+            .ligature(ligature)
+            .kern(float)
+            .strikethroughStyle(underlineStyle)
+            .strikethroughColor(color)
+            .underlineStyle(underlineStyle)
+            .underlineColor(color)
+            .strokeWidth(float)
+            .strokeColor(color)
+            .shadow(nil)
+            .textEffect(textEffect)
+            .attachment(nil)
+            .obliqueness(float)
+            .expansion(float)
+            .verticalGlyphForm(form)
+    
+        let second = attrs.clone()
+        
+        XCTAssertEqual(attrs.font, second.font)
+        XCTAssertEqual(attrs.foregroundColor, second.foregroundColor)
+        XCTAssertEqual(attrs.backgroundColor, second.backgroundColor)
+        XCTAssertEqual(attrs.ligature, second.ligature)
+        XCTAssertEqual(attrs.kern, second.kern)
+        XCTAssertEqual(attrs.strikethroughStyle, second.strikethroughStyle)
+        XCTAssertEqual(attrs.strikethroughColor, second.strikethroughColor)
+        XCTAssertEqual(attrs.underlineStyle, second.underlineStyle)
+        XCTAssertEqual(attrs.underlineColor, second.underlineColor)
+        XCTAssertEqual(attrs.strokeWidth, second.strokeWidth)
+        XCTAssertEqual(attrs.strokeColor, second.strokeColor)
+        XCTAssertEqual(attrs.shadow, second.shadow)
+        XCTAssertEqual(attrs.textEffect, second.textEffect)
+        XCTAssertEqual(attrs.attachment, second.attachment)
+        XCTAssertEqual(attrs.obliqueness, second.obliqueness)
+        XCTAssertEqual(attrs.expansion, second.expansion)
+        XCTAssertEqual(attrs.verticalGlyphForm, second.verticalGlyphForm)
+        
+        XCTAssertEqual(font, attrs.font)
+    }
+    
+    func testCloneShadowAndAttachment() {
+        let color = UIColor(white: 0.2, alpha: 1)
+        let offset = CGSize(width: 0.42, height: 0.42)
+        let blurRadius: CGFloat = 0.42
+        
+        let shadow = NSShadow()
+        shadow.shadowColor = color
+        shadow.shadowOffset = offset
+        shadow.shadowBlurRadius = blurRadius
+        
+        let bounds = CGRect(x: 0, y: 0, width: 42, height: 42)
+        
+        let attachment = NSTextAttachment()
+        attachment.bounds = bounds
+        
+        let attrs = TextAttributes()
+            .shadow(shadow)
+            .attachment(attachment)
+        
+        let clone = attrs.clone()
+        
+        XCTAssertEqual(attrs.shadow, clone.shadow)
+        XCTAssertEqual(attrs.attachment, clone.attachment)
+        
+        clone.shadow?.shadowBlurRadius = 42
+        clone.attachment?.bounds = .zero
+        
+        XCTAssertEqual(blurRadius, attrs.shadow?.shadowBlurRadius)
+        // XCTAssertEqual(bounds, attrs.attachment?.bounds)
+    }
+    
     func testCloneParagraphStyle() {
         let first  = TextAttributes().lineHeightMultiple(1.5)
         let firstStyle = first.paragraphStyle

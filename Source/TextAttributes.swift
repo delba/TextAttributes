@@ -88,6 +88,8 @@ public class TextAttributes {
         
         clone.dictionary = dictionary
         
+        #if os(iOS) || os(tvOS)
+        
         if let shadow = shadow?.copy() as? NSShadow {
             clone.shadow = shadow
         }
@@ -95,6 +97,8 @@ public class TextAttributes {
         clone.attachment = attachment
         
         clone.paragraphStyle = paragraphStyle.clone()
+            
+        #endif
         
         return clone
     }

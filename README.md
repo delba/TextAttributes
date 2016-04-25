@@ -78,6 +78,10 @@ attrs
 attrs.dictionary // Returns the attributes dictionary of type [String: AnyObject]
 ```
 
+#### Third-party libraries:
+
+- [muukii/**TextAttributesUtil**](https://github.com/muukii/TextAttributesUtil) Quickly create NSAttributedString with TextAttributes
+
 ## Demo
 
 <p align="center">

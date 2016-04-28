@@ -22,6 +22,12 @@
 // SOFTWARE.
 //
 
+#if os(OSX)
+    import AppKit
+#else
+    import UIKit
+#endif
+
 public enum LigatureStyle: Int {
     case None
     case Default
@@ -106,9 +112,9 @@ public class TextAttributes {
     // MARK: - Font
     
     /// The font attribute.
-    public var font: UIFont? {
+    public var font: Font? {
         get {
-            return dictionary[NSFontAttributeName] as? UIFont ?? UIFont(name: "HelveticaNeue", size: 12)
+            return dictionary[NSFontAttributeName] as? Font ?? Font(name: "HelveticaNeue", size: 12)
         }
         set {
             dictionary[NSFontAttributeName] = newValue
@@ -124,7 +130,7 @@ public class TextAttributes {
      - returns: The receiver.
      */
     public func font(name name: String, size: CGFloat) -> Self {
-        return font(UIFont(name: name, size: size))
+        return font(Font(name: name, size: size))
     }
     
     /**
@@ -134,7 +140,7 @@ public class TextAttributes {
      
      - returns: The receiver.
      */
-    public func font(font: UIFont?) -> Self {
+    public func font(font: Font?) -> Self {
         self.font = font
         return self
     }
@@ -225,9 +231,9 @@ public class TextAttributes {
     // MARK: - Strikethrough color
     
     /// The strikethrough color attribute.
-    var strikethroughColor: UIColor? {
+    var strikethroughColor: Color? {
         get {
-            return dictionary[NSStrikethroughColorAttributeName] as? UIColor
+            return dictionary[NSStrikethroughColorAttributeName] as? Color
         }
         set {
             dictionary[NSStrikethroughColorAttributeName] = newValue
@@ -243,7 +249,7 @@ public class TextAttributes {
      - returns: The receiver.
      */
     public func strikethroughColor(white white: CGFloat, alpha: CGFloat) -> Self {
-        return strikethroughColor(UIColor(white: white, alpha: alpha))
+        return strikethroughColor(Color(white: white, alpha: alpha))
     }
     
     /**
@@ -257,7 +263,7 @@ public class TextAttributes {
      - returns: The receiver.
      */
     public func strikethroughColor(hue hue: CGFloat, saturation: CGFloat, brightness: CGFloat, alpha: CGFloat) -> Self {
-        return strikethroughColor(UIColor(hue: hue, saturation: saturation, brightness: brightness, alpha: alpha))
+        return strikethroughColor(Color(hue: hue, saturation: saturation, brightness: brightness, alpha: alpha))
     }
     
     /**
@@ -271,7 +277,7 @@ public class TextAttributes {
      - returns: The receiver.
      */
     public func strikethroughColor(red red: CGFloat, green: CGFloat, blue: CGFloat, alpha: CGFloat) -> Self {
-        return strikethroughColor(UIColor(red: red, green: green, blue: blue, alpha: alpha))
+        return strikethroughColor(Color(red: red, green: green, blue: blue, alpha: alpha))
     }
     
     /**
@@ -281,8 +287,8 @@ public class TextAttributes {
      
      - returns: The receiver.
      */
-    public func strikethroughColor(patternImage image: UIImage) -> Self {
-        return strikethroughColor(UIColor(patternImage: image))
+    public func strikethroughColor(patternImage image: Image) -> Self {
+        return strikethroughColor(Color(patternImage: image))
     }
     
     /**
@@ -292,7 +298,7 @@ public class TextAttributes {
      
      - returns: The receiver.
      */
-    public func strikethroughColor(color: UIColor?) -> Self {
+    public func strikethroughColor(color: Color?) -> Self {
         self.strikethroughColor = color
         return self
     }
@@ -329,9 +335,9 @@ public class TextAttributes {
     // MARK: - Underline color
     
     /// The underline color attribute.
-    public var underlineColor: UIColor? {
+    public var underlineColor: Color? {
         get {
-            return dictionary[NSUnderlineColorAttributeName] as? UIColor
+            return dictionary[NSUnderlineColorAttributeName] as? Color
         }
         set {
             dictionary[NSUnderlineColorAttributeName] = newValue
@@ -347,7 +353,7 @@ public class TextAttributes {
      - returns: The receiver.
      */
     public func underlineColor(white white: CGFloat, alpha: CGFloat) -> Self {
-        return underlineColor(UIColor(white: white, alpha: alpha))
+        return underlineColor(Color(white: white, alpha: alpha))
     }
     
     /**
@@ -361,7 +367,7 @@ public class TextAttributes {
      - returns: The receiver.
      */
     public func underlineColor(hue hue: CGFloat, saturation: CGFloat, brightness: CGFloat, alpha: CGFloat) -> Self {
-        return underlineColor(UIColor(hue: hue, saturation: saturation, brightness: brightness, alpha: alpha))
+        return underlineColor(Color(hue: hue, saturation: saturation, brightness: brightness, alpha: alpha))
     }
     
     /**
@@ -375,7 +381,7 @@ public class TextAttributes {
      - returns: The receiver.
      */
     public func underlineColor(red red: CGFloat, green: CGFloat, blue: CGFloat, alpha: CGFloat) -> Self {
-        return underlineColor(UIColor(red: red, green: green, blue: blue, alpha: alpha))
+        return underlineColor(Color(red: red, green: green, blue: blue, alpha: alpha))
     }
     
     /**
@@ -385,8 +391,8 @@ public class TextAttributes {
      
      - returns: The receiver.
      */
-    public func underlineColor(patternImage image: UIImage) -> Self {
-        return underlineColor(UIColor(patternImage: image))
+    public func underlineColor(patternImage image: Image) -> Self {
+        return underlineColor(Color(patternImage: image))
     }
     
     /**
@@ -396,7 +402,7 @@ public class TextAttributes {
      
      - returns: The receiver.
      */
-    public func underlineColor(color: UIColor?) -> Self {
+    public func underlineColor(color: Color?) -> Self {
         self.underlineColor = color
         return self
     }
@@ -404,9 +410,9 @@ public class TextAttributes {
     // MARK: - Stroke color
     
     /// The stroke color attribute.
-    public var strokeColor: UIColor? {
+    public var strokeColor: Color? {
         get {
-            return dictionary[NSStrokeColorAttributeName] as? UIColor
+            return dictionary[NSStrokeColorAttributeName] as? Color
         }
         set {
             dictionary[NSStrokeColorAttributeName] = newValue
@@ -422,7 +428,7 @@ public class TextAttributes {
      - returns: The receiver.
      */
     public func strokeColor(white white: CGFloat, alpha: CGFloat) -> Self {
-        return strokeColor(UIColor(white: white, alpha: alpha))
+        return strokeColor(Color(white: white, alpha: alpha))
     }
     
     /**
@@ -436,7 +442,7 @@ public class TextAttributes {
      - returns: The receiver.
      */
     public func strokeColor(hue hue: CGFloat, saturation: CGFloat, brightness: CGFloat, alpha: CGFloat) -> Self {
-        return strokeColor(UIColor(hue: hue, saturation: saturation, brightness: brightness, alpha: alpha))
+        return strokeColor(Color(hue: hue, saturation: saturation, brightness: brightness, alpha: alpha))
     }
     
     /**
@@ -450,7 +456,7 @@ public class TextAttributes {
      - returns: The receiver.
      */
     public func strokeColor(red red: CGFloat, green: CGFloat, blue: CGFloat, alpha: CGFloat) -> Self {
-        return strokeColor(UIColor(red: red, green: green, blue: blue, alpha: alpha))
+        return strokeColor(Color(red: red, green: green, blue: blue, alpha: alpha))
     }
     
     /**
@@ -460,8 +466,8 @@ public class TextAttributes {
      
      - returns: The receiver.
      */
-    public func strokeColor(patternImage image: UIImage) -> Self {
-        return strokeColor(UIColor(patternImage: image))
+    public func strokeColor(patternImage image: Image) -> Self {
+        return strokeColor(Color(patternImage: image))
     }
     
     /**
@@ -471,7 +477,7 @@ public class TextAttributes {
      
      - returns: The receiver.
      */
-    public func strokeColor(color: UIColor?) -> Self {
+    public func strokeColor(color: Color?) -> Self {
         self.strokeColor = color
         return self
     }
@@ -503,9 +509,9 @@ public class TextAttributes {
     // MARK: - Foreground color
     
     /// The foreground color attribute.
-    public var foregroundColor: UIColor? {
+    public var foregroundColor: Color? {
         get {
-            return dictionary[NSForegroundColorAttributeName] as? UIColor
+            return dictionary[NSForegroundColorAttributeName] as? Color
         }
         set {
             dictionary[NSForegroundColorAttributeName] = newValue
@@ -521,7 +527,7 @@ public class TextAttributes {
      - returns: The receiver.
      */
     public func foregroundColor(white white: CGFloat, alpha: CGFloat) -> Self {
-        return foregroundColor(UIColor(white: white, alpha: alpha))
+        return foregroundColor(Color(white: white, alpha: alpha))
     }
     
     /**
@@ -535,7 +541,7 @@ public class TextAttributes {
      - returns: The receiver.
      */
     public func foregroundColor(hue hue: CGFloat, saturation: CGFloat, brightness: CGFloat, alpha: CGFloat) -> Self {
-        return foregroundColor(UIColor(hue: hue, saturation: saturation, brightness: brightness, alpha: alpha))
+        return foregroundColor(Color(hue: hue, saturation: saturation, brightness: brightness, alpha: alpha))
     }
     
     /**
@@ -549,7 +555,7 @@ public class TextAttributes {
      - returns: The receiver.
      */
     public func foregroundColor(red red: CGFloat, green: CGFloat, blue: CGFloat, alpha: CGFloat) -> Self {
-        return foregroundColor(UIColor(red: red, green: green, blue: blue, alpha: alpha))
+        return foregroundColor(Color(red: red, green: green, blue: blue, alpha: alpha))
     }
     
     /**
@@ -559,8 +565,8 @@ public class TextAttributes {
      
      - returns: The receiver.
      */
-    public func foregroundColor(patternImage image: UIImage) -> Self {
-        return foregroundColor(UIColor(patternImage: image))
+    public func foregroundColor(patternImage image: Image) -> Self {
+        return foregroundColor(Color(patternImage: image))
     }
     
     /**
@@ -570,7 +576,7 @@ public class TextAttributes {
      
      - returns: The receiver.
      */
-    public func foregroundColor(color: UIColor?) -> Self {
+    public func foregroundColor(color: Color?) -> Self {
         self.foregroundColor = color
         return self
     }
@@ -762,9 +768,9 @@ public class TextAttributes {
     // MARK: - Background color
     
     /// The background color attribute.
-    var backgroundColor: UIColor? {
+    var backgroundColor: Color? {
         get {
-            return dictionary[NSBackgroundColorAttributeName] as? UIColor
+            return dictionary[NSBackgroundColorAttributeName] as? Color
         }
         set {
             dictionary[NSBackgroundColorAttributeName] = newValue
@@ -780,7 +786,7 @@ public class TextAttributes {
      - returns: The receiver.
      */
     public func backgroundColor(white white: CGFloat, alpha: CGFloat) -> Self {
-        return backgroundColor(UIColor(white: white, alpha: alpha))
+        return backgroundColor(Color(white: white, alpha: alpha))
     }
     
     /**
@@ -794,7 +800,7 @@ public class TextAttributes {
      - returns: The receiver.
      */
     public func backgroundColor(hue hue: CGFloat, saturation: CGFloat, brightness: CGFloat, alpha: CGFloat) -> Self {
-        return backgroundColor(UIColor(hue: hue, saturation: saturation, brightness: brightness, alpha: alpha))
+        return backgroundColor(Color(hue: hue, saturation: saturation, brightness: brightness, alpha: alpha))
     }
     
     /**
@@ -808,7 +814,7 @@ public class TextAttributes {
      - returns: The receiver.
      */
     public func backgroundColor(red red: CGFloat, green: CGFloat, blue: CGFloat, alpha: CGFloat) -> Self {
-        return backgroundColor(UIColor(red: red, green: green, blue: blue, alpha: alpha))
+        return backgroundColor(Color(red: red, green: green, blue: blue, alpha: alpha))
     }
     
     /**
@@ -818,8 +824,8 @@ public class TextAttributes {
      
      - returns: The receiver.
      */
-    public func backgroundColor(patternImage image: UIImage) -> Self {
-        return backgroundColor(UIColor(patternImage: image))
+    public func backgroundColor(patternImage image: Image) -> Self {
+        return backgroundColor(Color(patternImage: image))
     }
     
     /**
@@ -829,7 +835,7 @@ public class TextAttributes {
      
      - returns: The receiver.
      */
-    public func backgroundColor(color: UIColor?) -> Self {
+    public func backgroundColor(color: Color?) -> Self {
         self.backgroundColor = color
         return self
     }
@@ -1090,6 +1096,26 @@ extension TextAttributes {
         }
     }
     
+    #if os(OSX)
+    /**
+     Sets the shadow attribute and returns the receiver.
+     
+     - parameter color:      The color of the shadow.
+     - parameter offset:     The offset values of the shadow.
+     - parameter blurRadius: The blur radius of the shadow.
+     
+     - returns: The receiver.
+     */
+    public func shadow(color color: NSColor?, offset: CGSize, blurRadius: CGFloat) -> Self {
+        return shadow({
+            let shadow = NSShadow()
+            shadow.shadowColor = color
+            shadow.shadowOffset = offset
+            shadow.shadowBlurRadius = blurRadius
+            return shadow
+        }() as NSShadow)
+    }
+    #else
     /**
      Sets the shadow attribute and returns the receiver.
      
@@ -1108,6 +1134,7 @@ extension TextAttributes {
             return shadow
         }() as NSShadow)
     }
+    #endif
     
     /**
      Sets the shadow attribute and returns the receiver.
@@ -1132,6 +1159,7 @@ extension TextAttributes {
             dictionary[NSAttachmentAttributeName] = newValue
         }
     }
+    
     /**
      Sets the attachment attribute and returns the receiver.
      

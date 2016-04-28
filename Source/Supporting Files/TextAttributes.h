@@ -22,7 +22,7 @@
 // SOFTWARE.
 //
 
-#import <UIKit/UIKit.h>
+@import Foundation;
 
 FOUNDATION_EXPORT double TextAttributesVersionNumber;
 FOUNDATION_EXPORT const unsigned char TextAttributesVersionString[];

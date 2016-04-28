@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>TextAttributes OSX.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>4</integer>
+		</dict>
 		<key>TextAttributes iOS Tests.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>isShown</key>
@@ -50,6 +55,16 @@
 			<true/>
 		</dict>
 		<key>6DB519941CCA8CEF005C3E83</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6DDF4E2F1CD1260A002AA459</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6DDF4E381CD1260B002AA459</key>
 		<dict>
 			<key>primary</key>
 			<true/>

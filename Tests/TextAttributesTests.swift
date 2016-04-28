@@ -23,15 +23,15 @@
 //
 
 import XCTest
-import UIKit
+// import UIKit
 @testable import TextAttributes
 
 class TextAttributesTests: XCTestCase {
     let string = "The quick brown fox jumps over the lazy dog"
     
     func testSetAttributes() {
-        let font = UIFont(name: "Avenir", size: 16)
-        let color = UIColor(white: 0.42, alpha: 1)
+        let font = Font(name: "Avenir", size: 16)
+        let color = Color(white: 0.42, alpha: 1)
         let ligature: LigatureStyle = .All
         let float: CGFloat = 0.42
         let underlineStyle: NSUnderlineStyle = .StyleSingle
@@ -81,7 +81,7 @@ class TextAttributesTests: XCTestCase {
     }
     
     func testSetShadowAndAttachment() {
-        let color = UIColor(white: 0.2, alpha: 1)
+        let color = Color(white: 0.2, alpha: 1)
         let offset = CGSize(width: 0.42, height: 0.42)
         let blurRadius: CGFloat = 0.42
         
@@ -121,8 +121,8 @@ class TextAttributesTests: XCTestCase {
     }
     
     func testClone() {
-        let font = UIFont(name: "Avenir", size: 16)
-        let color = UIColor(white: 0.42, alpha: 1)
+        let font = Font(name: "Avenir", size: 16)
+        let color = Color(white: 0.42, alpha: 1)
         let ligature: LigatureStyle = .All
         let float: CGFloat = 0.42
         let underlineStyle: NSUnderlineStyle = .StyleSingle
@@ -172,7 +172,7 @@ class TextAttributesTests: XCTestCase {
     }
     
     func testCloneShadowAndAttachment() {
-        let color = UIColor(white: 0.2, alpha: 1)
+        let color = Color(white: 0.2, alpha: 1)
         let offset = CGSize(width: 0.42, height: 0.42)
         let blurRadius: CGFloat = 0.42
         

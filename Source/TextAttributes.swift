@@ -22,12 +22,6 @@
 // SOFTWARE.
 //
 
-#if os(OSX)
-    import AppKit
-#else
-    import UIKit
-#endif
-
 public enum LigatureStyle: Int {
     case None
     case Default

@@ -22,7 +22,13 @@
 // SOFTWARE.
 //
 
-@import Foundation;
+#import <TargetConditionals.h>
+
+#if TARGET_OS_IPHONE
+    @import UIKit;
+#else
+    @import AppKit;
+#endif
 
 FOUNDATION_EXPORT double TextAttributesVersionNumber;
 FOUNDATION_EXPORT const unsigned char TextAttributesVersionString[];

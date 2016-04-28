@@ -23,10 +23,9 @@
 //
 
 #if os(OSX)
-    import AppKit
-    public typealias FontType  = NSFont
-    public typealias ColorType = NSColor
-    public typealias ImageType = NSImage
+    public typealias Font  = NSFont
+    public typealias Color = NSColor
+    public typealias Image = NSImage
     
     extension NSColor {
         public convenience init(red: CGFloat, green: CGFloat, blue: CGFloat, alpha: CGFloat) {
@@ -34,15 +33,10 @@
         }
     }
 #else
-    import UIKit
-    public typealias FontType  = UIFont
-    public typealias ColorType = UIColor
-    public typealias ImageType = UIImage
+    public typealias Font  = UIFont
+    public typealias Color = UIColor
+    public typealias Image = UIImage
 #endif
-
-public typealias Font = FontType
-public typealias Color = ColorType
-public typealias Image = ImageType
 
 extension NSRange {
     init(_ range: Range<Int>) {

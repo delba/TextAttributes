@@ -23,7 +23,6 @@
 //
 
 import XCTest
-// import UIKit
 @testable import TextAttributes
 
 class TextAttributesTests: XCTestCase {

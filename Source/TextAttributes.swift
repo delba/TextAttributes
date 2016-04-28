@@ -1074,31 +1074,21 @@ public class TextAttributes {
         self.lineBreakMode = value
         return self
     }
+}
 
-    #if os(iOS) || os(tvOS)
+#if !os(watchOS)
+extension TextAttributes {
     // MARK: - Shadow
     
     /// The shadow attribute.
-    public var shadow: NSShadow? = nil {
-        didSet {
+    public var shadow: NSShadow? {
+        get {
+            return dictionary[NSShadowAttributeName] as? NSShadow
+        }
+        set {
             dictionary[NSShadowAttributeName] = shadow
         }
     }
-    
-    // MARK: - Attachment
-    
-    /// The attachment attribute.
-    public var attachment: NSTextAttachment? = nil {
-        didSet {
-            dictionary[NSAttachmentAttributeName] = attachment
-        }
-    }
-    #endif
-}
-
-#if os(iOS) || os(tvOS)
-extension TextAttributes {
-    // MARK: - Shadow
     
     /**
      Sets the shadow attribute and returns the receiver.
@@ -1133,6 +1123,15 @@ extension TextAttributes {
     
     // MARK: - Attachment
     
+    /// The attachment attribute.
+    public var attachment: NSTextAttachment? {
+        get {
+            return dictionary[NSAttachmentAttributeName] as? NSTextAttachment
+        }
+        set {
+            dictionary[NSAttachmentAttributeName] = attachment
+        }
+    }
     /**
      Sets the attachment attribute and returns the receiver.
      

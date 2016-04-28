@@ -1086,7 +1086,7 @@ extension TextAttributes {
             return dictionary[NSShadowAttributeName] as? NSShadow
         }
         set {
-            dictionary[NSShadowAttributeName] = shadow
+            dictionary[NSShadowAttributeName] = newValue
         }
     }
     
@@ -1129,7 +1129,7 @@ extension TextAttributes {
             return dictionary[NSAttachmentAttributeName] as? NSTextAttachment
         }
         set {
-            dictionary[NSAttachmentAttributeName] = attachment
+            dictionary[NSAttachmentAttributeName] = newValue
         }
     }
     /**

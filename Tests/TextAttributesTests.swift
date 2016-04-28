@@ -97,8 +97,6 @@ class TextAttributesTests: XCTestCase {
             .shadow(shadow)
             .attachment(attachment)
         
-        print(attrs.dictionary[NSShadowAttributeName])
-        
         XCTAssertEqual(shadow, attrs.shadow)
         XCTAssertEqual(attachment, attrs.attachment)
     }

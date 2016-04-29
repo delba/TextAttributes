@@ -6,6 +6,7 @@
   <a href="https://travis-ci.org/delba/TextAttributes"><img alt="Travis Status" src="https://img.shields.io/travis/delba/TextAttributes.svg"/></a>
   <a href="https://img.shields.io/cocoapods/v/TextAttributes.svg"><img alt="CocoaPods compatible" src="https://img.shields.io/cocoapods/v/TextAttributes.svg"/></a>
   <a href="https://github.com/Carthage/Carthage"><img alt="Carthage compatible" src="https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat"/></a>
+  <a href="https://img.shields.io/cocoapods/p/TextAttributes.svg"><img alt="Platform" src="https://img.shields.io/cocoapods/p/TextAttributes.svg"/></a>
 </p>
 
 **TextAttributes** makes it easy to compose attributed strings.

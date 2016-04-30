@@ -18,6 +18,7 @@ let attrs = TextAttributes()
     .lineHeightMultiple(1.5)
 
 NSAttributedString("The quick brown fox jumps over the lazy dog", attributes: attrs)
+// same as "The quick brown fox jumps over the lazy dog" + attrs
 ```
 
 <p align="center">
@@ -30,6 +31,7 @@ NSAttributedString("The quick brown fox jumps over the lazy dog", attributes: at
 - [x] Chainable setter methods
 - [x] A direct access to the `NSParagraphStyle` properties
 - [x] Better autocompletion
+- [x] Additive Operators
 
 ## Usage
 
@@ -78,6 +80,16 @@ attrs
 ```swift
 attrs.dictionary // Returns the attributes dictionary of type [String: AnyObject]
 ```
+
+####Additive Operators
+
+| Left operand | Operator | Right operand | Returns |
+| ------------ | -------- | ------------- | ------- |
+| `String`   | `+` | `TextAttributes` | `NSAttributedString ` | 
+| `NSAttributedString`   | `+` | `NSAttributedString ` | `NSAttributedString ` |
+| `NSAttributedString `   | `+` | `String` |  `NSAttributedString ` |                    
+
+
 
 #### Third-party libraries:
 

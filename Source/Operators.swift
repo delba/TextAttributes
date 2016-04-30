@@ -25,6 +25,8 @@
 
 import Foundation
 
+infix operator + {associativity left precedence 140}
+
 /**
  Returns an NSAttributedString object initialized with a given string (left side) and attributes (right side).
  
@@ -33,7 +35,7 @@ import Foundation
  
  - returns: The newly created NSAttributedString.
  */
-func +(lhs: String, rhs: TextAttributes) -> NSAttributedString {
+public func +(lhs: String, rhs: TextAttributes) -> NSAttributedString {
     return NSAttributedString(string: lhs, attributes: rhs)
 }
 
@@ -46,7 +48,7 @@ func +(lhs: String, rhs: TextAttributes) -> NSAttributedString {
  
  - returns: The newly created NSAttributedString in the order of "<lhs><rhs>".
  */
-func +(lhs: NSAttributedString, rhs: NSAttributedString) -> NSAttributedString {
+public func +(lhs: NSAttributedString, rhs: NSAttributedString) -> NSAttributedString {
     let mutableAttributedString = NSMutableAttributedString(attributedString: lhs)
     mutableAttributedString.appendAttributedString(rhs)
     return mutableAttributedString as NSAttributedString
@@ -62,7 +64,7 @@ func +(lhs: NSAttributedString, rhs: NSAttributedString) -> NSAttributedString {
  
  - returns: The NSAttributedString with the newly appended text.
  */
-func +(lhs: NSAttributedString, rhs: String) -> NSAttributedString {
+public func +(lhs: NSAttributedString, rhs: String) -> NSAttributedString {
     let mutableAttributedString = NSMutableAttributedString(attributedString: lhs)
     mutableAttributedString.mutableString.appendString(rhs)
     return mutableAttributedString as NSAttributedString

@@ -89,7 +89,18 @@ attrs.dictionary // Returns the attributes dictionary of type [String: AnyObject
 | `NSAttributedString`   | `+` | `NSAttributedString ` | `NSAttributedString ` |
 | `NSAttributedString `   | `+` | `String` |  `NSAttributedString ` |                    
 
+```swift
+let blueAttributes =  TextAttributes().foregroundColor(.blueColor())
+let redAttributes = TextAttributes().foregroundColor(.redColor())
 
+let blueString: NSAttributedString = ("The quick brown fox jumps over the lazy dog" + blueAttributes)
+
+let redString: NSAttributedString  = "Red Alert! " + redAttributes
+
+let multiColorString = redString + blueString
+
+let moreInformativeString = redString + " Look at the fox."
+```
 
 #### Third-party libraries:
 

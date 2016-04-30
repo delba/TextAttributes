@@ -63,6 +63,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		260A7EE51CD5169D0088B264 /* TextAttributes.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = TextAttributes.playground; sourceTree = "<group>"; };
 		261721391CD44999006B01C9 /* OperatorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OperatorTests.swift; sourceTree = "<group>"; };
 		2664A3621CD43EBB005091CB /* Operators.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Operators.swift; sourceTree = "<group>"; };
 		6D2475371CAAB1050044D223 /* TextAttributes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TextAttributes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -140,6 +141,7 @@
 		6D24752D1CAAB1050044D223 = {
 			isa = PBXGroup;
 			children = (
+				260A7EE51CD5169D0088B264 /* TextAttributes.playground */,
 				6D2475381CAAB1050044D223 /* Products */,
 				6D2475391CAAB1050044D223 /* Source */,
 				6D2475451CAAB1050044D223 /* Tests */,

@@ -618,7 +618,7 @@ public class TextAttributes {
             }
         }
         set {
-            dictionary[NSLinkAttributeName] = link
+            dictionary[NSLinkAttributeName] = newValue
         }
     }
     
@@ -665,7 +665,7 @@ public class TextAttributes {
             return dictionary[NSBaselineOffsetAttributeName] as? CGFloat ?? 0
         }
         set {
-            dictionary[NSBaselineOffsetAttributeName] = baselineOffset as NSNumber
+            dictionary[NSBaselineOffsetAttributeName] = newValue as NSNumber
         }
     }
     

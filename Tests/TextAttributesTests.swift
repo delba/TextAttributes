@@ -36,7 +36,8 @@ class TextAttributesTests: XCTestCase {
         let underlineStyle: NSUnderlineStyle = .StyleSingle
         let textEffect: TextEffect = .Letterpress
         let form: VerticalGlyphForm = .Vertical
-        
+        let link = NSURL(string: "https://github.com/delba/TextAttributes")!
+
         let attrs = TextAttributes()
             .font(font)
             .foregroundColor(color)
@@ -55,7 +56,9 @@ class TextAttributesTests: XCTestCase {
             .obliqueness(float)
             .expansion(float)
             .verticalGlyphForm(form)
-        
+            .link(link)
+            .baselineOffset(float)
+
         XCTAssertEqual(font, attrs.font)
         XCTAssertEqual(ligature, attrs.ligature)
         XCTAssertEqual(textEffect, attrs.textEffect)
@@ -71,10 +74,13 @@ class TextAttributesTests: XCTestCase {
         XCTAssertEqual(float, attrs.obliqueness)
         XCTAssertEqual(float, attrs.expansion)
         XCTAssertEqual(float, attrs.strokeWidth)
-        
+        XCTAssertEqual(float, attrs.baselineOffset)
+
         XCTAssertEqual(underlineStyle, attrs.strikethroughStyle)
         XCTAssertEqual(underlineStyle, attrs.underlineStyle)
-        
+
+        XCTAssertEqual(link, attrs.link)
+
         XCTAssertEqual(nil, attrs.shadow)
         XCTAssertEqual(nil, attrs.attachment)
     }
@@ -127,6 +133,7 @@ class TextAttributesTests: XCTestCase {
         let underlineStyle: NSUnderlineStyle = .StyleSingle
         let textEffect: TextEffect = .Letterpress
         let form: VerticalGlyphForm = .Vertical
+        let link = NSURL(string: "https://github.com/delba/TextAttributes")!
         
         let attrs = TextAttributes()
             .font(font)
@@ -146,7 +153,9 @@ class TextAttributesTests: XCTestCase {
             .obliqueness(float)
             .expansion(float)
             .verticalGlyphForm(form)
-    
+            .link(link)
+            .baselineOffset(float)
+
         let second = attrs.clone()
         
         XCTAssertEqual(attrs.font, second.font)
@@ -165,8 +174,9 @@ class TextAttributesTests: XCTestCase {
         XCTAssertEqual(attrs.attachment, second.attachment)
         XCTAssertEqual(attrs.obliqueness, second.obliqueness)
         XCTAssertEqual(attrs.expansion, second.expansion)
-        XCTAssertEqual(attrs.verticalGlyphForm, second.verticalGlyphForm)
-        
+        XCTAssertEqual(attrs.link, second.link)
+        XCTAssertEqual(attrs.baselineOffset, second.baselineOffset)
+
         XCTAssertEqual(font, attrs.font)
     }
     

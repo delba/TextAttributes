@@ -135,7 +135,9 @@
 				6D2475391CAAB1050044D223 /* Source */,
 				6D2475451CAAB1050044D223 /* Tests */,
 			);
+			indentWidth = 4;
 			sourceTree = "<group>";
+			tabWidth = 4;
 		};
 		6D2475381CAAB1050044D223 /* Products */ = {
 			isa = PBXGroup;

@@ -60,7 +60,7 @@
 		6D24753A1CAAB1050044D223 /* TextAttributes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TextAttributes.h; sourceTree = "<group>"; };
 		6D24753C1CAAB1050044D223 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6D2475411CAAB1050044D223 /* TextAttributes iOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "TextAttributes iOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		6D2475461CAAB1050044D223 /* TextAttributesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextAttributesTests.swift; sourceTree = "<group>"; };
+		6D2475461CAAB1050044D223 /* TextAttributesTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextAttributesTests.swift; sourceTree = "<group>"; };
 		6D2475481CAAB1050044D223 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6D2475511CAAB1140044D223 /* TextAttributes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextAttributes.swift; sourceTree = "<group>"; };
 		6DB519781CCA7F30005C3E83 /* TextAttributes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TextAttributes.framework; sourceTree = BUILT_PRODUCTS_DIR; };

@@ -683,7 +683,7 @@ public class TextAttributes {
     
     // MARK: - Obliqueness
     
-    /// The oliqueness attribute.
+    /// The obliqueness attribute.
     public var obliqueness: CGFloat {
         get {
             return dictionary[NSObliquenessAttributeName] as? CGFloat ?? 0

@@ -61,7 +61,7 @@ extension NSMutableParagraphStyle {
         return clone
     }
     
-    fileprivate func cloneParagraphStyle(_ other: NSMutableParagraphStyle) -> NSMutableParagraphStyle {
+    fileprivate func cloneParagraphStyle(_ other: NSMutableParagraphStyle) {
         alignment              = other.alignment
         firstLineHeadIndent    = other.firstLineHeadIndent
         headIndent             = other.headIndent
@@ -74,7 +74,5 @@ extension NSMutableParagraphStyle {
         paragraphSpacingBefore = other.paragraphSpacingBefore
         baseWritingDirection   = other.baseWritingDirection
         lineHeightMultiple     = other.lineHeightMultiple
-        
-        return self
     }
 }

@@ -53,7 +53,6 @@ public enum TextEffect {
 
 open class TextAttributes {
     /// The attributes dictionary.
-    /// Needs to be Any for Swift3 because URL is value type.
     open fileprivate(set) var dictionary: [String: Any] = [:]
     
     /**
@@ -619,11 +618,7 @@ open class TextAttributes {
             }
         }
         set {
-            //if let value = newValue {
-          //  if var dictionary = dictionary as? [String: URL] {
-                dictionary[NSLinkAttributeName] = newValue
-         //   }
-          //  }
+            dictionary[NSLinkAttributeName] = newValue
         }
     }
     

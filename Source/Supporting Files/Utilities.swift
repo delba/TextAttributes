@@ -40,7 +40,7 @@
 
 extension NSRange {
     init(_ range: Range<Int>) {
-        self = NSRange(location: range.first ?? 0, length: range.count)
+        self = NSRange(location: range.lowerBound ?? 0, length: range.count)
     }
     
     init(_ string: NSString) {
@@ -61,7 +61,7 @@ extension NSMutableParagraphStyle {
         return clone
     }
     
-    private func cloneParagraphStyle(other: NSMutableParagraphStyle) -> NSMutableParagraphStyle {
+    private func cloneParagraphStyle(_ other: NSMutableParagraphStyle) -> NSMutableParagraphStyle {
         alignment              = other.alignment
         firstLineHeadIndent    = other.firstLineHeadIndent
         headIndent             = other.headIndent

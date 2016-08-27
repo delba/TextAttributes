@@ -23,22 +23,22 @@
 //
 
 public enum LigatureStyle: Int {
-    case None
-    case Default
-    case All
+    case none
+    case `default`
+    case all
 }
 
 public enum VerticalGlyphForm: Int {
-    case Horizontal
-    case Vertical
+    case horizontal
+    case vertical
 }
 
 public enum TextEffect {
-    case Letterpress
+    case letterpress
     
     init?(name: String) {
         if name == NSTextEffectLetterpressStyle {
-            self = .Letterpress
+            self = .letterpress
         } else {
             return nil
         }
@@ -46,7 +46,7 @@ public enum TextEffect {
     
     var name: String {
         switch self {
-        case .Letterpress: return NSTextEffectLetterpressStyle
+        case .letterpress: return NSTextEffectLetterpressStyle
         }
     }
 }
@@ -62,7 +62,7 @@ public class TextAttributes {
      
      - returns: The created TextAttributes.
      */
-    @available(*, deprecated=1, message="Please use the clone() method.")
+    @available(*, deprecated: 1, message: "Please use the clone() method.")
     public init(base: TextAttributes) {
         dictionary = base.dictionary
         paragraphStyle = base.paragraphStyle.clone()
@@ -121,7 +121,7 @@ public class TextAttributes {
      
      - returns: The receiver.
      */
-    public func font(name name: String, size: CGFloat) -> Self {
+    public func font(name: String, size: CGFloat) -> Self {
         return font(Font(name: name, size: size))
     }
     
@@ -132,7 +132,7 @@ public class TextAttributes {
      
      - returns: The receiver.
      */
-    public func font(font: Font?) -> Self {
+    public func font(_ font: Font?) -> Self {
         self.font = font
         return self
     }
@@ -142,15 +142,15 @@ public class TextAttributes {
     /// The ligature attribute.
     public var ligature: LigatureStyle {
         get {
-            if let int = dictionary[NSLigatureAttributeName] as? Int, ligature = LigatureStyle(rawValue: int) {
+            if let int = dictionary[NSLigatureAttributeName] as? Int, let ligature = LigatureStyle(rawValue: int) {
                 return ligature
             } else {
-                return .Default
+                return .default
             }
         }
         
         set {
-            dictionary[NSLigatureAttributeName] = NSNumber(integer: newValue.hashValue)
+            dictionary[NSLigatureAttributeName] = NSNumber(value: newValue.hashValue)
         }
     }
     
@@ -161,7 +161,7 @@ public class TextAttributes {
      
      - returns: The receiver.
      */
-    public func ligature(style: LigatureStyle) -> Self {
+    public func ligature(_ style: LigatureStyle) -> Self {
         self.ligature = style
         return self
     }
@@ -186,7 +186,7 @@ public class TextAttributes {
      
      - returns: The receiver.
      */
-    public func kern(value: CGFloat) -> Self {
+    public func kern(_ value: CGFloat) -> Self {
         self.kern = value
         return self
     }
@@ -196,15 +196,15 @@ public class TextAttributes {
     /// The strikethrough style attribute.
     public var strikethroughStyle: NSUnderlineStyle {
         get {
-            if let int = dictionary[NSStrikethroughStyleAttributeName] as? Int, style = NSUnderlineStyle(rawValue: int) {
+            if let int = dictionary[NSStrikethroughStyleAttributeName] as? Int, let style = NSUnderlineStyle(rawValue: int) {
                 return style
             } else {
-                return .StyleNone
+                return .styleNone
             }
         }
         
         set {
-            dictionary[NSStrikethroughStyleAttributeName] = NSNumber(integer: newValue.rawValue)
+            dictionary[NSStrikethroughStyleAttributeName] = NSNumber(value: newValue.rawValue)
         }
     }
     
@@ -215,7 +215,7 @@ public class TextAttributes {
      
      - returns: The receiver.
      */
-    public func strikethroughStyle(style: NSUnderlineStyle) -> Self {
+    public func strikethroughStyle(_ style: NSUnderlineStyle) -> Self {
         self.strikethroughStyle = style
         return self
     }
@@ -240,7 +240,7 @@ public class TextAttributes {
      
      - returns: The receiver.
      */
-    public func strikethroughColor(white white: CGFloat, alpha: CGFloat) -> Self {
+    public func strikethroughColor(white: CGFloat, alpha: CGFloat) -> Self {
         return strikethroughColor(Color(white: white, alpha: alpha))
     }
     
@@ -254,7 +254,7 @@ public class TextAttributes {
      
      - returns: The receiver.
      */
-    public func strikethroughColor(hue hue: CGFloat, saturation: CGFloat, brightness: CGFloat, alpha: CGFloat) -> Self {
+    public func strikethroughColor(hue: CGFloat, saturation: CGFloat, brightness: CGFloat, alpha: CGFloat) -> Self {
         return strikethroughColor(Color(hue: hue, saturation: saturation, brightness: brightness, alpha: alpha))
     }
     
@@ -268,7 +268,7 @@ public class TextAttributes {
      
      - returns: The receiver.
      */
-    public func strikethroughColor(red red: CGFloat, green: CGFloat, blue: CGFloat, alpha: CGFloat) -> Self {
+    public func strikethroughColor(red: CGFloat, green: CGFloat, blue: CGFloat, alpha: CGFloat) -> Self {
         return strikethroughColor(Color(red: red, green: green, blue: blue, alpha: alpha))
     }
     
@@ -290,7 +290,7 @@ public class TextAttributes {
      
      - returns: The receiver.
      */
-    public func strikethroughColor(color: Color?) -> Self {
+    public func strikethroughColor(_ color: Color?) -> Self {
         self.strikethroughColor = color
         return self
     }
@@ -300,15 +300,15 @@ public class TextAttributes {
     /// The underline style attribute.
     public var underlineStyle: NSUnderlineStyle {
         get {
-            if let int = dictionary[NSUnderlineStyleAttributeName] as? Int, style = NSUnderlineStyle(rawValue: int) {
+            if let int = dictionary[NSUnderlineStyleAttributeName] as? Int, let style = NSUnderlineStyle(rawValue: int) {
                 return style
             } else {
-                return .StyleNone
+                return .styleNone
             }
         }
         
         set {
-            dictionary[NSUnderlineStyleAttributeName] = NSNumber(integer: newValue.rawValue)
+            dictionary[NSUnderlineStyleAttributeName] = NSNumber(value: newValue.rawValue)
         }
     }
     
@@ -319,7 +319,7 @@ public class TextAttributes {
      
      - returns: The receiver.
      */
-    public func underlineStyle(style: NSUnderlineStyle) -> Self {
+    public func underlineStyle(_ style: NSUnderlineStyle) -> Self {
         self.underlineStyle = style
         return self
     }
@@ -344,7 +344,7 @@ public class TextAttributes {
      
      - returns: The receiver.
      */
-    public func underlineColor(white white: CGFloat, alpha: CGFloat) -> Self {
+    public func underlineColor(white: CGFloat, alpha: CGFloat) -> Self {
         return underlineColor(Color(white: white, alpha: alpha))
     }
     
@@ -358,7 +358,7 @@ public class TextAttributes {
      
      - returns: The receiver.
      */
-    public func underlineColor(hue hue: CGFloat, saturation: CGFloat, brightness: CGFloat, alpha: CGFloat) -> Self {
+    public func underlineColor(hue: CGFloat, saturation: CGFloat, brightness: CGFloat, alpha: CGFloat) -> Self {
         return underlineColor(Color(hue: hue, saturation: saturation, brightness: brightness, alpha: alpha))
     }
     
@@ -372,7 +372,7 @@ public class TextAttributes {
      
      - returns: The receiver.
      */
-    public func underlineColor(red red: CGFloat, green: CGFloat, blue: CGFloat, alpha: CGFloat) -> Self {
+    public func underlineColor(red: CGFloat, green: CGFloat, blue: CGFloat, alpha: CGFloat) -> Self {
         return underlineColor(Color(red: red, green: green, blue: blue, alpha: alpha))
     }
     
@@ -394,7 +394,7 @@ public class TextAttributes {
      
      - returns: The receiver.
      */
-    public func underlineColor(color: Color?) -> Self {
+    public func underlineColor(_ color: Color?) -> Self {
         self.underlineColor = color
         return self
     }
@@ -419,7 +419,7 @@ public class TextAttributes {
      
      - returns: The receiver.
      */
-    public func strokeColor(white white: CGFloat, alpha: CGFloat) -> Self {
+    public func strokeColor(white: CGFloat, alpha: CGFloat) -> Self {
         return strokeColor(Color(white: white, alpha: alpha))
     }
     
@@ -433,7 +433,7 @@ public class TextAttributes {
      
      - returns: The receiver.
      */
-    public func strokeColor(hue hue: CGFloat, saturation: CGFloat, brightness: CGFloat, alpha: CGFloat) -> Self {
+    public func strokeColor(hue: CGFloat, saturation: CGFloat, brightness: CGFloat, alpha: CGFloat) -> Self {
         return strokeColor(Color(hue: hue, saturation: saturation, brightness: brightness, alpha: alpha))
     }
     
@@ -447,7 +447,7 @@ public class TextAttributes {
      
      - returns: The receiver.
      */
-    public func strokeColor(red red: CGFloat, green: CGFloat, blue: CGFloat, alpha: CGFloat) -> Self {
+    public func strokeColor(red: CGFloat, green: CGFloat, blue: CGFloat, alpha: CGFloat) -> Self {
         return strokeColor(Color(red: red, green: green, blue: blue, alpha: alpha))
     }
     
@@ -469,7 +469,7 @@ public class TextAttributes {
      
      - returns: The receiver.
      */
-    public func strokeColor(color: Color?) -> Self {
+    public func strokeColor(_ color: Color?) -> Self {
         self.strokeColor = color
         return self
     }
@@ -493,7 +493,7 @@ public class TextAttributes {
      
      - returns: The receiver.
      */
-    public func strokeWidth(width: CGFloat) -> Self {
+    public func strokeWidth(_ width: CGFloat) -> Self {
         self.strokeWidth = width
         return self
     }
@@ -518,7 +518,7 @@ public class TextAttributes {
      
      - returns: The receiver.
      */
-    public func foregroundColor(white white: CGFloat, alpha: CGFloat) -> Self {
+    public func foregroundColor(white: CGFloat, alpha: CGFloat) -> Self {
         return foregroundColor(Color(white: white, alpha: alpha))
     }
     
@@ -532,7 +532,7 @@ public class TextAttributes {
      
      - returns: The receiver.
      */
-    public func foregroundColor(hue hue: CGFloat, saturation: CGFloat, brightness: CGFloat, alpha: CGFloat) -> Self {
+    public func foregroundColor(hue: CGFloat, saturation: CGFloat, brightness: CGFloat, alpha: CGFloat) -> Self {
         return foregroundColor(Color(hue: hue, saturation: saturation, brightness: brightness, alpha: alpha))
     }
     
@@ -546,7 +546,7 @@ public class TextAttributes {
      
      - returns: The receiver.
      */
-    public func foregroundColor(red red: CGFloat, green: CGFloat, blue: CGFloat, alpha: CGFloat) -> Self {
+    public func foregroundColor(red: CGFloat, green: CGFloat, blue: CGFloat, alpha: CGFloat) -> Self {
         return foregroundColor(Color(red: red, green: green, blue: blue, alpha: alpha))
     }
     
@@ -568,7 +568,7 @@ public class TextAttributes {
      
      - returns: The receiver.
      */
-    public func foregroundColor(color: Color?) -> Self {
+    public func foregroundColor(_ color: Color?) -> Self {
         self.foregroundColor = color
         return self
     }
@@ -578,7 +578,7 @@ public class TextAttributes {
     /// The text effect attribute.
     public var textEffect: TextEffect? {
         get {
-            if let string = dictionary[NSTextEffectAttributeName] as? String, effect = TextEffect(name: string) {
+            if let string = dictionary[NSTextEffectAttributeName] as? String, let effect = TextEffect(name: string) {
                 return effect
             }
             return nil
@@ -599,7 +599,7 @@ public class TextAttributes {
      
      - returns: The receiver.
      */
-    public func textEffect(style: TextEffect?) -> Self {
+    public func textEffect(_ style: TextEffect?) -> Self {
         self.textEffect = style
         return self
     }
@@ -607,12 +607,12 @@ public class TextAttributes {
     // MARK: - Link
     
     /// The link attribute.
-    public var link: NSURL? {
+    public var link: URL? {
         get {
-            if let URL = dictionary[NSLinkAttributeName] as? NSURL {
+            if let URL = dictionary[NSLinkAttributeName] as? URL {
                 return URL
             } else if let string = dictionary[NSLinkAttributeName] as? String {
-                return NSURL(string: string)
+                return URL(string: string)
             } else {
                 return nil
             }
@@ -629,8 +629,8 @@ public class TextAttributes {
      
      - returns: The receiver.
      */
-    public func link(string string: String) -> Self {
-        return link(NSURL(string: string))
+    public func link(string: String) -> Self {
+        return link(URL(string: string))
     }
     
     /**
@@ -641,8 +641,8 @@ public class TextAttributes {
      
      - returns: The receiver.
      */
-    public func link(string string: String, relativeToURL baseURL: NSURL?) -> Self {
-        return link(NSURL(string: string, relativeToURL: baseURL))
+    public func link(string: String, relativeToURL baseURL: URL?) -> Self {
+        return link(URL(string: string, relativeTo: baseURL))
     }
     
     /**
@@ -652,7 +652,7 @@ public class TextAttributes {
      
      - returns: The receiver.
      */
-    public func link(URL: NSURL?) -> Self {
+    public func link(_ URL: Foundation.URL?) -> Self {
         self.link = URL
         return self
     }
@@ -676,7 +676,7 @@ public class TextAttributes {
      
      - returns: The receiver.
      */
-    public func baselineOffset(value: CGFloat) -> Self {
+    public func baselineOffset(_ value: CGFloat) -> Self {
         self.baselineOffset = value
         return self
     }
@@ -700,7 +700,7 @@ public class TextAttributes {
      
      - returns: The receiver.
      */
-    public func obliqueness(value: CGFloat) -> Self {
+    public func obliqueness(_ value: CGFloat) -> Self {
         self.obliqueness = value
         return self
     }
@@ -724,7 +724,7 @@ public class TextAttributes {
      
      - returns: The receiver.
      */
-    public func expansion(value: CGFloat) -> Self {
+    public func expansion(_ value: CGFloat) -> Self {
         self.expansion = value
         return self
     }
@@ -734,14 +734,14 @@ public class TextAttributes {
     /// The vertical glyph form attribute.
     public var verticalGlyphForm: VerticalGlyphForm {
         get {
-            if let int = dictionary[NSVerticalGlyphFormAttributeName] as? Int, form = VerticalGlyphForm(rawValue: int) {
+            if let int = dictionary[NSVerticalGlyphFormAttributeName] as? Int, let form = VerticalGlyphForm(rawValue: int) {
                 return form
             } else {
-                return .Horizontal
+                return .horizontal
             }
         }
         set {
-            dictionary[NSVerticalGlyphFormAttributeName] = NSNumber(integer: newValue.hashValue)
+            dictionary[NSVerticalGlyphFormAttributeName] = NSNumber(value: newValue.hashValue)
         }
     }
     
@@ -752,7 +752,7 @@ public class TextAttributes {
      
      - returns: The receiver.
      */
-    public func verticalGlyphForm(value: VerticalGlyphForm) -> Self {
+    public func verticalGlyphForm(_ value: VerticalGlyphForm) -> Self {
         self.verticalGlyphForm = value
         return self
     }
@@ -777,7 +777,7 @@ public class TextAttributes {
      
      - returns: The receiver.
      */
-    public func backgroundColor(white white: CGFloat, alpha: CGFloat) -> Self {
+    public func backgroundColor(white: CGFloat, alpha: CGFloat) -> Self {
         return backgroundColor(Color(white: white, alpha: alpha))
     }
     
@@ -791,7 +791,7 @@ public class TextAttributes {
      
      - returns: The receiver.
      */
-    public func backgroundColor(hue hue: CGFloat, saturation: CGFloat, brightness: CGFloat, alpha: CGFloat) -> Self {
+    public func backgroundColor(hue: CGFloat, saturation: CGFloat, brightness: CGFloat, alpha: CGFloat) -> Self {
         return backgroundColor(Color(hue: hue, saturation: saturation, brightness: brightness, alpha: alpha))
     }
     
@@ -805,7 +805,7 @@ public class TextAttributes {
      
      - returns: The receiver.
      */
-    public func backgroundColor(red red: CGFloat, green: CGFloat, blue: CGFloat, alpha: CGFloat) -> Self {
+    public func backgroundColor(red: CGFloat, green: CGFloat, blue: CGFloat, alpha: CGFloat) -> Self {
         return backgroundColor(Color(red: red, green: green, blue: blue, alpha: alpha))
     }
     
@@ -827,7 +827,7 @@ public class TextAttributes {
      
      - returns: The receiver.
      */
-    public func backgroundColor(color: Color?) -> Self {
+    public func backgroundColor(_ color: Color?) -> Self {
         self.backgroundColor = color
         return self
     }
@@ -848,7 +848,7 @@ public class TextAttributes {
      
      - returns: The receiver.
      */
-    public func paragraphStyle(style: NSMutableParagraphStyle) -> Self {
+    public func paragraphStyle(_ style: NSMutableParagraphStyle) -> Self {
         self.paragraphStyle = style
         return self
     }
@@ -868,7 +868,7 @@ public class TextAttributes {
      
      - returns: The receiver.
      */
-    public func alignment(alignment: NSTextAlignment) -> Self {
+    public func alignment(_ alignment: NSTextAlignment) -> Self {
         self.alignment = alignment
         return self
     }
@@ -888,7 +888,7 @@ public class TextAttributes {
      
      - returns: The receiver.
      */
-    public func firstLineHeadIndent(value: CGFloat) -> Self {
+    public func firstLineHeadIndent(_ value: CGFloat) -> Self {
         self.firstLineHeadIndent = value
         return self
     }
@@ -908,7 +908,7 @@ public class TextAttributes {
      
      - returns: The receiver.
      */
-    public func headIndent(value: CGFloat) -> Self {
+    public func headIndent(_ value: CGFloat) -> Self {
         self.headIndent = value
         return self
     }
@@ -928,7 +928,7 @@ public class TextAttributes {
      
      - returns: The receiver.
      */
-    public func tailIndent(value: CGFloat) -> Self {
+    public func tailIndent(_ value: CGFloat) -> Self {
         self.tailIndent = value
         return self
     }
@@ -948,7 +948,7 @@ public class TextAttributes {
      
      - returns: The receiver.
      */
-    public func lineHeightMultiple(value: CGFloat) -> Self {
+    public func lineHeightMultiple(_ value: CGFloat) -> Self {
         self.lineHeightMultiple = value
         return self
     }
@@ -968,7 +968,7 @@ public class TextAttributes {
      
      - returns: The receiver.
      */
-    public func maximumLineHeight(value: CGFloat) -> Self {
+    public func maximumLineHeight(_ value: CGFloat) -> Self {
         self.maximumLineHeight = value
         return self
     }
@@ -988,7 +988,7 @@ public class TextAttributes {
      
      - returns: The receiver.
      */
-    public func minimumLineHeight(value: CGFloat) -> Self {
+    public func minimumLineHeight(_ value: CGFloat) -> Self {
         self.minimumLineHeight = value
         return self
     }
@@ -1008,7 +1008,7 @@ public class TextAttributes {
      
      - returns: The receiver.
      */
-    public func lineSpacing(value: CGFloat) -> Self {
+    public func lineSpacing(_ value: CGFloat) -> Self {
         self.lineSpacing = value
         return self
     }
@@ -1028,7 +1028,7 @@ public class TextAttributes {
      
      - returns: The receiver.
      */
-    public func paragraphSpacing(value: CGFloat) -> Self {
+    public func paragraphSpacing(_ value: CGFloat) -> Self {
         self.paragraphSpacing = value
         return self
     }
@@ -1048,7 +1048,7 @@ public class TextAttributes {
      
      - returns: The receiver.
      */
-    public func paragraphSpacingBefore(value: CGFloat) -> Self {
+    public func paragraphSpacingBefore(_ value: CGFloat) -> Self {
         self.paragraphSpacingBefore = value
         return self
     }
@@ -1068,7 +1068,7 @@ public class TextAttributes {
      
      - returns: The receiver.
      */
-    public func lineBreakMode(value: NSLineBreakMode) -> Self {
+    public func lineBreakMode(_ value: NSLineBreakMode) -> Self {
         self.lineBreakMode = value
         return self
     }
@@ -1098,7 +1098,7 @@ public class TextAttributes {
              
              - returns: The receiver.
              */
-            public func shadow(color color: NSColor?, offset: CGSize, blurRadius: CGFloat) -> Self {
+            public func shadow(color: NSColor?, offset: CGSize, blurRadius: CGFloat) -> Self {
                 return shadow({
                     let shadow = NSShadow()
                     shadow.shadowColor = color
@@ -1117,7 +1117,7 @@ public class TextAttributes {
              
              - returns: The receiver.
              */
-            public func shadow(color color: AnyObject?, offset: CGSize, blurRadius: CGFloat) -> Self {
+            public func shadow(color: AnyObject?, offset: CGSize, blurRadius: CGFloat) -> Self {
                 return shadow({
                     let shadow = NSShadow()
                     shadow.shadowColor = color
@@ -1135,7 +1135,7 @@ public class TextAttributes {
          
          - returns: The receiver.
          */
-        public func shadow(shadow: NSShadow?) -> Self {
+        public func shadow(_ shadow: NSShadow?) -> Self {
             self.shadow = shadow
             return self
         }
@@ -1159,7 +1159,7 @@ public class TextAttributes {
          
          - returns: The receiver.
          */
-        public func attachment(attachment: NSTextAttachment?) -> Self {
+        public func attachment(_ attachment: NSTextAttachment?) -> Self {
             self.attachment = attachment
             return self
         }

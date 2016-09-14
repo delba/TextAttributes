@@ -31,11 +31,11 @@ class TextAttributesTests: XCTestCase {
     func testSetAttributes() {
         let font = Font(name: "Avenir", size: 16)
         let color = Color(white: 0.42, alpha: 1)
-        let ligature: LigatureStyle = .All
+        let ligature: LigatureStyle = .all
         let float: CGFloat = 0.42
-        let underlineStyle: NSUnderlineStyle = .StyleSingle
-        let textEffect: TextEffect = .Letterpress
-        let form: VerticalGlyphForm = .Vertical
+        let underlineStyle: NSUnderlineStyle = .styleSingle
+        let textEffect: TextEffect = .letterpress
+        let form: VerticalGlyphForm = .vertical
         let link = NSURL(string: "https://github.com/delba/TextAttributes")!
 
         let attrs = TextAttributes()
@@ -56,7 +56,7 @@ class TextAttributesTests: XCTestCase {
             .obliqueness(float)
             .expansion(float)
             .verticalGlyphForm(form)
-            .link(link)
+            .link(link as URL)
             .baselineOffset(float)
 
         XCTAssertEqual(font, attrs.font)
@@ -79,7 +79,7 @@ class TextAttributesTests: XCTestCase {
         XCTAssertEqual(underlineStyle, attrs.strikethroughStyle)
         XCTAssertEqual(underlineStyle, attrs.underlineStyle)
 
-        XCTAssertEqual(link, attrs.link)
+        XCTAssertEqual(link as URL, attrs.link)
 
         XCTAssertEqual(nil, attrs.shadow)
         XCTAssertEqual(nil, attrs.attachment)
@@ -128,11 +128,11 @@ class TextAttributesTests: XCTestCase {
     func testClone() {
         let font = Font(name: "Avenir", size: 16)
         let color = Color(white: 0.42, alpha: 1)
-        let ligature: LigatureStyle = .All
+        let ligature: LigatureStyle = .all
         let float: CGFloat = 0.42
-        let underlineStyle: NSUnderlineStyle = .StyleSingle
-        let textEffect: TextEffect = .Letterpress
-        let form: VerticalGlyphForm = .Vertical
+        let underlineStyle: NSUnderlineStyle = .styleSingle
+        let textEffect: TextEffect = .letterpress
+        let form: VerticalGlyphForm = .vertical
         let link = NSURL(string: "https://github.com/delba/TextAttributes")!
         
         let attrs = TextAttributes()
@@ -153,7 +153,7 @@ class TextAttributesTests: XCTestCase {
             .obliqueness(float)
             .expansion(float)
             .verticalGlyphForm(form)
-            .link(link)
+            .link(link as URL)
             .baselineOffset(float)
 
         let second = attrs.clone()

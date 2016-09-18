@@ -31,12 +31,12 @@ class TextAttributesTests: XCTestCase {
     func testSetAttributes() {
         let font = Font(name: "Avenir", size: 16)
         let color = Color(white: 0.42, alpha: 1)
-        let ligature: LigatureStyle = .All
+        let ligature: LigatureStyle = .all
         let float: CGFloat = 0.42
-        let underlineStyle: NSUnderlineStyle = .StyleSingle
-        let textEffect: TextEffect = .Letterpress
-        let form: VerticalGlyphForm = .Vertical
-        let link = NSURL(string: "https://github.com/delba/TextAttributes")!
+        let underlineStyle: NSUnderlineStyle = .styleSingle
+        let textEffect: TextEffect = .letterpress
+        let form: VerticalGlyphForm = .vertical
+        let link = URL(string: "https://github.com/delba/TextAttributes")!
 
         let attrs = TextAttributes()
             .font(font)
@@ -128,12 +128,12 @@ class TextAttributesTests: XCTestCase {
     func testClone() {
         let font = Font(name: "Avenir", size: 16)
         let color = Color(white: 0.42, alpha: 1)
-        let ligature: LigatureStyle = .All
+        let ligature: LigatureStyle = .all
         let float: CGFloat = 0.42
-        let underlineStyle: NSUnderlineStyle = .StyleSingle
-        let textEffect: TextEffect = .Letterpress
-        let form: VerticalGlyphForm = .Vertical
-        let link = NSURL(string: "https://github.com/delba/TextAttributes")!
+        let underlineStyle: NSUnderlineStyle = .styleSingle
+        let textEffect: TextEffect = .letterpress
+        let form: VerticalGlyphForm = .vertical
+        let link = URL(string: "https://github.com/delba/TextAttributes")!
         
         let attrs = TextAttributes()
             .font(font)

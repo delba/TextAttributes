@@ -382,9 +382,11 @@
 					};
 					6DDF4E2F1CD1260A002AA459 = {
 						CreatedOnToolsVersion = 7.3;
+						LastSwiftMigration = 0800;
 					};
 					6DDF4E381CD1260B002AA459 = {
 						CreatedOnToolsVersion = 7.3;
+						LastSwiftMigration = 0800;
 					};
 				};
 			};
@@ -840,6 +842,7 @@
 				PRODUCT_NAME = TextAttributes;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -863,6 +866,7 @@
 				PRODUCT_NAME = TextAttributes;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -878,6 +882,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = io.delba.TextAttributesTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -893,6 +898,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = io.delba.TextAttributesTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};

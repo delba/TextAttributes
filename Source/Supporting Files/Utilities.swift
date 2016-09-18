@@ -29,7 +29,7 @@
     
     extension NSColor {
         public convenience init(red: CGFloat, green: CGFloat, blue: CGFloat, alpha: CGFloat) {
-            self.init(SRGBRed: red, green: green, blue: blue, alpha: alpha)
+            self.init(srgbRed: red, green: green, blue: blue, alpha: alpha)
         }
     }
 #else

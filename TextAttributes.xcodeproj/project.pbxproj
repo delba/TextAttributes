@@ -171,12 +171,10 @@
 		6D2475391CAAB1050044D223 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				6DEFC1FD1E1480FE00D42A1E /* Enums */,
+				6DEFC1FE1E14810D00D42A1E /* Extensions */,
 				6D5F82CF1CADCD2300237532 /* Supporting Files */,
-				6DC3C56A1CB82FCB00ED7249 /* AttributedString.swift */,
-				6DEFC1EE1E14714800D42A1E /* LigatureStyle.swift */,
 				6D2475511CAAB1140044D223 /* TextAttributes.swift */,
-				6DEFC1F81E14716A00D42A1E /* TextEffect.swift */,
-				6DEFC1F31E14715D00D42A1E /* VerticalGlyphForm.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -206,6 +204,26 @@
 				6D2475481CAAB1050044D223 /* Info.plist */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6DEFC1FD1E1480FE00D42A1E /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				6DEFC1EE1E14714800D42A1E /* LigatureStyle.swift */,
+				6DEFC1F81E14716A00D42A1E /* TextEffect.swift */,
+				6DEFC1F31E14715D00D42A1E /* VerticalGlyphForm.swift */,
+			);
+			name = Enums;
+			path = Enums;
+			sourceTree = "<group>";
+		};
+		6DEFC1FE1E14810D00D42A1E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				6DC3C56A1CB82FCB00ED7249 /* AttributedString.swift */,
+			);
+			name = Extensions;
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

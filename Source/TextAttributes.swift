@@ -1292,113 +1292,113 @@ open class TextAttributes {
 }
 
 #if !os(watchOS)
-    extension TextAttributes {
-        // MARK: - Shadow
-        
-        /// The shadow attribute.
-        open var shadow: NSShadow? {
-            get {
-                return dictionary[NSShadowAttributeName] as? NSShadow
-            }
-            set {
-                dictionary[NSShadowAttributeName] = newValue
-            }
+extension TextAttributes {
+    // MARK: - Shadow
+    
+    /// The shadow attribute.
+    open var shadow: NSShadow? {
+        get {
+            return dictionary[NSShadowAttributeName] as? NSShadow
         }
-        
-        #if os(OSX)
-            open static func shadow(color: NSColor?, offset: CGSize, blurRadius: CGFloat) -> TextAttributes {
-                return TextAttributes().shadow(color: color, offset: offset, blurRadius: blurRadius)
-            }
-        
-            /**
-             Sets the shadow attribute and returns the receiver.
-             
-             - parameter color:      The color of the shadow.
-             - parameter offset:     The offset values of the shadow.
-             - parameter blurRadius: The blur radius of the shadow.
-             
-             - returns: The receiver.
-             */
-            @discardableResult
-            open func shadow(color: NSColor?, offset: CGSize, blurRadius: CGFloat) -> Self {
-                return shadow({
-                    let shadow = NSShadow()
-                    shadow.shadowColor = color
-                    shadow.shadowOffset = offset
-                    shadow.shadowBlurRadius = blurRadius
-                    return shadow
-                }() as NSShadow)
-            }
-        #else
-            open static func shadow(color: AnyObject?, offset: CGSize, blurRadius: CGFloat) -> TextAttributes {
-                return TextAttributes().shadow(color: color, offset: offset, blurRadius: blurRadius)
-            }
-        
-            /**
-             Sets the shadow attribute and returns the receiver.
-             
-             - parameter color:      The color of the shadow.
-             - parameter offset:     The offset values of the shadow.
-             - parameter blurRadius: The blur radius of the shadow.
-             
-             - returns: The receiver.
-             */
-            @discardableResult
-            open func shadow(color: AnyObject?, offset: CGSize, blurRadius: CGFloat) -> Self {
-                return shadow({
-                    let shadow = NSShadow()
-                    shadow.shadowColor = color
-                    shadow.shadowOffset = offset
-                    shadow.shadowBlurRadius = blurRadius
-                    return shadow
-                }() as NSShadow)
-            }
-        #endif
-        
-        open static func shadow(_ shadow: NSShadow?) -> TextAttributes {
-            return TextAttributes().shadow(shadow)
-        }
-        
-        /**
-         Sets the shadow attribute and returns the receiver.
-         
-         - parameter shadow: The shadow.
-         
-         - returns: The receiver.
-         */
-        @discardableResult
-        open func shadow(_ shadow: NSShadow?) -> Self {
-            self.shadow = shadow
-            return self
-        }
-        
-        // MARK: - Attachment
-        
-        /// The attachment attribute.
-        open var attachment: NSTextAttachment? {
-            get {
-                return dictionary[NSAttachmentAttributeName] as? NSTextAttachment
-            }
-            set {
-                dictionary[NSAttachmentAttributeName] = newValue
-            }
-        }
-        
-        open static func attachment(_ attachment: NSTextAttachment?) -> TextAttributes {
-            return TextAttributes().attachment(attachment)
-        }
-        
-        /**
-         Sets the attachment attribute and returns the receiver.
-         
-         - parameter attachment: The text attachment.
-         
-         - returns: The receiver.
-         */
-        @discardableResult
-        open func attachment(_ attachment: NSTextAttachment?) -> Self {
-            self.attachment = attachment
-            return self
+        set {
+            dictionary[NSShadowAttributeName] = newValue
         }
     }
+    
+    #if os(OSX)
+    open static func shadow(color: NSColor?, offset: CGSize, blurRadius: CGFloat) -> TextAttributes {
+        return TextAttributes().shadow(color: color, offset: offset, blurRadius: blurRadius)
+    }
+
+    /**
+     Sets the shadow attribute and returns the receiver.
+     
+     - parameter color:      The color of the shadow.
+     - parameter offset:     The offset values of the shadow.
+     - parameter blurRadius: The blur radius of the shadow.
+     
+     - returns: The receiver.
+     */
+    @discardableResult
+    open func shadow(color: NSColor?, offset: CGSize, blurRadius: CGFloat) -> Self {
+        return shadow({
+            let shadow = NSShadow()
+            shadow.shadowColor = color
+            shadow.shadowOffset = offset
+            shadow.shadowBlurRadius = blurRadius
+            return shadow
+        }() as NSShadow)
+    }
+    #else
+    open static func shadow(color: AnyObject?, offset: CGSize, blurRadius: CGFloat) -> TextAttributes {
+        return TextAttributes().shadow(color: color, offset: offset, blurRadius: blurRadius)
+    }
+
+    /**
+     Sets the shadow attribute and returns the receiver.
+     
+     - parameter color:      The color of the shadow.
+     - parameter offset:     The offset values of the shadow.
+     - parameter blurRadius: The blur radius of the shadow.
+     
+     - returns: The receiver.
+     */
+    @discardableResult
+    open func shadow(color: AnyObject?, offset: CGSize, blurRadius: CGFloat) -> Self {
+        return shadow({
+            let shadow = NSShadow()
+            shadow.shadowColor = color
+            shadow.shadowOffset = offset
+            shadow.shadowBlurRadius = blurRadius
+            return shadow
+        }() as NSShadow)
+    }
+    #endif
+    
+    open static func shadow(_ shadow: NSShadow?) -> TextAttributes {
+        return TextAttributes().shadow(shadow)
+    }
+    
+    /**
+     Sets the shadow attribute and returns the receiver.
+     
+     - parameter shadow: The shadow.
+     
+     - returns: The receiver.
+     */
+    @discardableResult
+    open func shadow(_ shadow: NSShadow?) -> Self {
+        self.shadow = shadow
+        return self
+    }
+    
+    // MARK: - Attachment
+    
+    /// The attachment attribute.
+    open var attachment: NSTextAttachment? {
+        get {
+            return dictionary[NSAttachmentAttributeName] as? NSTextAttachment
+        }
+        set {
+            dictionary[NSAttachmentAttributeName] = newValue
+        }
+    }
+    
+    open static func attachment(_ attachment: NSTextAttachment?) -> TextAttributes {
+        return TextAttributes().attachment(attachment)
+    }
+    
+    /**
+     Sets the attachment attribute and returns the receiver.
+     
+     - parameter attachment: The text attachment.
+     
+     - returns: The receiver.
+     */
+    @discardableResult
+    open func attachment(_ attachment: NSTextAttachment?) -> Self {
+        self.attachment = attachment
+        return self
+    }
+}
 #endif

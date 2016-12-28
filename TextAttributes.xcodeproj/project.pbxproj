@@ -45,6 +45,14 @@
 		6DEFC2011E14815000D42A1E /* NSMutableAttributedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DEFC1FF1E14815000D42A1E /* NSMutableAttributedString.swift */; };
 		6DEFC2021E14815000D42A1E /* NSMutableAttributedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DEFC1FF1E14815000D42A1E /* NSMutableAttributedString.swift */; };
 		6DEFC2031E14815000D42A1E /* NSMutableAttributedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DEFC1FF1E14815000D42A1E /* NSMutableAttributedString.swift */; };
+		6DEFC2051E14823300D42A1E /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DEFC2041E14823300D42A1E /* String.swift */; };
+		6DEFC2061E14823300D42A1E /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DEFC2041E14823300D42A1E /* String.swift */; };
+		6DEFC2071E14823300D42A1E /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DEFC2041E14823300D42A1E /* String.swift */; };
+		6DEFC2081E14823300D42A1E /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DEFC2041E14823300D42A1E /* String.swift */; };
+		6DEFC20A1E1482C800D42A1E /* NSString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DEFC2091E1482C800D42A1E /* NSString.swift */; };
+		6DEFC20B1E1482C800D42A1E /* NSString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DEFC2091E1482C800D42A1E /* NSString.swift */; };
+		6DEFC20C1E1482C800D42A1E /* NSString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DEFC2091E1482C800D42A1E /* NSString.swift */; };
+		6DEFC20D1E1482C800D42A1E /* NSString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DEFC2091E1482C800D42A1E /* NSString.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +98,8 @@
 		6DEFC1F31E14715D00D42A1E /* VerticalGlyphForm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerticalGlyphForm.swift; sourceTree = "<group>"; };
 		6DEFC1F81E14716A00D42A1E /* TextEffect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextEffect.swift; sourceTree = "<group>"; };
 		6DEFC1FF1E14815000D42A1E /* NSMutableAttributedString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSMutableAttributedString.swift; sourceTree = "<group>"; };
+		6DEFC2041E14823300D42A1E /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		6DEFC2091E1482C800D42A1E /* NSString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSString.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -226,6 +236,8 @@
 			children = (
 				6DC3C56A1CB82FCB00ED7249 /* NSAttributedString.swift */,
 				6DEFC1FF1E14815000D42A1E /* NSMutableAttributedString.swift */,
+				6DEFC2091E1482C800D42A1E /* NSString.swift */,
+				6DEFC2041E14823300D42A1E /* String.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -514,8 +526,10 @@
 				6DEFC1EF1E14714800D42A1E /* LigatureStyle.swift in Sources */,
 				6DC3C56B1CB82FCB00ED7249 /* NSAttributedString.swift in Sources */,
 				6D2475521CAAB1140044D223 /* TextAttributes.swift in Sources */,
+				6DEFC20A1E1482C800D42A1E /* NSString.swift in Sources */,
 				6DEFC2001E14815000D42A1E /* NSMutableAttributedString.swift in Sources */,
 				6DB8402D1CB1F398002AB94E /* Utilities.swift in Sources */,
+				6DEFC2051E14823300D42A1E /* String.swift in Sources */,
 				6DEFC1F91E14716A00D42A1E /* TextEffect.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -536,8 +550,10 @@
 				6DEFC1F21E14714800D42A1E /* LigatureStyle.swift in Sources */,
 				6DB519821CCA819A005C3E83 /* NSAttributedString.swift in Sources */,
 				6DB519811CCA8195005C3E83 /* Utilities.swift in Sources */,
+				6DEFC20D1E1482C800D42A1E /* NSString.swift in Sources */,
 				6DEFC2031E14815000D42A1E /* NSMutableAttributedString.swift in Sources */,
 				6DB519861CCA8AD9005C3E83 /* TextAttributes.swift in Sources */,
+				6DEFC2081E14823300D42A1E /* String.swift in Sources */,
 				6DEFC1FC1E14716A00D42A1E /* TextEffect.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -550,8 +566,10 @@
 				6DEFC1F01E14714800D42A1E /* LigatureStyle.swift in Sources */,
 				6DB519CB1CCA9101005C3E83 /* NSAttributedString.swift in Sources */,
 				6DB519CA1CCA9101005C3E83 /* Utilities.swift in Sources */,
+				6DEFC20B1E1482C800D42A1E /* NSString.swift in Sources */,
 				6DEFC2011E14815000D42A1E /* NSMutableAttributedString.swift in Sources */,
 				6DB519C91CCA90FB005C3E83 /* TextAttributes.swift in Sources */,
+				6DEFC2061E14823300D42A1E /* String.swift in Sources */,
 				6DEFC1FA1E14716A00D42A1E /* TextEffect.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -572,8 +590,10 @@
 				6DEFC1F11E14714800D42A1E /* LigatureStyle.swift in Sources */,
 				6DDF4E4A1CD2045A002AA459 /* Utilities.swift in Sources */,
 				6DDF4E491CD20456002AA459 /* NSAttributedString.swift in Sources */,
+				6DEFC20C1E1482C800D42A1E /* NSString.swift in Sources */,
 				6DEFC2021E14815000D42A1E /* NSMutableAttributedString.swift in Sources */,
 				6DDF4E481CD20452002AA459 /* TextAttributes.swift in Sources */,
+				6DEFC2071E14823300D42A1E /* String.swift in Sources */,
 				6DEFC1FB1E14716A00D42A1E /* TextEffect.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -27,20 +27,6 @@ open class TextAttributes {
     open fileprivate(set) var dictionary: [String: Any] = [:]
     
     /**
-     Create an instance of TextAttributes with a base.
-     
-     - parameter base: The base.
-     
-     - returns: The created TextAttributes.
-     */
-    @available(*, deprecated: 1, message: "Please use the clone() method.")
-    public init(base: TextAttributes) {
-        dictionary = base.dictionary
-        paragraphStyle = base.paragraphStyle.clone()
-        dictionary[NSParagraphStyleAttributeName] = paragraphStyle
-    }
-    
-    /**
      Create an instance of TextAttributes.
      
      - returns: The created TextAttributes.

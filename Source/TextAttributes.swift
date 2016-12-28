@@ -22,35 +22,6 @@
 // SOFTWARE.
 //
 
-public enum LigatureStyle: Int {
-    case none
-    case `default`
-    case all
-}
-
-public enum VerticalGlyphForm: Int {
-    case horizontal
-    case vertical
-}
-
-public enum TextEffect {
-    case letterpress
-    
-    init?(name: String) {
-        if name == NSTextEffectLetterpressStyle {
-            self = .letterpress
-        } else {
-            return nil
-        }
-    }
-    
-    var name: String {
-        switch self {
-        case .letterpress: return NSTextEffectLetterpressStyle
-        }
-    }
-}
-
 open class TextAttributes {
     /// The attributes dictionary.
     open fileprivate(set) var dictionary: [String: Any] = [:]

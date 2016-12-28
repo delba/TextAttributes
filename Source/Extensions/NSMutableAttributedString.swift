@@ -1,5 +1,5 @@
 //
-// AttributedString.swift
+// NSMutableAttributedString.swift
 //
 // Copyright (c) 2016 Damien (http://delba.io)
 //
@@ -21,32 +21,6 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 //
-
-extension NSAttributedString {
-    /**
-     Returns an NSAttributedString object initialized with a given string and attributes.
-     
-     - parameter string:     The string for the new attributed string.
-     - parameter attributes: The attributes for the new attributed string.
-     
-     - returns: The newly created NSAttributedString.
-     */
-    public convenience init(string: NSString, attributes: TextAttributes) {
-        self.init(string: string as String, attributes: attributes)
-    }
-    
-    /**
-     Returns an NSAttributedString object initialized with a given string and attributes.
-     
-     - parameter string:     The string for the new attributed string.
-     - parameter attributes: The attributes for the new attributed string.
-     
-     - returns: The newly created NSAttributedString.
-     */
-    public convenience init(string: String, attributes: TextAttributes) {
-        self.init(string: string, attributes: attributes.dictionary)
-    }
-}
 
 extension NSMutableAttributedString {
     /**

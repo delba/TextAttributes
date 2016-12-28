@@ -13,20 +13,20 @@
 		6D2475521CAAB1140044D223 /* TextAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D2475511CAAB1140044D223 /* TextAttributes.swift */; };
 		6DB519801CCA8189005C3E83 /* TextAttributes.h in Headers */ = {isa = PBXBuildFile; fileRef = 6D24753A1CAAB1050044D223 /* TextAttributes.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6DB519811CCA8195005C3E83 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB8402C1CB1F398002AB94E /* Utilities.swift */; };
-		6DB519821CCA819A005C3E83 /* AttributedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DC3C56A1CB82FCB00ED7249 /* AttributedString.swift */; };
+		6DB519821CCA819A005C3E83 /* NSAttributedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DC3C56A1CB82FCB00ED7249 /* NSAttributedString.swift */; };
 		6DB519861CCA8AD9005C3E83 /* TextAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D2475511CAAB1140044D223 /* TextAttributes.swift */; };
 		6DB519961CCA8CEF005C3E83 /* TextAttributes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DB5198C1CCA8CEF005C3E83 /* TextAttributes.framework */; };
 		6DB519A31CCA8D8F005C3E83 /* TextAttributes.h in Headers */ = {isa = PBXBuildFile; fileRef = 6D24753A1CAAB1050044D223 /* TextAttributes.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6DB519C91CCA90FB005C3E83 /* TextAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D2475511CAAB1140044D223 /* TextAttributes.swift */; };
 		6DB519CA1CCA9101005C3E83 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB8402C1CB1F398002AB94E /* Utilities.swift */; };
-		6DB519CB1CCA9101005C3E83 /* AttributedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DC3C56A1CB82FCB00ED7249 /* AttributedString.swift */; };
+		6DB519CB1CCA9101005C3E83 /* NSAttributedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DC3C56A1CB82FCB00ED7249 /* NSAttributedString.swift */; };
 		6DB519CC1CCA9107005C3E83 /* TextAttributesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D2475461CAAB1050044D223 /* TextAttributesTests.swift */; };
 		6DB8402D1CB1F398002AB94E /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB8402C1CB1F398002AB94E /* Utilities.swift */; };
-		6DC3C56B1CB82FCB00ED7249 /* AttributedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DC3C56A1CB82FCB00ED7249 /* AttributedString.swift */; };
+		6DC3C56B1CB82FCB00ED7249 /* NSAttributedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DC3C56A1CB82FCB00ED7249 /* NSAttributedString.swift */; };
 		6DDF4E3A1CD1260B002AA459 /* TextAttributes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DDF4E301CD1260A002AA459 /* TextAttributes.framework */; };
 		6DDF4E471CD203A3002AA459 /* TextAttributes.h in Headers */ = {isa = PBXBuildFile; fileRef = 6D24753A1CAAB1050044D223 /* TextAttributes.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6DDF4E481CD20452002AA459 /* TextAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D2475511CAAB1140044D223 /* TextAttributes.swift */; };
-		6DDF4E491CD20456002AA459 /* AttributedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DC3C56A1CB82FCB00ED7249 /* AttributedString.swift */; };
+		6DDF4E491CD20456002AA459 /* NSAttributedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DC3C56A1CB82FCB00ED7249 /* NSAttributedString.swift */; };
 		6DDF4E4A1CD2045A002AA459 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB8402C1CB1F398002AB94E /* Utilities.swift */; };
 		6DDF4E4B1CD20817002AA459 /* TextAttributesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D2475461CAAB1050044D223 /* TextAttributesTests.swift */; };
 		6DEFC1EF1E14714800D42A1E /* LigatureStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DEFC1EE1E14714800D42A1E /* LigatureStyle.swift */; };
@@ -41,6 +41,10 @@
 		6DEFC1FA1E14716A00D42A1E /* TextEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DEFC1F81E14716A00D42A1E /* TextEffect.swift */; };
 		6DEFC1FB1E14716A00D42A1E /* TextEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DEFC1F81E14716A00D42A1E /* TextEffect.swift */; };
 		6DEFC1FC1E14716A00D42A1E /* TextEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DEFC1F81E14716A00D42A1E /* TextEffect.swift */; };
+		6DEFC2001E14815000D42A1E /* NSMutableAttributedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DEFC1FF1E14815000D42A1E /* NSMutableAttributedString.swift */; };
+		6DEFC2011E14815000D42A1E /* NSMutableAttributedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DEFC1FF1E14815000D42A1E /* NSMutableAttributedString.swift */; };
+		6DEFC2021E14815000D42A1E /* NSMutableAttributedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DEFC1FF1E14815000D42A1E /* NSMutableAttributedString.swift */; };
+		6DEFC2031E14815000D42A1E /* NSMutableAttributedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DEFC1FF1E14815000D42A1E /* NSMutableAttributedString.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,12 +83,13 @@
 		6DB5198C1CCA8CEF005C3E83 /* TextAttributes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TextAttributes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DB519951CCA8CEF005C3E83 /* TextAttributes tvOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "TextAttributes tvOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DB8402C1CB1F398002AB94E /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
-		6DC3C56A1CB82FCB00ED7249 /* AttributedString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttributedString.swift; sourceTree = "<group>"; };
+		6DC3C56A1CB82FCB00ED7249 /* NSAttributedString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSAttributedString.swift; sourceTree = "<group>"; };
 		6DDF4E301CD1260A002AA459 /* TextAttributes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TextAttributes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DDF4E391CD1260B002AA459 /* TextAttributes OSX Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "TextAttributes OSX Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DEFC1EE1E14714800D42A1E /* LigatureStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LigatureStyle.swift; sourceTree = "<group>"; };
 		6DEFC1F31E14715D00D42A1E /* VerticalGlyphForm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerticalGlyphForm.swift; sourceTree = "<group>"; };
 		6DEFC1F81E14716A00D42A1E /* TextEffect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextEffect.swift; sourceTree = "<group>"; };
+		6DEFC1FF1E14815000D42A1E /* NSMutableAttributedString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSMutableAttributedString.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -213,16 +218,15 @@
 				6DEFC1F81E14716A00D42A1E /* TextEffect.swift */,
 				6DEFC1F31E14715D00D42A1E /* VerticalGlyphForm.swift */,
 			);
-			name = Enums;
 			path = Enums;
 			sourceTree = "<group>";
 		};
 		6DEFC1FE1E14810D00D42A1E /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				6DC3C56A1CB82FCB00ED7249 /* AttributedString.swift */,
+				6DC3C56A1CB82FCB00ED7249 /* NSAttributedString.swift */,
+				6DEFC1FF1E14815000D42A1E /* NSMutableAttributedString.swift */,
 			);
-			name = Extensions;
 			path = Extensions;
 			sourceTree = "<group>";
 		};
@@ -508,8 +512,9 @@
 			files = (
 				6DEFC1F41E14715D00D42A1E /* VerticalGlyphForm.swift in Sources */,
 				6DEFC1EF1E14714800D42A1E /* LigatureStyle.swift in Sources */,
-				6DC3C56B1CB82FCB00ED7249 /* AttributedString.swift in Sources */,
+				6DC3C56B1CB82FCB00ED7249 /* NSAttributedString.swift in Sources */,
 				6D2475521CAAB1140044D223 /* TextAttributes.swift in Sources */,
+				6DEFC2001E14815000D42A1E /* NSMutableAttributedString.swift in Sources */,
 				6DB8402D1CB1F398002AB94E /* Utilities.swift in Sources */,
 				6DEFC1F91E14716A00D42A1E /* TextEffect.swift in Sources */,
 			);
@@ -529,8 +534,9 @@
 			files = (
 				6DEFC1F71E14715D00D42A1E /* VerticalGlyphForm.swift in Sources */,
 				6DEFC1F21E14714800D42A1E /* LigatureStyle.swift in Sources */,
-				6DB519821CCA819A005C3E83 /* AttributedString.swift in Sources */,
+				6DB519821CCA819A005C3E83 /* NSAttributedString.swift in Sources */,
 				6DB519811CCA8195005C3E83 /* Utilities.swift in Sources */,
+				6DEFC2031E14815000D42A1E /* NSMutableAttributedString.swift in Sources */,
 				6DB519861CCA8AD9005C3E83 /* TextAttributes.swift in Sources */,
 				6DEFC1FC1E14716A00D42A1E /* TextEffect.swift in Sources */,
 			);
@@ -542,8 +548,9 @@
 			files = (
 				6DEFC1F51E14715D00D42A1E /* VerticalGlyphForm.swift in Sources */,
 				6DEFC1F01E14714800D42A1E /* LigatureStyle.swift in Sources */,
-				6DB519CB1CCA9101005C3E83 /* AttributedString.swift in Sources */,
+				6DB519CB1CCA9101005C3E83 /* NSAttributedString.swift in Sources */,
 				6DB519CA1CCA9101005C3E83 /* Utilities.swift in Sources */,
+				6DEFC2011E14815000D42A1E /* NSMutableAttributedString.swift in Sources */,
 				6DB519C91CCA90FB005C3E83 /* TextAttributes.swift in Sources */,
 				6DEFC1FA1E14716A00D42A1E /* TextEffect.swift in Sources */,
 			);
@@ -564,7 +571,8 @@
 				6DEFC1F61E14715D00D42A1E /* VerticalGlyphForm.swift in Sources */,
 				6DEFC1F11E14714800D42A1E /* LigatureStyle.swift in Sources */,
 				6DDF4E4A1CD2045A002AA459 /* Utilities.swift in Sources */,
-				6DDF4E491CD20456002AA459 /* AttributedString.swift in Sources */,
+				6DDF4E491CD20456002AA459 /* NSAttributedString.swift in Sources */,
+				6DEFC2021E14815000D42A1E /* NSMutableAttributedString.swift in Sources */,
 				6DDF4E481CD20452002AA459 /* TextAttributes.swift in Sources */,
 				6DEFC1FB1E14716A00D42A1E /* TextEffect.swift in Sources */,
 			);

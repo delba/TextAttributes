@@ -12,12 +12,12 @@
 **TextAttributes** makes it easy to compose attributed strings.
 
 ```swift
-let attrs = TextAttributes()
+let attributes = Attributes
     .font(name: "HelveticaNeue", size: 16)
     .foregroundColor(white: 0.2, alpha: 1)
     .lineHeightMultiple(1.5)
 
-NSAttributedString("The quick brown fox jumps over the lazy dog", attributes: attrs)
+"The quick brown fox jumps over the lazy dog".with(attributes)
 ```
 
 <p align="center">

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0800"
+   LastUpgradeVersion = "0820"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "6DB5198B1CCA8CEF005C3E83"
-               BuildableName = "TextAttributes.framework"
-               BlueprintName = "TextAttributes tvOS"
-               ReferencedContainer = "container:TextAttributes.xcodeproj">
+               BlueprintIdentifier = "6DB519771CCA7F30005C3E83"
+               BuildableName = "Attributes.framework"
+               BlueprintName = "Attributes watchOS"
+               ReferencedContainer = "container:Attributes.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -28,26 +28,7 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "6DB519941CCA8CEF005C3E83"
-               BuildableName = "TextAttributes tvOS Tests.xctest"
-               BlueprintName = "TextAttributes tvOS Tests"
-               ReferencedContainer = "container:TextAttributes.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "6DB5198B1CCA8CEF005C3E83"
-            BuildableName = "TextAttributes.framework"
-            BlueprintName = "TextAttributes tvOS"
-            ReferencedContainer = "container:TextAttributes.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -64,10 +45,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "6DB5198B1CCA8CEF005C3E83"
-            BuildableName = "TextAttributes.framework"
-            BlueprintName = "TextAttributes tvOS"
-            ReferencedContainer = "container:TextAttributes.xcodeproj">
+            BlueprintIdentifier = "6DB519771CCA7F30005C3E83"
+            BuildableName = "Attributes.framework"
+            BlueprintName = "Attributes watchOS"
+            ReferencedContainer = "container:Attributes.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -82,10 +63,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "6DB5198B1CCA8CEF005C3E83"
-            BuildableName = "TextAttributes.framework"
-            BlueprintName = "TextAttributes tvOS"
-            ReferencedContainer = "container:TextAttributes.xcodeproj">
+            BlueprintIdentifier = "6DB519771CCA7F30005C3E83"
+            BuildableName = "Attributes.framework"
+            BlueprintName = "Attributes watchOS"
+            ReferencedContainer = "container:Attributes.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>

@@ -1,5 +1,5 @@
 //
-// TextAttributesTests.swift
+// AttributesTests.swift
 //
 // Copyright (c) 2016 Damien (http://delba.io)
 //
@@ -23,9 +23,9 @@
 //
 
 import XCTest
-@testable import TextAttributes
+@testable import Attributes
 
-class TextAttributesTests: XCTestCase {
+class AttributesTests: XCTestCase {
     let string = "The quick brown fox jumps over the lazy dog"
     
     func testSetAttributes() {
@@ -36,9 +36,9 @@ class TextAttributesTests: XCTestCase {
         let underlineStyle: NSUnderlineStyle = .styleSingle
         let textEffect: TextEffect = .letterpress
         let form: VerticalGlyphForm = .vertical
-        let link = URL(string: "https://github.com/delba/TextAttributes")!
+        let link = URL(string: "https://github.com/delba/Attributes")!
 
-        let attrs = TextAttributes()
+        let attrs = Attributes()
             .font(font)
             .foregroundColor(color)
             .backgroundColor(color)
@@ -98,7 +98,7 @@ class TextAttributesTests: XCTestCase {
         let attachment = NSTextAttachment()
         attachment.bounds = CGRect(x: 0, y: 0, width: 42, height: 42)
         
-        let attrs = TextAttributes()
+        let attrs = Attributes()
             .shadow(shadow)
             .attachment(attachment)
         
@@ -110,7 +110,7 @@ class TextAttributesTests: XCTestCase {
         let style = NSMutableParagraphStyle()
         style.lineHeightMultiple = 1.42
         
-        let attrs = TextAttributes()
+        let attrs = Attributes()
             .paragraphStyle(style)
         
         XCTAssertEqual(style, attrs.paragraphStyle)
@@ -119,7 +119,7 @@ class TextAttributesTests: XCTestCase {
     func testSetParagraphStyleProperties() {
         let float: CGFloat = 0.42
         
-        let attrs = TextAttributes()
+        let attrs = Attributes()
             .lineHeightMultiple(float)
         
         XCTAssertEqual(float, attrs.lineHeightMultiple)
@@ -133,9 +133,9 @@ class TextAttributesTests: XCTestCase {
         let underlineStyle: NSUnderlineStyle = .styleSingle
         let textEffect: TextEffect = .letterpress
         let form: VerticalGlyphForm = .vertical
-        let link = URL(string: "https://github.com/delba/TextAttributes")!
+        let link = URL(string: "https://github.com/delba/Attributes")!
         
-        let attrs = TextAttributes()
+        let attrs = Attributes()
             .font(font)
             .foregroundColor(color)
             .backgroundColor(color)
@@ -195,7 +195,7 @@ class TextAttributesTests: XCTestCase {
         let attachment = NSTextAttachment()
         attachment.bounds = bounds
         
-        let attrs = TextAttributes()
+        let attrs = Attributes()
             .shadow(shadow)
             .attachment(attachment)
         
@@ -212,7 +212,7 @@ class TextAttributesTests: XCTestCase {
     }
     
     func testCloneParagraphStyle() {
-        let first  = TextAttributes().lineHeightMultiple(1.5)
+        let first  = Attributes().lineHeightMultiple(1.5)
         let firstStyle = first.paragraphStyle
         
         XCTAssertEqual(1.5, firstStyle.lineHeightMultiple)

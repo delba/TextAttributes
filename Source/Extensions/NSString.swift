@@ -23,7 +23,7 @@
 //
 
 extension NSString {
-    public func with(_ attributes: TextAttributes) -> NSAttributedString {
+    public func with(_ attributes: Attributes) -> NSAttributedString {
         return NSAttributedString(string: self, attributes: attributes)
     }
 }

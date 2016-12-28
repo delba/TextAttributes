@@ -1,5 +1,5 @@
 //
-// TextAttributes.swift
+// Attributes.swift
 //
 // Copyright (c) 2016 Damien (http://delba.io)
 //
@@ -22,14 +22,14 @@
 // SOFTWARE.
 //
 
-open class TextAttributes {
+open class Attributes {
     /// The attributes dictionary.
     open fileprivate(set) var dictionary: [String: Any] = [:]
     
     /**
-     Create an instance of TextAttributes.
+     Create an instance of Attributes.
      
-     - returns: The created TextAttributes.
+     - returns: The created Attributes.
      */
     public init() {
         dictionary[NSParagraphStyleAttributeName] = paragraphStyle
@@ -40,8 +40,8 @@ open class TextAttributes {
      
      - returns: A copy of the receiver.
      */
-    open func clone() -> TextAttributes {
-        let clone = TextAttributes()
+    open func clone() -> Attributes {
+        let clone = Attributes()
         
         clone.dictionary = dictionary
         
@@ -70,8 +70,8 @@ open class TextAttributes {
         }
     }
     
-    open static func font(name: String, size: CGFloat) -> TextAttributes {
-        return TextAttributes().font(name: name, size: size)
+    open static func font(name: String, size: CGFloat) -> Attributes {
+        return Attributes().font(name: name, size: size)
     }
     
     /**
@@ -87,8 +87,8 @@ open class TextAttributes {
         return font(Font(name: name, size: size))
     }
     
-    open static func font(_ font: Font?) -> TextAttributes {
-        return TextAttributes().font(font)
+    open static func font(_ font: Font?) -> Attributes {
+        return Attributes().font(font)
     }
     
     /**
@@ -121,8 +121,8 @@ open class TextAttributes {
         }
     }
     
-    open static func ligature(_ style: LigatureStyle) -> TextAttributes {
-        return TextAttributes().ligature(style)
+    open static func ligature(_ style: LigatureStyle) -> Attributes {
+        return Attributes().ligature(style)
     }
     
     /**
@@ -151,8 +151,8 @@ open class TextAttributes {
         }
     }
     
-    open static func kern(_ value: CGFloat) -> TextAttributes {
-        return TextAttributes().kern(value)
+    open static func kern(_ value: CGFloat) -> Attributes {
+        return Attributes().kern(value)
     }
     
     /**
@@ -185,8 +185,8 @@ open class TextAttributes {
         }
     }
     
-    open static func strikethroughStyle(_ style: NSUnderlineStyle) -> TextAttributes {
-        return TextAttributes().strikethroughStyle(style)
+    open static func strikethroughStyle(_ style: NSUnderlineStyle) -> Attributes {
+        return Attributes().strikethroughStyle(style)
     }
     
     /**
@@ -214,8 +214,8 @@ open class TextAttributes {
         }
     }
     
-    open static func strikethroughColor(white: CGFloat, alpha: CGFloat) -> TextAttributes {
-        return TextAttributes().strokeColor(white: white, alpha: alpha)
+    open static func strikethroughColor(white: CGFloat, alpha: CGFloat) -> Attributes {
+        return Attributes().strokeColor(white: white, alpha: alpha)
     }
     
     /**
@@ -231,8 +231,8 @@ open class TextAttributes {
         return strikethroughColor(Color(white: white, alpha: alpha))
     }
     
-    open static func strikethroughColor(hue: CGFloat, saturation: CGFloat, brightness: CGFloat, alpha: CGFloat) -> TextAttributes {
-        return TextAttributes().backgroundColor(hue: hue, saturation: saturation, brightness: brightness, alpha: alpha)
+    open static func strikethroughColor(hue: CGFloat, saturation: CGFloat, brightness: CGFloat, alpha: CGFloat) -> Attributes {
+        return Attributes().backgroundColor(hue: hue, saturation: saturation, brightness: brightness, alpha: alpha)
     }
     
     /**
@@ -250,8 +250,8 @@ open class TextAttributes {
         return strikethroughColor(Color(hue: hue, saturation: saturation, brightness: brightness, alpha: alpha))
     }
     
-    open static func strikethroughColor(red: CGFloat, green: CGFloat, blue: CGFloat, alpha: CGFloat) -> TextAttributes {
-        return TextAttributes().strikethroughColor(red: red, green: green, blue: blue, alpha: alpha)
+    open static func strikethroughColor(red: CGFloat, green: CGFloat, blue: CGFloat, alpha: CGFloat) -> Attributes {
+        return Attributes().strikethroughColor(red: red, green: green, blue: blue, alpha: alpha)
     }
     
     /**
@@ -269,8 +269,8 @@ open class TextAttributes {
         return strikethroughColor(Color(red: red, green: green, blue: blue, alpha: alpha))
     }
     
-    open static func strikethroughColor(patternImage image: Image) -> TextAttributes {
-        return TextAttributes().strikethroughColor(patternImage: image)
+    open static func strikethroughColor(patternImage image: Image) -> Attributes {
+        return Attributes().strikethroughColor(patternImage: image)
     }
     
     /**
@@ -285,8 +285,8 @@ open class TextAttributes {
         return strikethroughColor(Color(patternImage: image))
     }
     
-    open static func strikethroughColor(_ color: Color?) -> TextAttributes {
-        return TextAttributes().strikethroughColor(color)
+    open static func strikethroughColor(_ color: Color?) -> Attributes {
+        return Attributes().strikethroughColor(color)
     }
     
     /**
@@ -319,8 +319,8 @@ open class TextAttributes {
         }
     }
     
-    open static func underlineStyle(_ style: NSUnderlineStyle) -> TextAttributes {
-        return TextAttributes().underlineStyle(style)
+    open static func underlineStyle(_ style: NSUnderlineStyle) -> Attributes {
+        return Attributes().underlineStyle(style)
     }
     
     /**
@@ -348,8 +348,8 @@ open class TextAttributes {
         }
     }
     
-    open static func underlineColor(white: CGFloat, alpha: CGFloat) -> TextAttributes {
-        return TextAttributes().underlineColor(white: white, alpha: alpha)
+    open static func underlineColor(white: CGFloat, alpha: CGFloat) -> Attributes {
+        return Attributes().underlineColor(white: white, alpha: alpha)
     }
     
     /**
@@ -365,8 +365,8 @@ open class TextAttributes {
         return underlineColor(Color(white: white, alpha: alpha))
     }
     
-    open static func underlineColor(hue: CGFloat, saturation: CGFloat, brightness: CGFloat, alpha: CGFloat) -> TextAttributes {
-        return TextAttributes().underlineColor(hue: hue, saturation: saturation, brightness: brightness, alpha: alpha)
+    open static func underlineColor(hue: CGFloat, saturation: CGFloat, brightness: CGFloat, alpha: CGFloat) -> Attributes {
+        return Attributes().underlineColor(hue: hue, saturation: saturation, brightness: brightness, alpha: alpha)
     }
     
     /**
@@ -384,8 +384,8 @@ open class TextAttributes {
         return underlineColor(Color(hue: hue, saturation: saturation, brightness: brightness, alpha: alpha))
     }
     
-    open static func underlineColor(red: CGFloat, green: CGFloat, blue: CGFloat, alpha: CGFloat) -> TextAttributes {
-        return TextAttributes().underlineColor(red: red, green: green, blue: blue, alpha: alpha)
+    open static func underlineColor(red: CGFloat, green: CGFloat, blue: CGFloat, alpha: CGFloat) -> Attributes {
+        return Attributes().underlineColor(red: red, green: green, blue: blue, alpha: alpha)
     }
     
     /**
@@ -403,8 +403,8 @@ open class TextAttributes {
         return underlineColor(Color(red: red, green: green, blue: blue, alpha: alpha))
     }
     
-    open static func underlineColor(patternImage image: Image) -> TextAttributes {
-        return TextAttributes().underlineColor(patternImage: image)
+    open static func underlineColor(patternImage image: Image) -> Attributes {
+        return Attributes().underlineColor(patternImage: image)
     }
     
     /**
@@ -419,8 +419,8 @@ open class TextAttributes {
         return underlineColor(Color(patternImage: image))
     }
     
-    open static func underlineColor(_ color: Color?) -> TextAttributes {
-        return TextAttributes().underlineColor(color)
+    open static func underlineColor(_ color: Color?) -> Attributes {
+        return Attributes().underlineColor(color)
     }
     
     /**
@@ -448,8 +448,8 @@ open class TextAttributes {
         }
     }
     
-    open static func strokeColor(white: CGFloat, alpha: CGFloat) -> TextAttributes {
-        return TextAttributes().strokeColor(white: white, alpha: alpha)
+    open static func strokeColor(white: CGFloat, alpha: CGFloat) -> Attributes {
+        return Attributes().strokeColor(white: white, alpha: alpha)
     }
     
     /**
@@ -465,8 +465,8 @@ open class TextAttributes {
         return strokeColor(Color(white: white, alpha: alpha))
     }
     
-    open static func strokeColor(hue: CGFloat, saturation: CGFloat, brightness: CGFloat, alpha: CGFloat) -> TextAttributes {
-        return TextAttributes().strokeColor(hue: hue, saturation: saturation, brightness: brightness, alpha: alpha)
+    open static func strokeColor(hue: CGFloat, saturation: CGFloat, brightness: CGFloat, alpha: CGFloat) -> Attributes {
+        return Attributes().strokeColor(hue: hue, saturation: saturation, brightness: brightness, alpha: alpha)
     }
     
     /**
@@ -484,8 +484,8 @@ open class TextAttributes {
         return strokeColor(Color(hue: hue, saturation: saturation, brightness: brightness, alpha: alpha))
     }
     
-    open static func strokeColor(red: CGFloat, green: CGFloat, blue: CGFloat, alpha: CGFloat) -> TextAttributes {
-        return TextAttributes().strokeColor(red: red, green: green, blue: blue, alpha: alpha)
+    open static func strokeColor(red: CGFloat, green: CGFloat, blue: CGFloat, alpha: CGFloat) -> Attributes {
+        return Attributes().strokeColor(red: red, green: green, blue: blue, alpha: alpha)
     }
     
     /**
@@ -503,8 +503,8 @@ open class TextAttributes {
         return strokeColor(Color(red: red, green: green, blue: blue, alpha: alpha))
     }
     
-    open static func strokeColor(patternImage image: Image) -> TextAttributes {
-        return TextAttributes().strokeColor(patternImage: image)
+    open static func strokeColor(patternImage image: Image) -> Attributes {
+        return Attributes().strokeColor(patternImage: image)
     }
     
     /**
@@ -519,8 +519,8 @@ open class TextAttributes {
         return strokeColor(Color(patternImage: image))
     }
     
-    open static func strokeColor(_ color: Color?) -> TextAttributes {
-        return TextAttributes().strokeColor(color)
+    open static func strokeColor(_ color: Color?) -> Attributes {
+        return Attributes().strokeColor(color)
     }
     
     /**
@@ -548,8 +548,8 @@ open class TextAttributes {
         }
     }
     
-    open static func strokeWidth(_ width: CGFloat) -> TextAttributes {
-        return TextAttributes().strokeWidth(width)
+    open static func strokeWidth(_ width: CGFloat) -> Attributes {
+        return Attributes().strokeWidth(width)
     }
     
     /**
@@ -577,8 +577,8 @@ open class TextAttributes {
         }
     }
     
-    open static func foregroundColor(white: CGFloat, alpha: CGFloat) -> TextAttributes {
-        return TextAttributes().foregroundColor(white: white, alpha: alpha)
+    open static func foregroundColor(white: CGFloat, alpha: CGFloat) -> Attributes {
+        return Attributes().foregroundColor(white: white, alpha: alpha)
     }
     
     /**
@@ -594,8 +594,8 @@ open class TextAttributes {
         return foregroundColor(Color(white: white, alpha: alpha))
     }
     
-    open static func foregroundColor(hue: CGFloat, saturation: CGFloat, brightness: CGFloat, alpha: CGFloat) -> TextAttributes {
-        return TextAttributes().foregroundColor(hue: hue, saturation: saturation, brightness: brightness, alpha: alpha)
+    open static func foregroundColor(hue: CGFloat, saturation: CGFloat, brightness: CGFloat, alpha: CGFloat) -> Attributes {
+        return Attributes().foregroundColor(hue: hue, saturation: saturation, brightness: brightness, alpha: alpha)
     }
     
     /**
@@ -613,8 +613,8 @@ open class TextAttributes {
         return foregroundColor(Color(hue: hue, saturation: saturation, brightness: brightness, alpha: alpha))
     }
     
-    open static func foregroundColor(red: CGFloat, green: CGFloat, blue: CGFloat, alpha: CGFloat) -> TextAttributes {
-        return TextAttributes().foregroundColor(red: red, green: green, blue: blue, alpha: alpha)
+    open static func foregroundColor(red: CGFloat, green: CGFloat, blue: CGFloat, alpha: CGFloat) -> Attributes {
+        return Attributes().foregroundColor(red: red, green: green, blue: blue, alpha: alpha)
     }
     
     /**
@@ -632,8 +632,8 @@ open class TextAttributes {
         return foregroundColor(Color(red: red, green: green, blue: blue, alpha: alpha))
     }
     
-    open static func foregroundColor(patternImage image: Image) -> TextAttributes {
-        return TextAttributes().foregroundColor(patternImage: image)
+    open static func foregroundColor(patternImage image: Image) -> Attributes {
+        return Attributes().foregroundColor(patternImage: image)
     }
     
     /**
@@ -648,8 +648,8 @@ open class TextAttributes {
         return foregroundColor(Color(patternImage: image))
     }
     
-    open static func foregroundColor(_ color: Color?) -> TextAttributes {
-        return TextAttributes().foregroundColor(color)
+    open static func foregroundColor(_ color: Color?) -> Attributes {
+        return Attributes().foregroundColor(color)
     }
     
     /**
@@ -684,8 +684,8 @@ open class TextAttributes {
         }
     }
     
-    open static func textEffect(_ style: TextEffect?) -> TextAttributes {
-        return TextAttributes().textEffect(style)
+    open static func textEffect(_ style: TextEffect?) -> Attributes {
+        return Attributes().textEffect(style)
     }
     
     /**
@@ -719,8 +719,8 @@ open class TextAttributes {
         }
     }
     
-    open static func link(string: String) -> TextAttributes {
-        return TextAttributes().link(string: string)
+    open static func link(string: String) -> Attributes {
+        return Attributes().link(string: string)
     }
     
     /**
@@ -735,8 +735,8 @@ open class TextAttributes {
         return link(URL(string: string))
     }
     
-    open static func link(string: String, relativeToURL baseURL: URL) -> TextAttributes {
-        return TextAttributes().link(string: string, relativeToURL: baseURL)
+    open static func link(string: String, relativeToURL baseURL: URL) -> Attributes {
+        return Attributes().link(string: string, relativeToURL: baseURL)
     }
     
     /**
@@ -752,8 +752,8 @@ open class TextAttributes {
         return link(URL(string: string, relativeTo: baseURL))
     }
     
-    open static func link(_ URL: URL?) -> TextAttributes {
-        return TextAttributes().link(URL)
+    open static func link(_ URL: URL?) -> Attributes {
+        return Attributes().link(URL)
     }
     
     /**
@@ -781,8 +781,8 @@ open class TextAttributes {
         }
     }
     
-    open static func baselineOffset(_ value: CGFloat) -> TextAttributes {
-        return TextAttributes().baselineOffset(value)
+    open static func baselineOffset(_ value: CGFloat) -> Attributes {
+        return Attributes().baselineOffset(value)
     }
     
     /**
@@ -810,8 +810,8 @@ open class TextAttributes {
         }
     }
     
-    open static func obliqueness(_ value: CGFloat) -> TextAttributes {
-        return TextAttributes().obliqueness(value)
+    open static func obliqueness(_ value: CGFloat) -> Attributes {
+        return Attributes().obliqueness(value)
     }
     
     /**
@@ -839,8 +839,8 @@ open class TextAttributes {
         }
     }
     
-    open static func expansion(_ value: CGFloat) -> TextAttributes {
-        return TextAttributes().expansion(value)
+    open static func expansion(_ value: CGFloat) -> Attributes {
+        return Attributes().expansion(value)
     }
     
     /**
@@ -872,8 +872,8 @@ open class TextAttributes {
         }
     }
     
-    open static func verticalGlyphForm(_ value: VerticalGlyphForm) -> TextAttributes {
-        return TextAttributes().verticalGlyphForm(value)
+    open static func verticalGlyphForm(_ value: VerticalGlyphForm) -> Attributes {
+        return Attributes().verticalGlyphForm(value)
     }
     
     /**
@@ -901,8 +901,8 @@ open class TextAttributes {
         }
     }
     
-    open static func backgroundColor(white: CGFloat, alpha: CGFloat) -> TextAttributes {
-        return TextAttributes().backgroundColor(white: white, alpha: alpha)
+    open static func backgroundColor(white: CGFloat, alpha: CGFloat) -> Attributes {
+        return Attributes().backgroundColor(white: white, alpha: alpha)
     }
     
     /**
@@ -918,8 +918,8 @@ open class TextAttributes {
         return backgroundColor(Color(white: white, alpha: alpha))
     }
     
-    open static func backgroundColor(hue: CGFloat, saturation: CGFloat, brightness: CGFloat, alpha: CGFloat) -> TextAttributes {
-        return TextAttributes().backgroundColor(hue: hue, saturation: saturation, brightness: brightness, alpha: alpha)
+    open static func backgroundColor(hue: CGFloat, saturation: CGFloat, brightness: CGFloat, alpha: CGFloat) -> Attributes {
+        return Attributes().backgroundColor(hue: hue, saturation: saturation, brightness: brightness, alpha: alpha)
     }
     
     /**
@@ -937,8 +937,8 @@ open class TextAttributes {
         return backgroundColor(Color(hue: hue, saturation: saturation, brightness: brightness, alpha: alpha))
     }
     
-    open static func backgroundColor(red: CGFloat, green: CGFloat, blue: CGFloat, alpha: CGFloat) -> TextAttributes {
-        return TextAttributes().backgroundColor(red: red, green: green, blue: blue, alpha: alpha)
+    open static func backgroundColor(red: CGFloat, green: CGFloat, blue: CGFloat, alpha: CGFloat) -> Attributes {
+        return Attributes().backgroundColor(red: red, green: green, blue: blue, alpha: alpha)
     }
     
     /**
@@ -956,8 +956,8 @@ open class TextAttributes {
         return backgroundColor(Color(red: red, green: green, blue: blue, alpha: alpha))
     }
     
-    open static func backgroundColor(patternImage image: Image) -> TextAttributes {
-        return TextAttributes().backgroundColor(patternImage: image)
+    open static func backgroundColor(patternImage image: Image) -> Attributes {
+        return Attributes().backgroundColor(patternImage: image)
     }
     
     /**
@@ -972,8 +972,8 @@ open class TextAttributes {
         return backgroundColor(Color(patternImage: image))
     }
     
-    open static func backgroundColor(_ color: Color?) -> TextAttributes {
-        return TextAttributes().backgroundColor(color)
+    open static func backgroundColor(_ color: Color?) -> Attributes {
+        return Attributes().backgroundColor(color)
     }
     
     /**
@@ -998,8 +998,8 @@ open class TextAttributes {
         }
     }
     
-    open static func paragraphStyle(_ style: NSMutableParagraphStyle) -> TextAttributes {
-        return TextAttributes().paragraphStyle(style)
+    open static func paragraphStyle(_ style: NSMutableParagraphStyle) -> Attributes {
+        return Attributes().paragraphStyle(style)
     }
     
     /**
@@ -1023,8 +1023,8 @@ open class TextAttributes {
         set { paragraphStyle.alignment = newValue }
     }
     
-    open static func alignment(_ alignment: NSTextAlignment) -> TextAttributes {
-        return TextAttributes().alignment(alignment)
+    open static func alignment(_ alignment: NSTextAlignment) -> Attributes {
+        return Attributes().alignment(alignment)
     }
     
     /**
@@ -1048,8 +1048,8 @@ open class TextAttributes {
         set { paragraphStyle.firstLineHeadIndent = newValue }
     }
     
-    open static func firstLineHeadIndent(_ value: CGFloat) -> TextAttributes {
-        return TextAttributes().firstLineHeadIndent(value)
+    open static func firstLineHeadIndent(_ value: CGFloat) -> Attributes {
+        return Attributes().firstLineHeadIndent(value)
     }
     
     /**
@@ -1073,8 +1073,8 @@ open class TextAttributes {
         set { paragraphStyle.headIndent = newValue }
     }
     
-    open static func headIndent(_ value: CGFloat) -> TextAttributes {
-        return TextAttributes().headIndent(value)
+    open static func headIndent(_ value: CGFloat) -> Attributes {
+        return Attributes().headIndent(value)
     }
     
     /**
@@ -1098,8 +1098,8 @@ open class TextAttributes {
         set { paragraphStyle.tailIndent = newValue }
     }
     
-    open static func tailIndent(_ value: CGFloat) -> TextAttributes {
-        return TextAttributes().tailIndent(value)
+    open static func tailIndent(_ value: CGFloat) -> Attributes {
+        return Attributes().tailIndent(value)
     }
     
     /**
@@ -1123,8 +1123,8 @@ open class TextAttributes {
         set { paragraphStyle.lineHeightMultiple = newValue }
     }
     
-    open static func lineHeightMultiple(_ value: CGFloat) -> TextAttributes {
-        return TextAttributes().lineHeightMultiple(value)
+    open static func lineHeightMultiple(_ value: CGFloat) -> Attributes {
+        return Attributes().lineHeightMultiple(value)
     }
     
     /**
@@ -1148,8 +1148,8 @@ open class TextAttributes {
         set { paragraphStyle.maximumLineHeight = newValue }
     }
     
-    open static func maximumLineHeight(_ value: CGFloat) -> TextAttributes {
-        return TextAttributes().maximumLineHeight(value)
+    open static func maximumLineHeight(_ value: CGFloat) -> Attributes {
+        return Attributes().maximumLineHeight(value)
     }
     
     /**
@@ -1173,8 +1173,8 @@ open class TextAttributes {
         set { paragraphStyle.minimumLineHeight = newValue }
     }
     
-    open static func minimumLineHeight(_ value: CGFloat) -> TextAttributes {
-        return TextAttributes().minimumLineHeight(value)
+    open static func minimumLineHeight(_ value: CGFloat) -> Attributes {
+        return Attributes().minimumLineHeight(value)
     }
     
     /**
@@ -1198,8 +1198,8 @@ open class TextAttributes {
         set { paragraphStyle.lineSpacing = newValue }
     }
     
-    open static func lineSpacing(_ value: CGFloat) -> TextAttributes {
-        return TextAttributes().lineSpacing(value)
+    open static func lineSpacing(_ value: CGFloat) -> Attributes {
+        return Attributes().lineSpacing(value)
     }
     
     /**
@@ -1223,8 +1223,8 @@ open class TextAttributes {
         set { paragraphStyle.paragraphSpacing = newValue }
     }
     
-    open static func paragraphSpacing(_ value: CGFloat) -> TextAttributes {
-        return TextAttributes().paragraphSpacing(value)
+    open static func paragraphSpacing(_ value: CGFloat) -> Attributes {
+        return Attributes().paragraphSpacing(value)
     }
     
     /**
@@ -1248,8 +1248,8 @@ open class TextAttributes {
         set { paragraphStyle.paragraphSpacingBefore = newValue }
     }
     
-    open static func paragraphSpacingBefore(_ value: CGFloat) -> TextAttributes {
-        return TextAttributes().paragraphSpacingBefore(value)
+    open static func paragraphSpacingBefore(_ value: CGFloat) -> Attributes {
+        return Attributes().paragraphSpacingBefore(value)
     }
     
     /**
@@ -1273,8 +1273,8 @@ open class TextAttributes {
         set { paragraphStyle.lineBreakMode = newValue }
     }
     
-    open static func lineBreakMode(_ value: NSLineBreakMode) -> TextAttributes {
-        return TextAttributes().lineBreakMode(value)
+    open static func lineBreakMode(_ value: NSLineBreakMode) -> Attributes {
+        return Attributes().lineBreakMode(value)
     }
     
     /**
@@ -1292,7 +1292,7 @@ open class TextAttributes {
 }
 
 #if !os(watchOS)
-extension TextAttributes {
+extension Attributes {
     // MARK: - Shadow
     
     /// The shadow attribute.
@@ -1306,8 +1306,8 @@ extension TextAttributes {
     }
     
     #if os(OSX)
-    open static func shadow(color: NSColor?, offset: CGSize, blurRadius: CGFloat) -> TextAttributes {
-        return TextAttributes().shadow(color: color, offset: offset, blurRadius: blurRadius)
+    open static func shadow(color: NSColor?, offset: CGSize, blurRadius: CGFloat) -> Attributes {
+        return Attributes().shadow(color: color, offset: offset, blurRadius: blurRadius)
     }
 
     /**
@@ -1330,8 +1330,8 @@ extension TextAttributes {
         }() as NSShadow)
     }
     #else
-    open static func shadow(color: AnyObject?, offset: CGSize, blurRadius: CGFloat) -> TextAttributes {
-        return TextAttributes().shadow(color: color, offset: offset, blurRadius: blurRadius)
+    open static func shadow(color: AnyObject?, offset: CGSize, blurRadius: CGFloat) -> Attributes {
+        return Attributes().shadow(color: color, offset: offset, blurRadius: blurRadius)
     }
 
     /**
@@ -1355,8 +1355,8 @@ extension TextAttributes {
     }
     #endif
     
-    open static func shadow(_ shadow: NSShadow?) -> TextAttributes {
-        return TextAttributes().shadow(shadow)
+    open static func shadow(_ shadow: NSShadow?) -> Attributes {
+        return Attributes().shadow(shadow)
     }
     
     /**
@@ -1384,8 +1384,8 @@ extension TextAttributes {
         }
     }
     
-    open static func attachment(_ attachment: NSTextAttachment?) -> TextAttributes {
-        return TextAttributes().attachment(attachment)
+    open static func attachment(_ attachment: NSTextAttachment?) -> Attributes {
+        return Attributes().attachment(attachment)
     }
     
     /**

@@ -31,7 +31,7 @@ extension NSAttributedString {
      
      - returns: The newly created NSAttributedString.
      */
-    public convenience init(string: NSString, attributes: TextAttributes) {
+    public convenience init(string: NSString, attributes: Attributes) {
         self.init(string: string as String, attributes: attributes)
     }
     
@@ -43,7 +43,7 @@ extension NSAttributedString {
      
      - returns: The newly created NSAttributedString.
      */
-    public convenience init(string: String, attributes: TextAttributes) {
+    public convenience init(string: String, attributes: Attributes) {
         self.init(string: string, attributes: attributes.dictionary)
     }
 }

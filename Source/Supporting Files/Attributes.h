@@ -1,5 +1,5 @@
 //
-// TextAttributes.h
+// Attributes.h
 //
 // Copyright (c) 2016 Damien (http://delba.io)
 //
@@ -30,5 +30,5 @@
     @import AppKit;
 #endif
 
-FOUNDATION_EXPORT double TextAttributesVersionNumber;
-FOUNDATION_EXPORT const unsigned char TextAttributesVersionString[];
+FOUNDATION_EXPORT double AttributesVersionNumber;
+FOUNDATION_EXPORT const unsigned char AttributesVersionString[];

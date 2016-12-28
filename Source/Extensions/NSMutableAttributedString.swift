@@ -28,7 +28,7 @@ extension NSMutableAttributedString {
      
      - parameter attributes: The attributes to set.
      */
-    public func setAttributes(_ attributes: TextAttributes) {
+    public func setAttributes(_ attributes: Attributes) {
         setAttributes(attributes, range: NSRange(mutableString))
     }
     
@@ -38,7 +38,7 @@ extension NSMutableAttributedString {
      - parameter attributes: The attributes to set.
      - parameter range:      The range of characters whose attributes are set.
      */
-    public func setAttributes(_ attributes: TextAttributes, range: Range<Int>) {
+    public func setAttributes(_ attributes: Attributes, range: Range<Int>) {
         setAttributes(attributes, range: NSRange(range))
     }
     
@@ -48,7 +48,7 @@ extension NSMutableAttributedString {
      - parameter attributes: The attributes to set.
      - parameter range:      The range of characters whose attributes are set.
      */
-    public func setAttributes(_ attributes: TextAttributes, range: NSRange) {
+    public func setAttributes(_ attributes: Attributes, range: NSRange) {
         setAttributes(attributes.dictionary, range: range)
     }
     
@@ -57,7 +57,7 @@ extension NSMutableAttributedString {
      
      - parameter attributes: The attributes to add.
      */
-    public func addAttributes(_ attributes: TextAttributes) {
+    public func addAttributes(_ attributes: Attributes) {
         addAttributes(attributes, range: NSRange(mutableString))
     }
     
@@ -67,7 +67,7 @@ extension NSMutableAttributedString {
      - parameter attributes: The attributes to add.
      - parameter range:      he range of characters to which the specified attributes apply.
      */
-    public func addAttributes(_ attributes: TextAttributes, range: Range<Int>) {
+    public func addAttributes(_ attributes: Attributes, range: Range<Int>) {
         addAttributes(attributes, range: NSRange(range))
     }
     
@@ -77,7 +77,7 @@ extension NSMutableAttributedString {
      - parameter attributes: The attributes to add.
      - parameter range:      he range of characters to which the specified attributes apply.
      */
-    public func addAttributes(_ attributes: TextAttributes, range: NSRange) {
+    public func addAttributes(_ attributes: Attributes, range: NSRange) {
         addAttributes(attributes.dictionary, range: range)
     }
 }

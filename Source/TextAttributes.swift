@@ -70,6 +70,10 @@ open class TextAttributes {
         }
     }
     
+    open static func font(name: String, size: CGFloat) -> TextAttributes {
+        return TextAttributes().font(name: name, size: size)
+    }
+    
     /**
      Sets the font attribute and returns the receiver.
      
@@ -81,6 +85,10 @@ open class TextAttributes {
     @discardableResult
     open func font(name: String, size: CGFloat) -> Self {
         return font(Font(name: name, size: size))
+    }
+    
+    open static func font(_ font: Font?) -> TextAttributes {
+        return TextAttributes().font(font)
     }
     
     /**
@@ -113,6 +121,10 @@ open class TextAttributes {
         }
     }
     
+    open static func ligature(_ style: LigatureStyle) -> TextAttributes {
+        return TextAttributes().ligature(style)
+    }
+    
     /**
      Sets the ligature attribute and returns the receiver.
      
@@ -137,6 +149,10 @@ open class TextAttributes {
         set {
             dictionary[NSKernAttributeName] = newValue as NSNumber
         }
+    }
+    
+    open static func kern(_ value: CGFloat) -> TextAttributes {
+        return TextAttributes().kern(value)
     }
     
     /**
@@ -169,6 +185,10 @@ open class TextAttributes {
         }
     }
     
+    open static func strikethroughStyle(_ style: NSUnderlineStyle) -> TextAttributes {
+        return TextAttributes().strikethroughStyle(style)
+    }
+    
     /**
      Sets the strikethrough style attribute and returns the receiver.
      
@@ -194,6 +214,10 @@ open class TextAttributes {
         }
     }
     
+    open static func strikethroughColor(white: CGFloat, alpha: CGFloat) -> TextAttributes {
+        return TextAttributes().strokeColor(white: white, alpha: alpha)
+    }
+    
     /**
      Sets the strikethrough color attribute and returns the receiver.
      
@@ -205,6 +229,10 @@ open class TextAttributes {
     @discardableResult
     open func strikethroughColor(white: CGFloat, alpha: CGFloat) -> Self {
         return strikethroughColor(Color(white: white, alpha: alpha))
+    }
+    
+    open static func strikethroughColor(hue: CGFloat, saturation: CGFloat, brightness: CGFloat, alpha: CGFloat) -> TextAttributes {
+        return TextAttributes().backgroundColor(hue: hue, saturation: saturation, brightness: brightness, alpha: alpha)
     }
     
     /**
@@ -222,6 +250,10 @@ open class TextAttributes {
         return strikethroughColor(Color(hue: hue, saturation: saturation, brightness: brightness, alpha: alpha))
     }
     
+    open static func strikethroughColor(red: CGFloat, green: CGFloat, blue: CGFloat, alpha: CGFloat) -> TextAttributes {
+        return TextAttributes().strikethroughColor(red: red, green: green, blue: blue, alpha: alpha)
+    }
+    
     /**
      Sets the strikethrough color attribute and returns the receiver.
      
@@ -237,6 +269,10 @@ open class TextAttributes {
         return strikethroughColor(Color(red: red, green: green, blue: blue, alpha: alpha))
     }
     
+    open static func strikethroughColor(patternImage image: Image) -> TextAttributes {
+        return TextAttributes().strikethroughColor(patternImage: image)
+    }
+    
     /**
      Sets the strikethrough color attribute and returns the receiver.
      
@@ -247,6 +283,10 @@ open class TextAttributes {
     @discardableResult
     open func strikethroughColor(patternImage image: Image) -> Self {
         return strikethroughColor(Color(patternImage: image))
+    }
+    
+    open static func strikethroughColor(_ color: Color?) -> TextAttributes {
+        return TextAttributes().strikethroughColor(color)
     }
     
     /**
@@ -279,6 +319,10 @@ open class TextAttributes {
         }
     }
     
+    open static func underlineStyle(_ style: NSUnderlineStyle) -> TextAttributes {
+        return TextAttributes().underlineStyle(style)
+    }
+    
     /**
      Sets the underline style attribute and returns the receiver.
      
@@ -304,6 +348,10 @@ open class TextAttributes {
         }
     }
     
+    open static func underlineColor(white: CGFloat, alpha: CGFloat) -> TextAttributes {
+        return TextAttributes().underlineColor(white: white, alpha: alpha)
+    }
+    
     /**
      Sets the underline color attribute and returns the receiver.
      
@@ -315,6 +363,10 @@ open class TextAttributes {
     @discardableResult
     open func underlineColor(white: CGFloat, alpha: CGFloat) -> Self {
         return underlineColor(Color(white: white, alpha: alpha))
+    }
+    
+    open static func underlineColor(hue: CGFloat, saturation: CGFloat, brightness: CGFloat, alpha: CGFloat) -> TextAttributes {
+        return TextAttributes().underlineColor(hue: hue, saturation: saturation, brightness: brightness, alpha: alpha)
     }
     
     /**
@@ -332,6 +384,10 @@ open class TextAttributes {
         return underlineColor(Color(hue: hue, saturation: saturation, brightness: brightness, alpha: alpha))
     }
     
+    open static func underlineColor(red: CGFloat, green: CGFloat, blue: CGFloat, alpha: CGFloat) -> TextAttributes {
+        return TextAttributes().underlineColor(red: red, green: green, blue: blue, alpha: alpha)
+    }
+    
     /**
      Sets the underline color attribute and returns the receiver.
      
@@ -347,6 +403,10 @@ open class TextAttributes {
         return underlineColor(Color(red: red, green: green, blue: blue, alpha: alpha))
     }
     
+    open static func underlineColor(patternImage image: Image) -> TextAttributes {
+        return TextAttributes().underlineColor(patternImage: image)
+    }
+    
     /**
      Sets the underline color attribute and returns the receiver.
      
@@ -357,6 +417,10 @@ open class TextAttributes {
     @discardableResult
     open func underlineColor(patternImage image: Image) -> Self {
         return underlineColor(Color(patternImage: image))
+    }
+    
+    open static func underlineColor(_ color: Color?) -> TextAttributes {
+        return TextAttributes().underlineColor(color)
     }
     
     /**
@@ -384,6 +448,10 @@ open class TextAttributes {
         }
     }
     
+    open static func strokeColor(white: CGFloat, alpha: CGFloat) -> TextAttributes {
+        return TextAttributes().strokeColor(white: white, alpha: alpha)
+    }
+    
     /**
      Sets the stroke color attribute and returns the receiver.
      
@@ -395,6 +463,10 @@ open class TextAttributes {
     @discardableResult
     open func strokeColor(white: CGFloat, alpha: CGFloat) -> Self {
         return strokeColor(Color(white: white, alpha: alpha))
+    }
+    
+    open static func strokeColor(hue: CGFloat, saturation: CGFloat, brightness: CGFloat, alpha: CGFloat) -> TextAttributes {
+        return TextAttributes().strokeColor(hue: hue, saturation: saturation, brightness: brightness, alpha: alpha)
     }
     
     /**
@@ -412,6 +484,10 @@ open class TextAttributes {
         return strokeColor(Color(hue: hue, saturation: saturation, brightness: brightness, alpha: alpha))
     }
     
+    open static func strokeColor(red: CGFloat, green: CGFloat, blue: CGFloat, alpha: CGFloat) -> TextAttributes {
+        return TextAttributes().strokeColor(red: red, green: green, blue: blue, alpha: alpha)
+    }
+    
     /**
      Sets the stroke color attribute and returns the receiver.
      
@@ -427,6 +503,10 @@ open class TextAttributes {
         return strokeColor(Color(red: red, green: green, blue: blue, alpha: alpha))
     }
     
+    open static func strokeColor(patternImage image: Image) -> TextAttributes {
+        return TextAttributes().strokeColor(patternImage: image)
+    }
+    
     /**
      Sets the stroke color attribute and returns the receiver.
      
@@ -437,6 +517,10 @@ open class TextAttributes {
     @discardableResult
     open func strokeColor(patternImage image: Image) -> Self {
         return strokeColor(Color(patternImage: image))
+    }
+    
+    open static func strokeColor(_ color: Color?) -> TextAttributes {
+        return TextAttributes().strokeColor(color)
     }
     
     /**
@@ -464,6 +548,10 @@ open class TextAttributes {
         }
     }
     
+    open static func strokeWidth(_ width: CGFloat) -> TextAttributes {
+        return TextAttributes().strokeWidth(width)
+    }
+    
     /**
      Sets the stroke width attribute and returns the receiver.
      
@@ -489,6 +577,10 @@ open class TextAttributes {
         }
     }
     
+    open static func foregroundColor(white: CGFloat, alpha: CGFloat) -> TextAttributes {
+        return TextAttributes().foregroundColor(white: white, alpha: alpha)
+    }
+    
     /**
      Sets the foreground color attribute and returns the receiver.
      
@@ -500,6 +592,10 @@ open class TextAttributes {
     @discardableResult
     open func foregroundColor(white: CGFloat, alpha: CGFloat) -> Self {
         return foregroundColor(Color(white: white, alpha: alpha))
+    }
+    
+    open static func foregroundColor(hue: CGFloat, saturation: CGFloat, brightness: CGFloat, alpha: CGFloat) -> TextAttributes {
+        return TextAttributes().foregroundColor(hue: hue, saturation: saturation, brightness: brightness, alpha: alpha)
     }
     
     /**
@@ -517,6 +613,10 @@ open class TextAttributes {
         return foregroundColor(Color(hue: hue, saturation: saturation, brightness: brightness, alpha: alpha))
     }
     
+    open static func foregroundColor(red: CGFloat, green: CGFloat, blue: CGFloat, alpha: CGFloat) -> TextAttributes {
+        return TextAttributes().foregroundColor(red: red, green: green, blue: blue, alpha: alpha)
+    }
+    
     /**
      Sets the foreground color attribute and returns the receiver.
      
@@ -532,6 +632,10 @@ open class TextAttributes {
         return foregroundColor(Color(red: red, green: green, blue: blue, alpha: alpha))
     }
     
+    open static func foregroundColor(patternImage image: Image) -> TextAttributes {
+        return TextAttributes().foregroundColor(patternImage: image)
+    }
+    
     /**
      Sets the foreground color attribute and returns the receiver.
      
@@ -542,6 +646,10 @@ open class TextAttributes {
     @discardableResult
     open func foregroundColor(patternImage image: Image) -> Self {
         return foregroundColor(Color(patternImage: image))
+    }
+    
+    open static func foregroundColor(_ color: Color?) -> TextAttributes {
+        return TextAttributes().foregroundColor(color)
     }
     
     /**
@@ -576,6 +684,10 @@ open class TextAttributes {
         }
     }
     
+    open static func textEffect(_ style: TextEffect?) -> TextAttributes {
+        return TextAttributes().textEffect(style)
+    }
+    
     /**
      Sets the text effect attribute and returns the receiver.
      
@@ -607,6 +719,10 @@ open class TextAttributes {
         }
     }
     
+    open static func link(string: String) -> TextAttributes {
+        return TextAttributes().link(string: string)
+    }
+    
     /**
      Sets the link attribute and returns the receiver.
      
@@ -617,6 +733,10 @@ open class TextAttributes {
     @discardableResult
     open func link(string: String) -> Self {
         return link(URL(string: string))
+    }
+    
+    open static func link(string: String, relativeToURL baseURL: URL) -> TextAttributes {
+        return TextAttributes().link(string: string, relativeToURL: baseURL)
     }
     
     /**
@@ -630,6 +750,10 @@ open class TextAttributes {
     @discardableResult
     open func link(string: String, relativeToURL baseURL: URL) -> Self {
         return link(URL(string: string, relativeTo: baseURL))
+    }
+    
+    open static func link(_ URL: URL?) -> TextAttributes {
+        return TextAttributes().link(URL)
     }
     
     /**
@@ -657,6 +781,10 @@ open class TextAttributes {
         }
     }
     
+    open static func baselineOffset(_ value: CGFloat) -> TextAttributes {
+        return TextAttributes().baselineOffset(value)
+    }
+    
     /**
      Sets the baseline offset attribute and return the receiver.
      
@@ -682,6 +810,10 @@ open class TextAttributes {
         }
     }
     
+    open static func obliqueness(_ value: CGFloat) -> TextAttributes {
+        return TextAttributes().obliqueness(value)
+    }
+    
     /**
      Sets the obliqueness attribute and returns the receiver.
      
@@ -705,6 +837,10 @@ open class TextAttributes {
         set {
             dictionary[NSExpansionAttributeName] = newValue as NSNumber
         }
+    }
+    
+    open static func expansion(_ value: CGFloat) -> TextAttributes {
+        return TextAttributes().expansion(value)
     }
     
     /**
@@ -736,6 +872,10 @@ open class TextAttributes {
         }
     }
     
+    open static func verticalGlyphForm(_ value: VerticalGlyphForm) -> TextAttributes {
+        return TextAttributes().verticalGlyphForm(value)
+    }
+    
     /**
      Sets the vertical glyph form attribute and returns the receiver.
      
@@ -761,6 +901,10 @@ open class TextAttributes {
         }
     }
     
+    open static func backgroundColor(white: CGFloat, alpha: CGFloat) -> TextAttributes {
+        return TextAttributes().backgroundColor(white: white, alpha: alpha)
+    }
+    
     /**
      Sets the background color attribute and returns the receiver.
      
@@ -772,6 +916,10 @@ open class TextAttributes {
     @discardableResult
     open func backgroundColor(white: CGFloat, alpha: CGFloat) -> Self {
         return backgroundColor(Color(white: white, alpha: alpha))
+    }
+    
+    open static func backgroundColor(hue: CGFloat, saturation: CGFloat, brightness: CGFloat, alpha: CGFloat) -> TextAttributes {
+        return TextAttributes().backgroundColor(hue: hue, saturation: saturation, brightness: brightness, alpha: alpha)
     }
     
     /**
@@ -789,6 +937,10 @@ open class TextAttributes {
         return backgroundColor(Color(hue: hue, saturation: saturation, brightness: brightness, alpha: alpha))
     }
     
+    open static func backgroundColor(red: CGFloat, green: CGFloat, blue: CGFloat, alpha: CGFloat) -> TextAttributes {
+        return TextAttributes().backgroundColor(red: red, green: green, blue: blue, alpha: alpha)
+    }
+    
     /**
      Sets the background color attribute and returns the receiver.
      
@@ -804,6 +956,10 @@ open class TextAttributes {
         return backgroundColor(Color(red: red, green: green, blue: blue, alpha: alpha))
     }
     
+    open static func backgroundColor(patternImage image: Image) -> TextAttributes {
+        return TextAttributes().backgroundColor(patternImage: image)
+    }
+    
     /**
      Sets the background color attribute and returns the receiver.
      
@@ -814,6 +970,10 @@ open class TextAttributes {
     @discardableResult
     open func backgroundColor(patternImage image: Image) -> Self {
         return backgroundColor(Color(patternImage: image))
+    }
+    
+    open static func backgroundColor(_ color: Color?) -> TextAttributes {
+        return TextAttributes().backgroundColor(color)
     }
     
     /**
@@ -838,6 +998,10 @@ open class TextAttributes {
         }
     }
     
+    open static func paragraphStyle(_ style: NSMutableParagraphStyle) -> TextAttributes {
+        return TextAttributes().paragraphStyle(style)
+    }
+    
     /**
      Sets the paragraph style attribute and returns the receiver.
      
@@ -857,6 +1021,10 @@ open class TextAttributes {
     open var alignment: NSTextAlignment {
         get { return paragraphStyle.alignment }
         set { paragraphStyle.alignment = newValue }
+    }
+    
+    open static func alignment(_ alignment: NSTextAlignment) -> TextAttributes {
+        return TextAttributes().alignment(alignment)
     }
     
     /**
@@ -880,6 +1048,10 @@ open class TextAttributes {
         set { paragraphStyle.firstLineHeadIndent = newValue }
     }
     
+    open static func firstLineHeadIndent(_ value: CGFloat) -> TextAttributes {
+        return TextAttributes().firstLineHeadIndent(value)
+    }
+    
     /**
      Sets the indentation of the first line of the paragraph style and returns the receiver.
      
@@ -899,6 +1071,10 @@ open class TextAttributes {
     open var headIndent: CGFloat {
         get { return paragraphStyle.headIndent }
         set { paragraphStyle.headIndent = newValue }
+    }
+    
+    open static func headIndent(_ value: CGFloat) -> TextAttributes {
+        return TextAttributes().headIndent(value)
     }
     
     /**
@@ -922,6 +1098,10 @@ open class TextAttributes {
         set { paragraphStyle.tailIndent = newValue }
     }
     
+    open static func tailIndent(_ value: CGFloat) -> TextAttributes {
+        return TextAttributes().tailIndent(value)
+    }
+    
     /**
      Sets the trailing indentation of the paragraph style and returns the receiver.
      
@@ -941,6 +1121,10 @@ open class TextAttributes {
     open var lineHeightMultiple: CGFloat {
         get { return paragraphStyle.lineHeightMultiple }
         set { paragraphStyle.lineHeightMultiple = newValue }
+    }
+    
+    open static func lineHeightMultiple(_ value: CGFloat) -> TextAttributes {
+        return TextAttributes().lineHeightMultiple(value)
     }
     
     /**
@@ -964,6 +1148,10 @@ open class TextAttributes {
         set { paragraphStyle.maximumLineHeight = newValue }
     }
     
+    open static func maximumLineHeight(_ value: CGFloat) -> TextAttributes {
+        return TextAttributes().maximumLineHeight(value)
+    }
+    
     /**
      Sets the maximum line height of the paragraph style and returns the receiver.
      
@@ -983,6 +1171,10 @@ open class TextAttributes {
     open var minimumLineHeight: CGFloat {
         get { return paragraphStyle.minimumLineHeight }
         set { paragraphStyle.minimumLineHeight = newValue }
+    }
+    
+    open static func minimumLineHeight(_ value: CGFloat) -> TextAttributes {
+        return TextAttributes().minimumLineHeight(value)
     }
     
     /**
@@ -1006,6 +1198,10 @@ open class TextAttributes {
         set { paragraphStyle.lineSpacing = newValue }
     }
     
+    open static func lineSpacing(_ value: CGFloat) -> TextAttributes {
+        return TextAttributes().lineSpacing(value)
+    }
+    
     /**
      Sets the line spacing of the paragraph style and returns the receiver.
      
@@ -1025,6 +1221,10 @@ open class TextAttributes {
     open var paragraphSpacing: CGFloat {
         get { return paragraphStyle.paragraphSpacing }
         set { paragraphStyle.paragraphSpacing = newValue }
+    }
+    
+    open static func paragraphSpacing(_ value: CGFloat) -> TextAttributes {
+        return TextAttributes().paragraphSpacing(value)
     }
     
     /**
@@ -1048,6 +1248,10 @@ open class TextAttributes {
         set { paragraphStyle.paragraphSpacingBefore = newValue }
     }
     
+    open static func paragraphSpacingBefore(_ value: CGFloat) -> TextAttributes {
+        return TextAttributes().paragraphSpacingBefore(value)
+    }
+    
     /**
      Sets the distance between the paragraph's top and the beginning of its text content and returns the receiver.
      
@@ -1069,6 +1273,10 @@ open class TextAttributes {
         set { paragraphStyle.lineBreakMode = newValue }
     }
     
+    open static func lineBreakMode(_ value: NSLineBreakMode) -> TextAttributes {
+        return TextAttributes().lineBreakMode(value)
+    }
+    
     /**
      Sets the mode that should be used to break lines and returns the receiver.
      
@@ -1088,7 +1296,7 @@ open class TextAttributes {
         // MARK: - Shadow
         
         /// The shadow attribute.
-        public var shadow: NSShadow? {
+        open var shadow: NSShadow? {
             get {
                 return dictionary[NSShadowAttributeName] as? NSShadow
             }
@@ -1098,6 +1306,10 @@ open class TextAttributes {
         }
         
         #if os(OSX)
+            open static func shadow(color: NSColor?, offset: CGSize, blurRadius: CGFloat) -> TextAttributes {
+                return TextAttributes().shadow(color: color, offset: offset, blurRadius: blurRadius)
+            }
+        
             /**
              Sets the shadow attribute and returns the receiver.
              
@@ -1108,7 +1320,7 @@ open class TextAttributes {
              - returns: The receiver.
              */
             @discardableResult
-            public func shadow(color: NSColor?, offset: CGSize, blurRadius: CGFloat) -> Self {
+            open func shadow(color: NSColor?, offset: CGSize, blurRadius: CGFloat) -> Self {
                 return shadow({
                     let shadow = NSShadow()
                     shadow.shadowColor = color
@@ -1118,6 +1330,10 @@ open class TextAttributes {
                 }() as NSShadow)
             }
         #else
+            open static func shadow(color: AnyObject?, offset: CGSize, blurRadius: CGFloat) -> TextAttributes {
+                return TextAttributes().shadow(color: color, offset: offset, blurRadius: blurRadius)
+            }
+        
             /**
              Sets the shadow attribute and returns the receiver.
              
@@ -1128,7 +1344,7 @@ open class TextAttributes {
              - returns: The receiver.
              */
             @discardableResult
-            public func shadow(color: AnyObject?, offset: CGSize, blurRadius: CGFloat) -> Self {
+            open func shadow(color: AnyObject?, offset: CGSize, blurRadius: CGFloat) -> Self {
                 return shadow({
                     let shadow = NSShadow()
                     shadow.shadowColor = color
@@ -1139,6 +1355,10 @@ open class TextAttributes {
             }
         #endif
         
+        open static func shadow(_ shadow: NSShadow?) -> TextAttributes {
+            return TextAttributes().shadow(shadow)
+        }
+        
         /**
          Sets the shadow attribute and returns the receiver.
          
@@ -1147,7 +1367,7 @@ open class TextAttributes {
          - returns: The receiver.
          */
         @discardableResult
-        public func shadow(_ shadow: NSShadow?) -> Self {
+        open func shadow(_ shadow: NSShadow?) -> Self {
             self.shadow = shadow
             return self
         }
@@ -1155,13 +1375,17 @@ open class TextAttributes {
         // MARK: - Attachment
         
         /// The attachment attribute.
-        public var attachment: NSTextAttachment? {
+        open var attachment: NSTextAttachment? {
             get {
                 return dictionary[NSAttachmentAttributeName] as? NSTextAttachment
             }
             set {
                 dictionary[NSAttachmentAttributeName] = newValue
             }
+        }
+        
+        open static func attachment(_ attachment: NSTextAttachment?) -> TextAttributes {
+            return TextAttributes().attachment(attachment)
         }
         
         /**
@@ -1172,7 +1396,7 @@ open class TextAttributes {
          - returns: The receiver.
          */
         @discardableResult
-        public func attachment(_ attachment: NSTextAttachment?) -> Self {
+        open func attachment(_ attachment: NSTextAttachment?) -> Self {
             self.attachment = attachment
             return self
         }

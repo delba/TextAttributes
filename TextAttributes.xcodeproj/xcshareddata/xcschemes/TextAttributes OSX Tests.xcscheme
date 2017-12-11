@@ -9,14 +9,14 @@
          <BuildActionEntry
             buildForTesting = "YES"
             buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "6DB5198B1CCA8CEF005C3E83"
-               BuildableName = "TextAttributes.framework"
-               BlueprintName = "TextAttributes tvOS"
+               BlueprintIdentifier = "6DDF4E381CD1260B002AA459"
+               BuildableName = "TextAttributes OSX Tests.xctest"
+               BlueprintName = "TextAttributes OSX Tests"
                ReferencedContainer = "container:TextAttributes.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -33,9 +33,9 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "6DB519941CCA8CEF005C3E83"
-               BuildableName = "TextAttributes tvOS Tests.xctest"
-               BlueprintName = "TextAttributes tvOS Tests"
+               BlueprintIdentifier = "6DDF4E381CD1260B002AA459"
+               BuildableName = "TextAttributes OSX Tests.xctest"
+               BlueprintName = "TextAttributes OSX Tests"
                ReferencedContainer = "container:TextAttributes.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -43,9 +43,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "6DB5198B1CCA8CEF005C3E83"
-            BuildableName = "TextAttributes.framework"
-            BlueprintName = "TextAttributes tvOS"
+            BlueprintIdentifier = "6DDF4E381CD1260B002AA459"
+            BuildableName = "TextAttributes OSX Tests.xctest"
+            BlueprintName = "TextAttributes OSX Tests"
             ReferencedContainer = "container:TextAttributes.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -66,9 +66,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "6DB5198B1CCA8CEF005C3E83"
-            BuildableName = "TextAttributes.framework"
-            BlueprintName = "TextAttributes tvOS"
+            BlueprintIdentifier = "6DDF4E381CD1260B002AA459"
+            BuildableName = "TextAttributes OSX Tests.xctest"
+            BlueprintName = "TextAttributes OSX Tests"
             ReferencedContainer = "container:TextAttributes.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -81,15 +81,6 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "6DB5198B1CCA8CEF005C3E83"
-            BuildableName = "TextAttributes.framework"
-            BlueprintName = "TextAttributes tvOS"
-            ReferencedContainer = "container:TextAttributes.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

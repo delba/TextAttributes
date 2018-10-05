@@ -366,7 +366,7 @@
 				TargetAttributes = {
 					6D2475361CAAB1050044D223 = {
 						CreatedOnToolsVersion = 7.2;
-						LastSwiftMigration = 0800;
+						LastSwiftMigration = 1000;
 					};
 					6D2475401CAAB1050044D223 = {
 						CreatedOnToolsVersion = 7.2;
@@ -663,7 +663,8 @@
 				PRODUCT_NAME = TextAttributes;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -684,7 +685,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = io.delba.TextAttributes;
 				PRODUCT_NAME = TextAttributes;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};

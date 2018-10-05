@@ -152,7 +152,7 @@ open class TextAttributes {
         }
         
         set {
-            dictionary[NSAttributedString.Key.ligature.rawValue] = NSNumber(value: newValue.hashValue)
+            dictionary[NSAttributedString.Key.ligature.rawValue] = NSNumber(value: newValue.rawValue)
         }
     }
     
@@ -777,7 +777,7 @@ open class TextAttributes {
             }
         }
         set {
-            dictionary[NSAttributedString.Key.verticalGlyphForm.rawValue] = NSNumber(value: newValue.hashValue)
+            dictionary[NSAttributedString.Key.verticalGlyphForm.rawValue] = NSNumber(value: newValue.rawValue)
         }
     }
     

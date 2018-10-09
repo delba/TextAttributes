@@ -33,7 +33,7 @@ class TextAttributesTests: XCTestCase {
         let color = Color(white: 0.42, alpha: 1)
         let ligature: LigatureStyle = .all
         let float: CGFloat = 0.42
-        let underlineStyle: NSUnderlineStyle = NSUnderlineStyle.single
+        let underlineStyle: NSUnderlineStyle = .single
         let textEffect: TextEffect = .letterpress
         let form: VerticalGlyphForm = .vertical
         let link = URL(string: "https://github.com/delba/TextAttributes")!

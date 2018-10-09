@@ -6,8 +6,8 @@ branches:
 
 xcode_project: TextAttributes.xcodeproj
 xcode_scheme: TextAttributesTests
-osx_image: xcode8
-xcode_sdk: iphonesimulator10.0
+osx_image: xcode10
+xcode_sdk: iphonesimulator12.0
 
 script:
   - xcodebuild test -project TextAttributes.xcodeproj -scheme "TextAttributes iOS Tests" -destination "platform=iOS Simulator,name=iPhone 6s"

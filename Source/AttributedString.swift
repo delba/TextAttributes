@@ -44,7 +44,7 @@ extension NSAttributedString {
      - returns: The newly created NSAttributedString.
      */
     public convenience init(string: String, attributes: TextAttributes) {
-        self.init(string: string, attributes: convertToOptionalNSAttributedStringKeyDictionary(attributes.dictionary))
+        self.init(string: string, attributes: attributes.dictionary)
     }
 }
 
@@ -75,7 +75,7 @@ extension NSMutableAttributedString {
      - parameter range:      The range of characters whose attributes are set.
      */
     public func setAttributes(_ attributes: TextAttributes, range: NSRange) {
-        setAttributes(convertToOptionalNSAttributedStringKeyDictionary(attributes.dictionary), range: range)
+        setAttributes(attributes.dictionary, range: range)
     }
     
     /**
@@ -104,17 +104,6 @@ extension NSMutableAttributedString {
      - parameter range:      he range of characters to which the specified attributes apply.
      */
     public func addAttributes(_ attributes: TextAttributes, range: NSRange) {
-        addAttributes(convertToNSAttributedStringKeyDictionary(attributes.dictionary), range: range)
+        addAttributes(attributes.dictionary, range: range)
     }
-}
-
-// Helper function inserted by Swift 4.2 migrator.
-fileprivate func convertToOptionalNSAttributedStringKeyDictionary(_ input: [String: Any]?) -> [NSAttributedString.Key: Any]? {
-	guard let input = input else { return nil }
-	return Dictionary(uniqueKeysWithValues: input.map { key, value in (NSAttributedString.Key(rawValue: key), value)})
-}
-
-// Helper function inserted by Swift 4.2 migrator.
-fileprivate func convertToNSAttributedStringKeyDictionary(_ input: [String: Any]) -> [NSAttributedString.Key: Any] {
-	return Dictionary(uniqueKeysWithValues: input.map { key, value in (NSAttributedString.Key(rawValue: key), value)})
 }

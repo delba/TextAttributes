@@ -1,5 +1,5 @@
 //
-// Utilities.swift
+// NSMutableParagraphStyle+TextAttributes.swift
 //
 // Copyright (c) 2016-2019 Damien (http://delba.io)
 //
@@ -22,18 +22,31 @@
 // SOFTWARE.
 //
 
-#if os(OSX)
-    public typealias Font  = NSFont
-    public typealias Color = NSColor
-    public typealias Image = NSImage
+extension NSMutableParagraphStyle {
+    func clone() -> NSMutableParagraphStyle {
+        let clone = NSMutableParagraphStyle()
 
-    extension NSColor {
-        public convenience init(red: CGFloat, green: CGFloat, blue: CGFloat, alpha: CGFloat) {
-            self.init(srgbRed: red, green: green, blue: blue, alpha: alpha)
+        if #available(iOS 9.0, *) {
+            clone.setParagraphStyle(self)
+        } else {
+            clone.cloneParagraphStyle(self)
         }
+
+        return clone
     }
-#else
-    public typealias Font  = UIFont
-    public typealias Color = UIColor
-    public typealias Image = UIImage
-#endif
+
+    private func cloneParagraphStyle(_ other: NSMutableParagraphStyle) {
+        alignment              = other.alignment
+        firstLineHeadIndent    = other.firstLineHeadIndent
+        headIndent             = other.headIndent
+        tailIndent             = other.tailIndent
+        lineBreakMode          = other.lineBreakMode
+        maximumLineHeight      = other.maximumLineHeight
+        minimumLineHeight      = other.minimumLineHeight
+        lineSpacing            = other.lineSpacing
+        paragraphSpacing       = other.paragraphSpacing
+        paragraphSpacingBefore = other.paragraphSpacingBefore
+        baseWritingDirection   = other.baseWritingDirection
+        lineHeightMultiple     = other.lineHeightMultiple
+    }
+}

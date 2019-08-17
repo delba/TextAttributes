@@ -1,5 +1,5 @@
 //
-// Utilities.swift
+// NSAttributedString+TextAttributes.swift
 //
 // Copyright (c) 2016-2019 Damien (http://delba.io)
 //
@@ -22,18 +22,28 @@
 // SOFTWARE.
 //
 
-#if os(OSX)
-    public typealias Font  = NSFont
-    public typealias Color = NSColor
-    public typealias Image = NSImage
+extension NSAttributedString {
+    /**
+     Returns an NSAttributedString object initialized with a given string and attributes.
 
-    extension NSColor {
-        public convenience init(red: CGFloat, green: CGFloat, blue: CGFloat, alpha: CGFloat) {
-            self.init(srgbRed: red, green: green, blue: blue, alpha: alpha)
-        }
+     - parameter string:     The string for the new attributed string.
+     - parameter attributes: The attributes for the new attributed string.
+
+     - returns: The newly created NSAttributedString.
+     */
+    public convenience init(string: NSString, attributes: TextAttributes) {
+        self.init(string: string as String, attributes: attributes)
     }
-#else
-    public typealias Font  = UIFont
-    public typealias Color = UIColor
-    public typealias Image = UIImage
-#endif
+
+    /**
+     Returns an NSAttributedString object initialized with a given string and attributes.
+
+     - parameter string:     The string for the new attributed string.
+     - parameter attributes: The attributes for the new attributed string.
+
+     - returns: The newly created NSAttributedString.
+     */
+    public convenience init(string: String, attributes: TextAttributes) {
+        self.init(string: string, attributes: attributes.dictionary)
+    }
+}

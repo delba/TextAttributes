@@ -1,5 +1,5 @@
 //
-// AttributedString.swift
+// NSMutableAttributedString+TextAttributes.swift
 //
 // Copyright (c) 2016-2019 Damien (http://delba.io)
 //
@@ -22,36 +22,10 @@
 // SOFTWARE.
 //
 
-extension NSAttributedString {
-    /**
-     Returns an NSAttributedString object initialized with a given string and attributes.
-     
-     - parameter string:     The string for the new attributed string.
-     - parameter attributes: The attributes for the new attributed string.
-     
-     - returns: The newly created NSAttributedString.
-     */
-    public convenience init(string: NSString, attributes: TextAttributes) {
-        self.init(string: string as String, attributes: attributes)
-    }
-
-    /**
-     Returns an NSAttributedString object initialized with a given string and attributes.
-     
-     - parameter string:     The string for the new attributed string.
-     - parameter attributes: The attributes for the new attributed string.
-     
-     - returns: The newly created NSAttributedString.
-     */
-    public convenience init(string: String, attributes: TextAttributes) {
-        self.init(string: string, attributes: attributes.dictionary)
-    }
-}
-
 extension NSMutableAttributedString {
     /**
      Sets the attributes to the specified attributes.
-     
+
      - parameter attributes: The attributes to set.
      */
     open func setAttributes(_ attributes: TextAttributes) {
@@ -60,7 +34,7 @@ extension NSMutableAttributedString {
 
     /**
      Sets the attributes for the characters in the specified range to the specified attributes.
-     
+
      - parameter attributes: The attributes to set.
      - parameter range:      The range of characters whose attributes are set.
      */
@@ -70,7 +44,7 @@ extension NSMutableAttributedString {
 
     /**
      Sets the attributes for the characters in the specified range to the specified attributes.
-     
+
      - parameter attributes: The attributes to set.
      - parameter range:      The range of characters whose attributes are set.
      */
@@ -80,7 +54,7 @@ extension NSMutableAttributedString {
 
     /**
      Adds the given attributes.
-     
+
      - parameter attributes: The attributes to add.
      */
     open func addAttributes(_ attributes: TextAttributes) {
@@ -89,7 +63,7 @@ extension NSMutableAttributedString {
 
     /**
      Adds the given collection of attributes to the characters in the specified range.
-     
+
      - parameter attributes: The attributes to add.
      - parameter range:      he range of characters to which the specified attributes apply.
      */
@@ -99,7 +73,7 @@ extension NSMutableAttributedString {
 
     /**
      Adds the given collection of attributes to the characters in the specified range.
-     
+
      - parameter attributes: The attributes to add.
      - parameter range:      he range of characters to which the specified attributes apply.
      */

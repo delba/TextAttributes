@@ -13,22 +13,34 @@
 		6D2475521CAAB1140044D223 /* TextAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D2475511CAAB1140044D223 /* TextAttributes.swift */; };
 		6DB519801CCA8189005C3E83 /* TextAttributes.h in Headers */ = {isa = PBXBuildFile; fileRef = 6D24753A1CAAB1050044D223 /* TextAttributes.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6DB519811CCA8195005C3E83 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB8402C1CB1F398002AB94E /* Utilities.swift */; };
-		6DB519821CCA819A005C3E83 /* AttributedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DC3C56A1CB82FCB00ED7249 /* AttributedString.swift */; };
 		6DB519861CCA8AD9005C3E83 /* TextAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D2475511CAAB1140044D223 /* TextAttributes.swift */; };
 		6DB519961CCA8CEF005C3E83 /* TextAttributes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DB5198C1CCA8CEF005C3E83 /* TextAttributes.framework */; };
 		6DB519A31CCA8D8F005C3E83 /* TextAttributes.h in Headers */ = {isa = PBXBuildFile; fileRef = 6D24753A1CAAB1050044D223 /* TextAttributes.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6DB519C91CCA90FB005C3E83 /* TextAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D2475511CAAB1140044D223 /* TextAttributes.swift */; };
 		6DB519CA1CCA9101005C3E83 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB8402C1CB1F398002AB94E /* Utilities.swift */; };
-		6DB519CB1CCA9101005C3E83 /* AttributedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DC3C56A1CB82FCB00ED7249 /* AttributedString.swift */; };
 		6DB519CC1CCA9107005C3E83 /* TextAttributesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D2475461CAAB1050044D223 /* TextAttributesTests.swift */; };
 		6DB8402D1CB1F398002AB94E /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB8402C1CB1F398002AB94E /* Utilities.swift */; };
-		6DC3C56B1CB82FCB00ED7249 /* AttributedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DC3C56A1CB82FCB00ED7249 /* AttributedString.swift */; };
 		6DDF4E3A1CD1260B002AA459 /* TextAttributes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DDF4E301CD1260A002AA459 /* TextAttributes.framework */; };
 		6DDF4E471CD203A3002AA459 /* TextAttributes.h in Headers */ = {isa = PBXBuildFile; fileRef = 6D24753A1CAAB1050044D223 /* TextAttributes.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6DDF4E481CD20452002AA459 /* TextAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D2475511CAAB1140044D223 /* TextAttributes.swift */; };
-		6DDF4E491CD20456002AA459 /* AttributedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DC3C56A1CB82FCB00ED7249 /* AttributedString.swift */; };
 		6DDF4E4A1CD2045A002AA459 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB8402C1CB1F398002AB94E /* Utilities.swift */; };
 		6DDF4E4B1CD20817002AA459 /* TextAttributesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D2475461CAAB1050044D223 /* TextAttributesTests.swift */; };
+		8474276E230876DD007A7922 /* NSRange+TextAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8474276D230876DD007A7922 /* NSRange+TextAttributes.swift */; };
+		84742770230876F7007A7922 /* NSMutableParagraphStyle+TextAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8474276F230876F7007A7922 /* NSMutableParagraphStyle+TextAttributes.swift */; };
+		847427722308770B007A7922 /* NSAttributedString+TextAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847427712308770B007A7922 /* NSAttributedString+TextAttributes.swift */; };
+		847427742308772D007A7922 /* NSMutableAttributedString+TextAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847427732308772D007A7922 /* NSMutableAttributedString+TextAttributes.swift */; };
+		8474277523087735007A7922 /* NSRange+TextAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8474276D230876DD007A7922 /* NSRange+TextAttributes.swift */; };
+		8474277623087736007A7922 /* NSRange+TextAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8474276D230876DD007A7922 /* NSRange+TextAttributes.swift */; };
+		8474277723087737007A7922 /* NSRange+TextAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8474276D230876DD007A7922 /* NSRange+TextAttributes.swift */; };
+		847427782308773B007A7922 /* NSMutableParagraphStyle+TextAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8474276F230876F7007A7922 /* NSMutableParagraphStyle+TextAttributes.swift */; };
+		847427792308773D007A7922 /* NSMutableParagraphStyle+TextAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8474276F230876F7007A7922 /* NSMutableParagraphStyle+TextAttributes.swift */; };
+		8474277A2308773E007A7922 /* NSMutableParagraphStyle+TextAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8474276F230876F7007A7922 /* NSMutableParagraphStyle+TextAttributes.swift */; };
+		8474277B23087742007A7922 /* NSAttributedString+TextAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847427712308770B007A7922 /* NSAttributedString+TextAttributes.swift */; };
+		8474277C23087743007A7922 /* NSAttributedString+TextAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847427712308770B007A7922 /* NSAttributedString+TextAttributes.swift */; };
+		8474277D23087745007A7922 /* NSAttributedString+TextAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847427712308770B007A7922 /* NSAttributedString+TextAttributes.swift */; };
+		8474277E23087748007A7922 /* NSMutableAttributedString+TextAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847427732308772D007A7922 /* NSMutableAttributedString+TextAttributes.swift */; };
+		8474277F23087749007A7922 /* NSMutableAttributedString+TextAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847427732308772D007A7922 /* NSMutableAttributedString+TextAttributes.swift */; };
+		847427802308774B007A7922 /* NSMutableAttributedString+TextAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847427732308772D007A7922 /* NSMutableAttributedString+TextAttributes.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,9 +79,12 @@
 		6DB5198C1CCA8CEF005C3E83 /* TextAttributes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TextAttributes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DB519951CCA8CEF005C3E83 /* TextAttributes tvOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "TextAttributes tvOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DB8402C1CB1F398002AB94E /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
-		6DC3C56A1CB82FCB00ED7249 /* AttributedString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttributedString.swift; sourceTree = "<group>"; };
 		6DDF4E301CD1260A002AA459 /* TextAttributes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TextAttributes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DDF4E391CD1260B002AA459 /* TextAttributes OSX Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "TextAttributes OSX Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8474276D230876DD007A7922 /* NSRange+TextAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSRange+TextAttributes.swift"; sourceTree = "<group>"; };
+		8474276F230876F7007A7922 /* NSMutableParagraphStyle+TextAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSMutableParagraphStyle+TextAttributes.swift"; sourceTree = "<group>"; };
+		847427712308770B007A7922 /* NSAttributedString+TextAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSAttributedString+TextAttributes.swift"; sourceTree = "<group>"; };
+		847427732308772D007A7922 /* NSMutableAttributedString+TextAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSMutableAttributedString+TextAttributes.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,8 +171,8 @@
 		6D2475391CAAB1050044D223 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				8474276C230876C8007A7922 /* Extensions */,
 				6D5F82CF1CADCD2300237532 /* Supporting Files */,
-				6DC3C56A1CB82FCB00ED7249 /* AttributedString.swift */,
 				6D2475511CAAB1140044D223 /* TextAttributes.swift */,
 			);
 			path = Source;
@@ -188,6 +203,17 @@
 				6D2475481CAAB1050044D223 /* Info.plist */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8474276C230876C8007A7922 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				847427712308770B007A7922 /* NSAttributedString+TextAttributes.swift */,
+				847427732308772D007A7922 /* NSMutableAttributedString+TextAttributes.swift */,
+				8474276F230876F7007A7922 /* NSMutableParagraphStyle+TextAttributes.swift */,
+				8474276D230876DD007A7922 /* NSRange+TextAttributes.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -471,9 +497,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6DC3C56B1CB82FCB00ED7249 /* AttributedString.swift in Sources */,
+				847427742308772D007A7922 /* NSMutableAttributedString+TextAttributes.swift in Sources */,
+				8474276E230876DD007A7922 /* NSRange+TextAttributes.swift in Sources */,
 				6D2475521CAAB1140044D223 /* TextAttributes.swift in Sources */,
+				84742770230876F7007A7922 /* NSMutableParagraphStyle+TextAttributes.swift in Sources */,
 				6DB8402D1CB1F398002AB94E /* Utilities.swift in Sources */,
+				847427722308770B007A7922 /* NSAttributedString+TextAttributes.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -489,9 +518,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6DB519821CCA819A005C3E83 /* AttributedString.swift in Sources */,
+				847427802308774B007A7922 /* NSMutableAttributedString+TextAttributes.swift in Sources */,
+				8474277723087737007A7922 /* NSRange+TextAttributes.swift in Sources */,
 				6DB519811CCA8195005C3E83 /* Utilities.swift in Sources */,
+				8474277A2308773E007A7922 /* NSMutableParagraphStyle+TextAttributes.swift in Sources */,
 				6DB519861CCA8AD9005C3E83 /* TextAttributes.swift in Sources */,
+				8474277D23087745007A7922 /* NSAttributedString+TextAttributes.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -499,9 +531,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6DB519CB1CCA9101005C3E83 /* AttributedString.swift in Sources */,
+				8474277E23087748007A7922 /* NSMutableAttributedString+TextAttributes.swift in Sources */,
+				8474277523087735007A7922 /* NSRange+TextAttributes.swift in Sources */,
 				6DB519CA1CCA9101005C3E83 /* Utilities.swift in Sources */,
+				847427782308773B007A7922 /* NSMutableParagraphStyle+TextAttributes.swift in Sources */,
 				6DB519C91CCA90FB005C3E83 /* TextAttributes.swift in Sources */,
+				8474277B23087742007A7922 /* NSAttributedString+TextAttributes.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -517,9 +552,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8474277F23087749007A7922 /* NSMutableAttributedString+TextAttributes.swift in Sources */,
+				8474277623087736007A7922 /* NSRange+TextAttributes.swift in Sources */,
 				6DDF4E4A1CD2045A002AA459 /* Utilities.swift in Sources */,
-				6DDF4E491CD20456002AA459 /* AttributedString.swift in Sources */,
+				847427792308773D007A7922 /* NSMutableParagraphStyle+TextAttributes.swift in Sources */,
 				6DDF4E481CD20452002AA459 /* TextAttributes.swift in Sources */,
+				8474277C23087743007A7922 /* NSAttributedString+TextAttributes.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,5 +1,5 @@
 //
-// Utilities.swift
+// NSRange+TextAttributes.swift
 //
 // Copyright (c) 2016-2019 Damien (http://delba.io)
 //
@@ -22,18 +22,12 @@
 // SOFTWARE.
 //
 
-#if os(OSX)
-    public typealias Font  = NSFont
-    public typealias Color = NSColor
-    public typealias Image = NSImage
-
-    extension NSColor {
-        public convenience init(red: CGFloat, green: CGFloat, blue: CGFloat, alpha: CGFloat) {
-            self.init(srgbRed: red, green: green, blue: blue, alpha: alpha)
-        }
+extension NSRange {
+    init(_ range: Range<Int>) {
+        self = NSRange(location: range.lowerBound, length: range.count)
     }
-#else
-    public typealias Font  = UIFont
-    public typealias Color = UIColor
-    public typealias Image = UIImage
-#endif
+
+    init(_ string: NSString) {
+        self = NSRange(location: 0, length: string.length)
+    }
+}

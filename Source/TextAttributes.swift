@@ -33,24 +33,6 @@ public enum VerticalGlyphForm: Int {
     case vertical
 }
 
-public enum TextEffect {
-    case letterpress
-    
-    init?(name: String) {
-        if name == NSTextEffectLetterpressStyle {
-            self = .letterpress
-        } else {
-            return nil
-        }
-    }
-    
-    var name: String {
-        switch self {
-        case .letterpress: return NSTextEffectLetterpressStyle
-        }
-    }
-}
-
 open class TextAttributes {
     /// The attributes dictionary.
     open fileprivate(set) var dictionary: [String: Any] = [:]
@@ -603,19 +585,12 @@ open class TextAttributes {
     // MARK: - TextEffect
 
     /// The text effect attribute.
-    open var textEffect: TextEffect? {
+    open var textEffect: NSAttributedString.TextEffectStyle? {
         get {
-            if let string = dictionary[NSTextEffectAttributeName] as? String, let effect = TextEffect(name: string) {
-                return effect
-            }
-            return nil
+            return dictionary[.textEffect] as? NSAttributedString.TextEffectStyle
         }
         set {
-            if let name = newValue?.name {
-                dictionary[NSTextEffectAttributeName] = NSString(string: name)
-            } else {
-                dictionary[NSTextEffectAttributeName] = nil
-            }
+            dictionary[.textEffect] = newValue
         }
     }
 
@@ -627,7 +602,7 @@ open class TextAttributes {
      - returns: The receiver.
      */
     @discardableResult
-    open func textEffect(_ style: TextEffect?) -> Self {
+    open func textEffect(_ style: NSAttributedString.TextEffectStyle?) -> Self {
         self.textEffect = style
         return self
     }

@@ -35,7 +35,7 @@ public enum VerticalGlyphForm {
 
 open class TextAttributes {
     /// The attributes dictionary.
-    open fileprivate(set) var dictionary: [NSAttributedString.Key: Any] = [:]
+    open private(set) var dictionary: [NSAttributedString.Key: Any] = [:]
 
     /**
      Create an instance of TextAttributes.

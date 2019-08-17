@@ -114,7 +114,6 @@ open class TextAttributes {
         get {
             return dictionary[.ligature] as? LigatureStyle ?? .default
         }
-
         set {
             dictionary[.ligature] = newValue
         }
@@ -140,7 +139,6 @@ open class TextAttributes {
         get {
             return dictionary[.kern] as? CGFloat ?? 0
         }
-
         set {
             dictionary[.kern] = newValue
         }
@@ -166,7 +164,6 @@ open class TextAttributes {
         get {
             return dictionary[.strikethroughStyle] as? NSUnderlineStyle ?? []
         }
-
         set {
             dictionary[.strikethroughStyle] = newValue
         }
@@ -272,7 +269,6 @@ open class TextAttributes {
         get {
             return dictionary[.underlineStyle] as? NSUnderlineStyle ?? []
         }
-
         set {
             dictionary[.underlineStyle] = newValue
         }

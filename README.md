@@ -76,7 +76,7 @@ attrs
 - **Access the underlying dictionary:**
 
 ```swift
-attrs.dictionary // Returns the attributes dictionary of type [String: AnyObject]
+attrs.dictionary // Returns the attributes dictionary of type [NSAttributedString.Key: Any]
 ```
 
 #### Third-party libraries:
@@ -196,7 +196,7 @@ pod 'TextAttributes'
 
 ## License
 
-Copyright (c) 2016 Damien (http://delba.io)
+Copyright (c) 2016-2019 Damien (http://delba.io)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

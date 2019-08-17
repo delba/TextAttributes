@@ -1076,7 +1076,7 @@ open class TextAttributes {
         // MARK: - Shadow
 
         /// The shadow attribute.
-        public var shadow: NSShadow? {
+        open var shadow: NSShadow? {
             get {
                 return dictionary[.shadow] as? NSShadow
             }
@@ -1096,7 +1096,7 @@ open class TextAttributes {
              - returns: The receiver.
              */
             @discardableResult
-            public func shadow(color: NSColor?, offset: CGSize, blurRadius: CGFloat) -> Self {
+            open func shadow(color: NSColor?, offset: CGSize, blurRadius: CGFloat) -> Self {
                 return shadow({
                     let shadow = NSShadow()
                     shadow.shadowColor = color
@@ -1116,7 +1116,7 @@ open class TextAttributes {
              - returns: The receiver.
              */
             @discardableResult
-            public func shadow(color: AnyObject?, offset: CGSize, blurRadius: CGFloat) -> Self {
+            open func shadow(color: AnyObject?, offset: CGSize, blurRadius: CGFloat) -> Self {
                 return shadow({
                     let shadow = NSShadow()
                     shadow.shadowColor = color
@@ -1135,7 +1135,7 @@ open class TextAttributes {
          - returns: The receiver.
          */
         @discardableResult
-        public func shadow(_ shadow: NSShadow?) -> Self {
+        open func shadow(_ shadow: NSShadow?) -> Self {
             self.shadow = shadow
             return self
         }
@@ -1143,7 +1143,7 @@ open class TextAttributes {
         // MARK: - Attachment
 
         /// The attachment attribute.
-        public var attachment: NSTextAttachment? {
+        open var attachment: NSTextAttachment? {
             get {
                 return dictionary[.attachment] as? NSTextAttachment
             }
@@ -1160,7 +1160,7 @@ open class TextAttributes {
          - returns: The receiver.
          */
         @discardableResult
-        public func attachment(_ attachment: NSTextAttachment?) -> Self {
+        open func attachment(_ attachment: NSTextAttachment?) -> Self {
             self.attachment = attachment
             return self
         }

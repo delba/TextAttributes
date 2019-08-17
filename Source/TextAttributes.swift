@@ -142,7 +142,7 @@ open class TextAttributes {
         }
 
         set {
-            dictionary[.kern] = newValue as NSNumber
+            dictionary[.kern] = newValue
         }
     }
 
@@ -459,7 +459,7 @@ open class TextAttributes {
             return dictionary[.strokeWidth] as? CGFloat ?? 0
         }
         set {
-            dictionary[.strokeWidth] = newValue as NSNumber
+            dictionary[.strokeWidth] = newValue
         }
     }
 
@@ -645,7 +645,7 @@ open class TextAttributes {
             return dictionary[.baselineOffset] as? CGFloat ?? 0
         }
         set {
-            dictionary[.baselineOffset] = newValue as NSNumber
+            dictionary[.baselineOffset] = newValue
         }
     }
 
@@ -670,7 +670,7 @@ open class TextAttributes {
             return dictionary[.obliqueness] as? CGFloat ?? 0
         }
         set {
-            dictionary[.obliqueness] = newValue as NSNumber
+            dictionary[.obliqueness] = newValue
         }
     }
 
@@ -695,7 +695,7 @@ open class TextAttributes {
             return dictionary[.expansion] as? CGFloat ?? 0
         }
         set {
-            dictionary[.expansion] = newValue as NSNumber
+            dictionary[.expansion] = newValue
         }
     }
 

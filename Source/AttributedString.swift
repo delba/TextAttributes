@@ -34,7 +34,7 @@ extension NSAttributedString {
     public convenience init(string: NSString, attributes: TextAttributes) {
         self.init(string: string as String, attributes: attributes)
     }
-    
+
     /**
      Returns an NSAttributedString object initialized with a given string and attributes.
      
@@ -57,7 +57,7 @@ extension NSMutableAttributedString {
     public func setAttributes(_ attributes: TextAttributes) {
         setAttributes(attributes, range: NSRange(mutableString))
     }
-    
+
     /**
      Sets the attributes for the characters in the specified range to the specified attributes.
      
@@ -67,7 +67,7 @@ extension NSMutableAttributedString {
     public func setAttributes(_ attributes: TextAttributes, range: Range<Int>) {
         setAttributes(attributes, range: NSRange(range))
     }
-    
+
     /**
      Sets the attributes for the characters in the specified range to the specified attributes.
      
@@ -77,7 +77,7 @@ extension NSMutableAttributedString {
     public func setAttributes(_ attributes: TextAttributes, range: NSRange) {
         setAttributes(attributes.dictionary, range: range)
     }
-    
+
     /**
      Adds the given attributes.
      
@@ -86,7 +86,7 @@ extension NSMutableAttributedString {
     public func addAttributes(_ attributes: TextAttributes) {
         addAttributes(attributes, range: NSRange(mutableString))
     }
-    
+
     /**
      Adds the given collection of attributes to the characters in the specified range.
      
@@ -96,7 +96,7 @@ extension NSMutableAttributedString {
     public func addAttributes(_ attributes: TextAttributes, range: Range<Int>) {
         addAttributes(attributes, range: NSRange(range))
     }
-    
+
     /**
      Adds the given collection of attributes to the characters in the specified range.
      

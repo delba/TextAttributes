@@ -22,13 +22,13 @@
 // SOFTWARE.
 //
 
-public enum LigatureStyle: Int {
+public enum LigatureStyle {
     case none
     case `default`
     case all
 }
 
-public enum VerticalGlyphForm: Int {
+public enum VerticalGlyphForm {
     case horizontal
     case vertical
 }
@@ -126,15 +126,11 @@ open class TextAttributes {
     /// The ligature attribute.
     open var ligature: LigatureStyle {
         get {
-            if let int = dictionary[NSLigatureAttributeName] as? Int, let ligature = LigatureStyle(rawValue: int) {
-                return ligature
-            } else {
-                return .default
-            }
+            return dictionary[.ligature] as? LigatureStyle ?? .default
         }
 
         set {
-            dictionary[NSLigatureAttributeName] = NSNumber(value: newValue.hashValue)
+            dictionary[.ligature] = newValue
         }
     }
 
@@ -743,14 +739,10 @@ open class TextAttributes {
     /// The vertical glyph form attribute.
     open var verticalGlyphForm: VerticalGlyphForm {
         get {
-            if let int = dictionary[NSVerticalGlyphFormAttributeName] as? Int, let form = VerticalGlyphForm(rawValue: int) {
-                return form
-            } else {
-                return .horizontal
-            }
+            return dictionary[.verticalGlyphForm] as? VerticalGlyphForm ?? .horizontal
         }
         set {
-            dictionary[NSVerticalGlyphFormAttributeName] = NSNumber(value: newValue.hashValue)
+            dictionary[.verticalGlyphForm] = newValue
         }
     }
 

@@ -35,20 +35,6 @@ public enum VerticalGlyphForm {
 
 open class TextAttributes {
     /// The attributes dictionary.
-    /**
-     Create an instance of TextAttributes with a base.
-     
-     - parameter base: The base.
-     
-     - returns: The created TextAttributes.
-     */
-    @available(*, deprecated: 1, message: "Please use the clone() method.")
-    public init(base: TextAttributes) {
-        dictionary = base.dictionary
-        paragraphStyle = base.paragraphStyle.clone()
-        dictionary[NSParagraphStyleAttributeName] = paragraphStyle
-    }
-    
     open fileprivate(set) var dictionary: [NSAttributedString.Key: Any] = [:]
 
     /**

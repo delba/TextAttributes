@@ -582,13 +582,7 @@ open class TextAttributes {
     /// The link attribute.
     open var link: URL? {
         get {
-            if let URL = dictionary[.link] as? URL {
-                return URL
-            } else if let string = dictionary[.link] as? String {
-                return URL(string: string)
-            } else {
-                return nil
-            }
+            return dictionary[.link] as? URL
         }
         set {
             dictionary[.link] = newValue

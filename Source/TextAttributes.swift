@@ -35,8 +35,6 @@ public enum VerticalGlyphForm {
 
 open class TextAttributes {
     /// The attributes dictionary.
-    open fileprivate(set) var dictionary: [String: Any] = [:]
-    
     /**
      Create an instance of TextAttributes with a base.
      
@@ -51,13 +49,15 @@ open class TextAttributes {
         dictionary[NSParagraphStyleAttributeName] = paragraphStyle
     }
     
+    open fileprivate(set) var dictionary: [NSAttributedString.Key: Any] = [:]
+
     /**
      Create an instance of TextAttributes.
      
      - returns: The created TextAttributes.
      */
     public init() {
-        dictionary[NSParagraphStyleAttributeName] = paragraphStyle
+        dictionary[.paragraphStyle] = paragraphStyle
     }
 
     /**
@@ -88,10 +88,10 @@ open class TextAttributes {
     /// The font attribute.
     open var font: Font? {
         get {
-            return dictionary[NSFontAttributeName] as? Font ?? Font(name: "HelveticaNeue", size: 12)
+            return dictionary[.font] as? Font
         }
         set {
-            dictionary[NSFontAttributeName] = newValue
+            dictionary[.font] = newValue
         }
     }
 
@@ -152,11 +152,11 @@ open class TextAttributes {
     /// The number of points by which to adjust kern-pair characters.
     open var kern: CGFloat {
         get {
-            return dictionary[NSKernAttributeName] as? CGFloat ?? 0
+            return dictionary[.kern] as? CGFloat ?? 0
         }
 
         set {
-            dictionary[NSKernAttributeName] = newValue as NSNumber
+            dictionary[.kern] = newValue as NSNumber
         }
     }
 
@@ -178,15 +178,11 @@ open class TextAttributes {
     /// The strikethrough style attribute.
     open var strikethroughStyle: NSUnderlineStyle {
         get {
-            if let int = dictionary[NSStrikethroughStyleAttributeName] as? Int, let style = NSUnderlineStyle(rawValue: int) {
-                return style
-            } else {
-                return .styleNone
-            }
+            return dictionary[.strikethroughStyle] as? NSUnderlineStyle ?? []
         }
 
         set {
-            dictionary[NSStrikethroughStyleAttributeName] = NSNumber(value: newValue.rawValue)
+            dictionary[.strikethroughStyle] = newValue
         }
     }
 
@@ -208,10 +204,10 @@ open class TextAttributes {
     /// The strikethrough color attribute.
     var strikethroughColor: Color? {
         get {
-            return dictionary[NSStrikethroughColorAttributeName] as? Color
+            return dictionary[.strikethroughColor] as? Color
         }
         set {
-            dictionary[NSStrikethroughColorAttributeName] = newValue
+            dictionary[.strikethroughColor] = newValue
         }
     }
 
@@ -288,15 +284,11 @@ open class TextAttributes {
     /// The underline style attribute.
     open var underlineStyle: NSUnderlineStyle {
         get {
-            if let int = dictionary[NSUnderlineStyleAttributeName] as? Int, let style = NSUnderlineStyle(rawValue: int) {
-                return style
-            } else {
-                return .styleNone
-            }
+            return dictionary[.underlineStyle] as? NSUnderlineStyle ?? []
         }
 
         set {
-            dictionary[NSUnderlineStyleAttributeName] = NSNumber(value: newValue.rawValue)
+            dictionary[.underlineStyle] = newValue
         }
     }
 
@@ -318,10 +310,10 @@ open class TextAttributes {
     /// The underline color attribute.
     open var underlineColor: Color? {
         get {
-            return dictionary[NSUnderlineColorAttributeName] as? Color
+            return dictionary[.underlineColor] as? Color
         }
         set {
-            dictionary[NSUnderlineColorAttributeName] = newValue
+            dictionary[.underlineColor] = newValue
         }
     }
 
@@ -398,10 +390,10 @@ open class TextAttributes {
     /// The stroke color attribute.
     open var strokeColor: Color? {
         get {
-            return dictionary[NSStrokeColorAttributeName] as? Color
+            return dictionary[.strokeColor] as? Color
         }
         set {
-            dictionary[NSStrokeColorAttributeName] = newValue
+            dictionary[.strokeColor] = newValue
         }
     }
 
@@ -478,10 +470,10 @@ open class TextAttributes {
     /// The stroke width attribute.
     open var strokeWidth: CGFloat {
         get {
-            return dictionary[NSStrokeWidthAttributeName] as? CGFloat ?? 0
+            return dictionary[.strokeWidth] as? CGFloat ?? 0
         }
         set {
-            dictionary[NSStrokeWidthAttributeName] = newValue as NSNumber
+            dictionary[.strokeWidth] = newValue as NSNumber
         }
     }
 
@@ -503,10 +495,10 @@ open class TextAttributes {
     /// The foreground color attribute.
     open var foregroundColor: Color? {
         get {
-            return dictionary[NSForegroundColorAttributeName] as? Color
+            return dictionary[.foregroundColor] as? Color
         }
         set {
-            dictionary[NSForegroundColorAttributeName] = newValue
+            dictionary[.foregroundColor] = newValue
         }
     }
 
@@ -608,16 +600,16 @@ open class TextAttributes {
     /// The link attribute.
     open var link: URL? {
         get {
-            if let URL = dictionary[NSLinkAttributeName] as? URL {
+            if let URL = dictionary[.link] as? URL {
                 return URL
-            } else if let string = dictionary[NSLinkAttributeName] as? String {
+            } else if let string = dictionary[.link] as? String {
                 return URL(string: string)
             } else {
                 return nil
             }
         }
         set {
-            dictionary[NSLinkAttributeName] = newValue
+            dictionary[.link] = newValue
         }
     }
 
@@ -664,10 +656,10 @@ open class TextAttributes {
     /// The baseline offset attribute.
     open var baselineOffset: CGFloat {
         get {
-            return dictionary[NSBaselineOffsetAttributeName] as? CGFloat ?? 0
+            return dictionary[.baselineOffset] as? CGFloat ?? 0
         }
         set {
-            dictionary[NSBaselineOffsetAttributeName] = newValue as NSNumber
+            dictionary[.baselineOffset] = newValue as NSNumber
         }
     }
 
@@ -689,10 +681,10 @@ open class TextAttributes {
     /// The obliqueness attribute.
     open var obliqueness: CGFloat {
         get {
-            return dictionary[NSObliquenessAttributeName] as? CGFloat ?? 0
+            return dictionary[.obliqueness] as? CGFloat ?? 0
         }
         set {
-            dictionary[NSObliquenessAttributeName] = newValue as NSNumber
+            dictionary[.obliqueness] = newValue as NSNumber
         }
     }
 
@@ -714,10 +706,10 @@ open class TextAttributes {
     /// The expansion attribute.
     open var expansion: CGFloat {
         get {
-            return dictionary[NSExpansionAttributeName] as? CGFloat ?? 0
+            return dictionary[.expansion] as? CGFloat ?? 0
         }
         set {
-            dictionary[NSExpansionAttributeName] = newValue as NSNumber
+            dictionary[.expansion] = newValue as NSNumber
         }
     }
 
@@ -764,10 +756,10 @@ open class TextAttributes {
     /// The background color attribute.
     var backgroundColor: Color? {
         get {
-            return dictionary[NSBackgroundColorAttributeName] as? Color
+            return dictionary[.backgroundColor] as? Color
         }
         set {
-            dictionary[NSBackgroundColorAttributeName] = newValue
+            dictionary[.backgroundColor] = newValue
         }
     }
 
@@ -844,7 +836,7 @@ open class TextAttributes {
     /// The paragraph style attribute.
     open var paragraphStyle: NSMutableParagraphStyle = NSMutableParagraphStyle() {
         didSet {
-            dictionary[NSParagraphStyleAttributeName] = paragraphStyle
+            dictionary[.paragraphStyle] = paragraphStyle
         }
     }
 
@@ -1100,10 +1092,10 @@ open class TextAttributes {
         /// The shadow attribute.
         public var shadow: NSShadow? {
             get {
-                return dictionary[NSShadowAttributeName] as? NSShadow
+                return dictionary[.shadow] as? NSShadow
             }
             set {
-                dictionary[NSShadowAttributeName] = newValue
+                dictionary[.shadow] = newValue
             }
         }
 
@@ -1167,10 +1159,10 @@ open class TextAttributes {
         /// The attachment attribute.
         public var attachment: NSTextAttachment? {
             get {
-                return dictionary[NSAttachmentAttributeName] as? NSTextAttachment
+                return dictionary[.attachment] as? NSTextAttachment
             }
             set {
-                dictionary[NSAttachmentAttributeName] = newValue
+                dictionary[.attachment] = newValue
             }
         }
 

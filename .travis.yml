@@ -1,4 +1,4 @@
-language: objective-c
+language: swift
 
 branches:
   only:
@@ -6,8 +6,7 @@ branches:
 
 xcode_project: TextAttributes.xcodeproj
 xcode_scheme: TextAttributesTests
-osx_image: xcode10.3
-xcode_sdk: iphonesimulator12.4
+osx_image: xcode11.2
 
 script:
-  - xcodebuild test -project TextAttributes.xcodeproj -scheme "TextAttributes iOS Tests" -destination "platform=iOS Simulator,name=iPhone Xs"
+  - xcodebuild test -project TextAttributes.xcodeproj -scheme "TextAttributes iOS Tests" -destination "platform=iOS Simulator,name=iPhone 11"

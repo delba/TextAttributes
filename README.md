@@ -17,7 +17,7 @@ let attrs = TextAttributes()
     .foregroundColor(white: 0.2, alpha: 1)
     .lineHeightMultiple(1.5)
 
-NSAttributedString("The quick brown fox jumps over the lazy dog", attributes: attrs)
+NSAttributedString(string: "The quick brown fox jumps over the lazy dog", attributes: attrs)
 ```
 
 <p align="center">

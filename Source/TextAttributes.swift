@@ -162,10 +162,11 @@ open class TextAttributes {
     /// The strikethrough style attribute.
     open var strikethroughStyle: NSUnderlineStyle {
         get {
-            return dictionary[.strikethroughStyle] as? NSUnderlineStyle ?? []
+            guard let rawValue = dictionary[.strikethroughStyle] as? Int else { return [] }
+            return NSUnderlineStyle(rawValue: rawValue)
         }
         set {
-            dictionary[.strikethroughStyle] = newValue
+            dictionary[.strikethroughStyle] = newValue.rawValue
         }
     }
 
@@ -267,10 +268,11 @@ open class TextAttributes {
     /// The underline style attribute.
     open var underlineStyle: NSUnderlineStyle {
         get {
-            return dictionary[.underlineStyle] as? NSUnderlineStyle ?? []
+            guard let rawValue = dictionary[.underlineStyle] as? Int else { return [] }
+            return NSUnderlineStyle(rawValue: rawValue)
         }
         set {
-            dictionary[.underlineStyle] = newValue
+            dictionary[.underlineStyle] = newValue.rawValue
         }
     }
 

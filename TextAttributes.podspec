@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name          = 'TextAttributes'
-  s.version       = '2.0.1'
+  s.version       = '2.0.2'
   s.license       = 'MIT'
   s.homepage      = 'https://github.com/delba/TextAttributes'
   s.author        = { 'Damien' => 'damien@delba.io' }

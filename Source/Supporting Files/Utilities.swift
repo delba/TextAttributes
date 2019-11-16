@@ -22,18 +22,22 @@
 // SOFTWARE.
 //
 
-#if os(OSX)
-    public typealias Font  = NSFont
-    public typealias Color = NSColor
-    public typealias Image = NSImage
+#if canImport(UIKit)
+import UIKit
 
-    extension NSColor {
-        public convenience init(red: CGFloat, green: CGFloat, blue: CGFloat, alpha: CGFloat) {
-            self.init(srgbRed: red, green: green, blue: blue, alpha: alpha)
-        }
+public typealias Font  = UIFont
+public typealias Color = UIColor
+public typealias Image = UIImage
+#elseif canImport(AppKit)
+import AppKit
+
+public typealias Font  = NSFont
+public typealias Color = NSColor
+public typealias Image = NSImage
+
+extension NSColor {
+    public convenience init(red: CGFloat, green: CGFloat, blue: CGFloat, alpha: CGFloat) {
+        self.init(srgbRed: red, green: green, blue: blue, alpha: alpha)
     }
-#else
-    public typealias Font  = UIFont
-    public typealias Color = UIColor
-    public typealias Image = UIImage
+}
 #endif

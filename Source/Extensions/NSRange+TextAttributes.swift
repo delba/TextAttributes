@@ -22,6 +22,8 @@
 // SOFTWARE.
 //
 
+import Foundation
+
 extension NSRange {
     init(_ range: Range<Int>) {
         self = NSRange(location: range.lowerBound, length: range.count)

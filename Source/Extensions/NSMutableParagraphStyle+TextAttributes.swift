@@ -22,6 +22,12 @@
 // SOFTWARE.
 //
 
+#if canImport(UIKit)
+import UIKit
+#elseif canImport(AppKit)
+import AppKit
+#endif
+
 extension NSMutableParagraphStyle {
     func clone() -> NSMutableParagraphStyle {
         let clone = NSMutableParagraphStyle()

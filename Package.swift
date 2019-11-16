@@ -1,5 +1,6 @@
+// swift-tools-version:5.0
 //
-// NSAttributedString+TextAttributes.swift
+// Package.swift
 //
 // Copyright (c) 2016-2019 Damien (http://delba.io)
 //
@@ -22,30 +23,18 @@
 // SOFTWARE.
 //
 
-import Foundation
+import PackageDescription
 
-extension NSAttributedString {
-    /**
-     Returns an NSAttributedString object initialized with a given string and attributes.
-
-     - parameter string:     The string for the new attributed string.
-     - parameter attributes: The attributes for the new attributed string.
-
-     - returns: The newly created NSAttributedString.
-     */
-    public convenience init(string: NSString, attributes: TextAttributes) {
-        self.init(string: string as String, attributes: attributes)
-    }
-
-    /**
-     Returns an NSAttributedString object initialized with a given string and attributes.
-
-     - parameter string:     The string for the new attributed string.
-     - parameter attributes: The attributes for the new attributed string.
-
-     - returns: The newly created NSAttributedString.
-     */
-    public convenience init(string: String, attributes: TextAttributes) {
-        self.init(string: string, attributes: attributes.dictionary)
-    }
-}
+let package = Package(
+    name: "TextAttributes",
+    products: [
+        .library(
+            name: "TextAttributes",
+            targets: ["TextAttributes"]),
+    ],
+    targets: [
+        .target(
+            name: "TextAttributes",
+            path: "Source")
+    ]
+)

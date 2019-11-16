@@ -22,6 +22,8 @@
 // SOFTWARE.
 //
 
+import Foundation
+
 extension NSMutableAttributedString {
     /**
      Sets the attributes to the specified attributes.
